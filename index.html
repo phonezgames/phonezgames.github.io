@@ -1,0 +1,2194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>be1.ru</title>
+</head>
+<body>
+<p>&lt;!DOCTYPE html&gt;&nbsp;<br />
+&lt;html&gt;<br />
+&nbsp; &nbsp; &lt;head&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Clash of Tanks&lt;/title&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;style type=&quot;text/css&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; body {<br />
+&nbsp; &nbsp; margin: 0;<br />
+&nbsp; &nbsp; padding-top: 50%;<br />
+&nbsp; &nbsp; position: relative;<br />
+}</p>
+
+<p>#main {<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; padding: 20px;<br />
+&nbsp; &nbsp; box-shadow: 0 0 100px 80px &nbsp;lightblue;<br />
+&nbsp; &nbsp; background: lightblue;<br />
+&nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp;&nbsp;<br />
+}</p>
+
+<p>.smoke-base {<br />
+&nbsp;position &nbsp; &nbsp; &nbsp; &nbsp; : absolute;<br />
+&nbsp;left &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 0%;<br />
+&nbsp;top &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 0%;<br />
+&nbsp;width &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 100%;<br />
+&nbsp;height &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 100%;<br />
+&nbsp;background-color : rgba(0,0,0,.4);<br />
+&nbsp;display &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: table;<br />
+&nbsp;z-index &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 1001;<br />
+}</p>
+
+<p>.smoke-dialog_wrapper {<br />
+&nbsp;position &nbsp; &nbsp; &nbsp; : relative;<br />
+&nbsp;vertical-align : middle;<br />
+&nbsp;display &nbsp; &nbsp; &nbsp; &nbsp;: table-cell;<br />
+}</p>
+
+<p>.smoke-dialog {<br />
+&nbsp;width &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 80%;<br />
+&nbsp;margin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 0 auto;<br />
+&nbsp;padding &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 20px;<br />
+&nbsp;color &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: #202020;<br />
+&nbsp;border &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 1px solid #B6B6B6;<br />
+&nbsp;border-radius &nbsp; &nbsp;: 28px;<br />
+&nbsp;background-color : #f3f3f3;<br />
+&nbsp;font-family &nbsp; &nbsp; &nbsp;: Arial;<br />
+&nbsp;font-size &nbsp; &nbsp; &nbsp; &nbsp;: 18px;<br />
+&nbsp;font-weight &nbsp; &nbsp; &nbsp;: normal;<br />
+&nbsp;text-align &nbsp; &nbsp; &nbsp; : center;<br />
+&nbsp;line-height: 24px;<br />
+}</p>
+
+<p>.smoke-dialog-buttons {<br />
+&nbsp;vertical-align : middle;<br />
+&nbsp; &nbsp; margin-top: 10px;<br />
+}</p>
+
+<p>.smoke-dialog-buttons-ok, .smoke-dialog-buttons-cancel {<br />
+&nbsp; &nbsp; margin: 0 7px;<br />
+&nbsp; &nbsp; padding: 8px 24px;<br />
+&nbsp; &nbsp; border: 0;<br />
+&nbsp; &nbsp; border-radius: 7px;<br />
+&nbsp; &nbsp; outline: 0;<br />
+&nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; background: #00BD20;<br />
+&nbsp; &nbsp; font-family: arial;<br />
+&nbsp; &nbsp; font-size: 14px;<br />
+&nbsp; &nbsp; font-weight: normal;<br />
+&nbsp; &nbsp; text-transform: none;<br />
+&nbsp; &nbsp; line-height: 18px;<br />
+&nbsp; &nbsp; vertical-align: baseline;<br />
+&nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; cursor: pointer;<br />
+}<br />
+.smoke-dialog-buttons-ok:hover, .smoke-dialog-buttons-cancel:hover {<br />
+&nbsp; background: #222;<br />
+}</p>
+
+<p>.smoke-prompt {<br />
+&nbsp;margin-top : 15px;<br />
+&nbsp;text-align : center;<br />
+}</p>
+
+<p>.smoke-prompt-input {<br />
+&nbsp;-moz-box-sizing &nbsp;: border-box;<br />
+&nbsp;box-sizing &nbsp; &nbsp; &nbsp; : border-box;<br />
+&nbsp;width &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 75%;<br />
+&nbsp;margin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 0;<br />
+&nbsp;padding &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 11.2px;<br />
+&nbsp;border &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 1.4px solid #aaa;<br />
+&nbsp;outline &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: none;<br />
+&nbsp;font-family &nbsp; &nbsp; &nbsp;: arial;<br />
+&nbsp;font-size &nbsp; &nbsp; &nbsp; &nbsp;: 22.4px;<br />
+&nbsp;background-color : white;<br />
+&nbsp;display &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: inline-block;<br />
+}</p>
+
+<p>.smoke-dialog-buttons-cancel {<br />
+&nbsp;background-color : rgba(0, 0, 0, .40);<br />
+}</p>
+
+<p><br />
+.dif {<br />
+&nbsp; &nbsp; display: inline-block ;<br />
+&nbsp; &nbsp; margin-top: 8px;<br />
+&nbsp; &nbsp; margin-left: 14px;<br />
+&nbsp; &nbsp; margin-right: -12px;<br />
+&nbsp; &nbsp; font-weight: bold;<br />
+&nbsp; &nbsp; font-size: 2em;<br />
+&nbsp; &nbsp; width: 95px;<br />
+}</p>
+
+<p>#log {<br />
+&nbsp; &nbsp;display:none;<br />
+&nbsp; &nbsp;position: relative;<br />
+&nbsp; &nbsp;font-weight: bolder;<br />
+&nbsp; &nbsp;font-size: 0.8em;<br />
+&nbsp; &nbsp;text-align: center;<br />
+}</p>
+
+<p>.win{<br />
+&nbsp; &nbsp;margin-top: -10px;<br />
+&nbsp; &nbsp;color: green;<br />
+}</p>
+
+<p>.loss{<br />
+&nbsp; &nbsp;margin-top: -10px;<br />
+&nbsp; &nbsp;color: red;<br />
+}</p>
+
+<p>canvas {<br />
+&nbsp; &nbsp; position: fixed;<br />
+&nbsp; &nbsp; display: block;&nbsp;<br />
+&nbsp; &nbsp; border: 3px solid #eee;<br />
+&nbsp; &nbsp; margin: auto;<br />
+&nbsp; &nbsp; border-radius: 7px;<br />
+&nbsp; &nbsp; box-shadow: 0 0 15px;<br />
+-webkit-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);<br />
+-moz-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);<br />
+box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);</p>
+
+<p>}<br />
+#start{<br />
+&nbsp; &nbsp; color: green;<br />
+&nbsp; &nbsp; margin-bottom: 10px;<br />
+}<br />
+#info {<br />
+&nbsp; &nbsp; color: red;<br />
+}<br />
+button {<br />
+&nbsp; &nbsp; width: 300px;<br />
+&nbsp; &nbsp; height: 50px;<br />
+&nbsp; &nbsp; font-size: 1.75em;<br />
+&nbsp; &nbsp; border:1px solid white;<br />
+&nbsp; &nbsp; border-radius: 7px;<br />
+&nbsp; &nbsp; box-shadow: 0 0 5px, inset 0 0 25px;<br />
+&nbsp; &nbsp; padding: 10px 40px;<br />
+&nbsp; &nbsp; background-color: #f3f3f3;<br />
+&nbsp; &nbsp; font-weight: bold;<br />
+&nbsp; &nbsp; outline-style: none;</p>
+
+<p>}</p>
+
+<p>#btn-left, #btn-right {<br />
+&nbsp; &nbsp; border-radius: 50%;<br />
+&nbsp; &nbsp; padding: 0 20px ;<br />
+&nbsp; &nbsp; font-size: 2em;<br />
+}</p>
+
+<p>#infdiv {<br />
+&nbsp; &nbsp; display:none;<br />
+&nbsp; &nbsp; position: relative;<br />
+&nbsp; &nbsp; margin-auto<br />
+&nbsp; &nbsp; width: 80%;<br />
+&nbsp; &nbsp; border: 3px solid lightblue;<br />
+&nbsp; &nbsp; background-color: white;<br />
+&nbsp; &nbsp; padding: 10px;<br />
+&nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; border-radius: 10px;<br />
+&nbsp; &nbsp; box-shadow: 0 0 20px;<br />
+&nbsp; &nbsp; font-weight: bolder;<br />
+&nbsp; &nbsp; font-size: 0.9em;<br />
+}</p>
+
+<p>.modal {<br />
+&nbsp; border-radius: 10px;<br />
+&nbsp; display: none;&nbsp;<br />
+&nbsp; position: relative;<br />
+&nbsp; z-index: 99;&nbsp;<br />
+&nbsp; overflow: auto;<br />
+&nbsp; background-color: rgba(0,100,0,0.5);&nbsp;<br />
+}</p>
+
+<p><br />
+.modal-content {<br />
+&nbsp; color: white;<br />
+&nbsp; background-color: rgba(0,100,0,0.4);&nbsp;<br />
+&nbsp; margin: 15% auto;&nbsp;<br />
+&nbsp; padding: 20px;<br />
+&nbsp; border: 2px solid white;<br />
+&nbsp; border-radius: 10px;<br />
+&nbsp; width: 80%;<br />
+&nbsp; text-align: center;<br />
+}</p>
+
+<p><br />
+.close {<br />
+&nbsp; color: #aaa;<br />
+&nbsp; float: right;<br />
+&nbsp; font-size: 28px;<br />
+&nbsp; font-weight: bold;<br />
+}</p>
+
+<p>.close:hover,<br />
+.close:focus {<br />
+&nbsp; color: black;<br />
+&nbsp; text-decoration: none;<br />
+&nbsp; cursor: pointer;<br />
+}<br />
+.units{<br />
+&nbsp; &nbsp; -webkit-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);<br />
+-moz-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);<br />
+box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);<br />
+}</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/style&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;script type=&quot;text/javascript&quot;&gt;<br />
+var w, h, k, xo, yo,<br />
+units = [],<br />
+&nbsp; &nbsp; icons = [],<br />
+&nbsp; &nbsp; bullets = [],<br />
+&nbsp; &nbsp; enemies = [],<br />
+&nbsp; &nbsp; explosions = [],<br />
+&nbsp; &nbsp; dif = [&#39; 1&#39;, &#39; 2&#39;, &#39; 3&#39;, &#39; 4&#39;, &#39; 5&#39;, &#39; 6&#39;, &#39; 7&#39;, &#39; 8&#39;, &#39; 9&#39;, &#39; 10&#39;, &#39;11&#39;, &#39;12&#39;, &#39;13&#39;, &#39;14&#39;, &#39;15&#39;, &#39;16&#39;, &#39;17&#39;, &#39;18&#39;, &#39;19&#39;, &#39;20&#39;],<br />
+&nbsp; &nbsp; gameTime = 0,<br />
+&nbsp; &nbsp; isGameOver,<br />
+&nbsp; &nbsp; nextwave = 0,<br />
+&nbsp; &nbsp; enemydep = 1,<br />
+&nbsp; &nbsp; firstwave = false,<br />
+&nbsp; &nbsp; deployarea = false,<br />
+&nbsp; &nbsp; counter = 0,<br />
+&nbsp; &nbsp; counter2 = 0,<br />
+&nbsp; &nbsp; gameNum = 0,<br />
+&nbsp; &nbsp; game_paused = false,<br />
+&nbsp; &nbsp; lvl = 0, &nbsp; &nbsp; // 0...9<br />
+&nbsp; &nbsp; inf = function ()<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var popup = document.getElementById(&#39;infdiv&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var btn = document.getElementById(&#39;info&#39;);&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (popup.style.display !== &#39;block&#39;)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; popup.style.display = &#39;block&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info.style.color = &#39;white&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info.style.backgroundColor = &#39;red&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; popup.style.display = &#39;none&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info.style.color = &#39;red&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; info.style.backgroundColor = &#39;#f3f3f3&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; },<br />
+&nbsp; &nbsp; changeLvl = function (op) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (op == 1 &amp;&amp; lvl &lt; 19) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lvl++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (op == 0 &amp;&amp; lvl &gt; 0) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lvl--;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var _dif = document.getElementsByClassName(&quot;dif&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _dif[1].innerHTML = dif[lvl];<br />
+&nbsp; &nbsp; };<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp;</p>
+
+<p>(function ()<br />
+{<br />
+&nbsp; &nbsp; function Sprite(url, pos, size, resized, animspeed, frames, _index, once)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.pos = pos;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.size = size;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.resized = resized;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.url = url;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.animspeed = animspeed;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.frames = frames;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this._index = _index;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.once = once;<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; Sprite.prototype =<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; update: function (dt)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._index += this.animspeed * dt;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;render: function (ctx)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var frame;</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (this.animspeed &gt; 0)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var max = this.frames.length;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var idx = Math.floor(this._index);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame = this.frames[idx % max];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (this.once &amp;&amp; idx &gt;= max)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.done = true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame = 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var x = this.pos[0];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var y = this.pos[1];&nbsp;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x += frame * this.size[0];&nbsp;&nbsp;&nbsp;ctx.drawImage(resources.get(this.url), &nbsp;x, y, &nbsp;this.size[0], this.size[1], &nbsp;0, 0, &nbsp;this.resized[0], this.resized[1]);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;window.Sprite = Sprite;<br />
+})();</p>
+
+<p>(function ()<br />
+{<br />
+&nbsp; &nbsp; function Unit(status, pos, hp, speed, maxspeed, range, damage, reload, angle, defaultangle, dir, sprite)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.status = status;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.pos = pos;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.hp = hp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.maxhp = hp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.speed = speed;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.maxspeed = maxspeed;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.range = range;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.damage = damage;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.reload = reload;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.angle = angle;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.defaultangle = defaultangle;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.dir = dir;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; this.sprite = sprite<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; Unit.prototype =<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getAngle: function (target)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var x = this.pos[0] - target[0];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var y = this.pos[1] - target[1];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (x &lt; 0)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return Math.floor(Math.atan(y / x) * (180 / Math.PI));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return Math.floor(Math.atan(y / x) * (180 / Math.PI) - 180);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; moveAhead: function (dt)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var rad = this.angle / (180 / Math.PI);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.pos[0] += Math.cos(rad) * this.speed * dt * this.dir;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.pos[1] += Math.sin(rad) * this.speed * dt * this.dir;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; findTarget: function (t)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (i = 0; i &lt; t.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var dis = this.getDistance(t[i]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (dis &lt; this.range &amp;&amp; !t[i].destroyed &amp;&amp; t[i].time &gt; 0.7 &amp;&amp; t[i].pos[1] &gt; k)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.target = t[i];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.status = &quot;targetfound&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; avoidCollision: function (list, ownindx, dt)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var l = list;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (i = 0; i &lt; l.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (i == ownindx) continue;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (this.getDistance(l[i]) &lt; k * 8)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (var sec = 2; sec &gt; 0; sec--) {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var ownfuturepos = [this.pos[0] + (Math.cos(this.angle / (180 / Math.PI)) * this.speed * sec * this.dir), this.pos[1] + (Math.sin(this.angle / (180 / Math.PI)) * this.speed * sec * this.dir)];</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var allyfuturepos = [l[i].pos[0] + (Math.cos(l[i].angle / (180 / Math.PI)) * l[i].speed * sec * this.dir), l[i].pos[1] + (Math.sin(l[i].angle / (180 / Math.PI)) * l[i].speed * sec * this.dir)];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (getDistance(ownfuturepos, allyfuturepos) &lt; k * 3 &amp;&amp; this.pos[1] * this.dir &gt; l[i].pos[1] * l[i].dir &amp;&amp; Math.abs(ownfuturepos[0] - allyfuturepos[0]) &lt; this.sprite.resized[0])<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.speed -= 160/Math.pow(sec, 4) * dt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; getDistance: function (t)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return Math.floor(Math.sqrt(Math.pow(this.pos[0] - t.pos[0], 2) + Math.pow(this.pos[1] - t.pos[1], 2)));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; },</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; fireOnTarget: function ()<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var x = Math.floor(this.pos[0] + ((this.sprite.resized[1] / 2 * this.dir) * Math.cos(this.angle / (180 / Math.PI))));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var y = Math.floor(this.pos[1] + ((this.sprite.resized[0] / 2 * this.dir) * Math.sin(this.angle / (180 / Math.PI))));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bullets.push(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pos: [x, y],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; target: this.target,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; speed: k * 12,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; damage: this.damage,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; angle: this.angle + getRandom (-5,3),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dir: this.dir,</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.lastshot = 0;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;window.Unit = Unit;<br />
+})();</p>
+
+<p>var getRandom = function (min, max)<br />
+{<br />
+&nbsp; &nbsp; return Math.floor(Math.random() * (max - min + 1)) + min;<br />
+};</p>
+
+<p>var getDistance = function (own, ally)<br />
+{</p>
+
+<p>&nbsp; &nbsp; return Math.floor(Math.sqrt(Math.pow(own[0] - ally[0], 2) + Math.pow(own[1] - ally[1], 2)));<br />
+};</p>
+
+<p>var deployUnit = function (unit, pos)<br />
+{<br />
+&nbsp; &nbsp; var u = unit;<br />
+&nbsp; &nbsp; units.push(new Unit(u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8], u[9], u[10], u[11], u[12], u[13]));<br />
+&nbsp; &nbsp; units[units.length - 1].pos = pos;<br />
+&nbsp; &nbsp; deployarea = false;<br />
+};</p>
+
+<p>var deployEnemy = function (unit, pos)<br />
+{<br />
+&nbsp; &nbsp; var u = unit;<br />
+&nbsp; &nbsp; enemies.push(new Unit(u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8], u[9], u[10], u[11], u[12], u[13]));<br />
+&nbsp; &nbsp; enemies[enemies.length - 1].pos = pos;</p>
+
+<p>};</p>
+
+<p>var returnToBase = function (icon)<br />
+{<br />
+&nbsp; &nbsp; icon.pos = icon.defaultpos;<br />
+&nbsp; &nbsp; icon.dragable = false;<br />
+};<br />
+// Smoke-pure.js: (c) 2013-2014 Michael Romanovsky, or &quot;Agamemnus&quot; on Github. Released under the MIT license.</p>
+
+<p>void function () {<br />
+&nbsp;var smoke = {}</p>
+
+<p>&nbsp;// Options:<br />
+&nbsp;smoke.ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;ОК&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Text for &quot;Ok&quot; button.<br />
+&nbsp;smoke.cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;Отмена&quot; &nbsp; &nbsp; &nbsp;// Text for &quot;Cancel&quot; button.<br />
+&nbsp;smoke.point_event &nbsp; &nbsp; &nbsp;= &#39;click&#39; &nbsp; &nbsp; &nbsp; // Point event (&quot;click&quot;, &quot;touchstart&quot;, etc.)<br />
+&nbsp;smoke.parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = document.body // Where the smoke div attaches. Note that if this is undefined (because document.body hasn&#39;t been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.<br />
+&nbsp;smoke.zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 10000 &nbsp; &nbsp; &nbsp; &nbsp; // Z-index of the smoke DOM object. This should be a high number.<br />
+&nbsp;smoke.reverse_buttons &nbsp;= false &nbsp; &nbsp; &nbsp; &nbsp; // If false, the &quot;Ok&quot; button appears before (left of) the &quot;Cancel&quot; button. If true, the &quot;Cancel&quot; button appears before the &quot;Ok&quot; button.<br />
+&nbsp;smoke.autofocus &nbsp; &nbsp; &nbsp; &nbsp;= true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// If true, the input is automatically focused when the smoke DOM object is created.<br />
+&nbsp;smoke.autoexit &nbsp; &nbsp; &nbsp; &nbsp; = true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// If true, clicking outside the smoke dialog (but inside the dialog_wrapper) closes/detaches the smoke DOM object and runs the callback with a parameter of (false, evt).<br />
+&nbsp;smoke.custom_css &nbsp; &nbsp; &nbsp; = {} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Custom classes for each object in the structure. E.G.: smoke.custom_css = {&quot;button.ok&quot;: &quot;my_ok_button_style&quot;} or smoke.custom_css = {&quot;buttons.ok&quot;: [&quot;my_ok_button_style1&quot;, &quot;my_ok_button_style2&quot;]}<br />
+&nbsp;smoke.css_prefix &nbsp; &nbsp; &nbsp; = &quot;smoke&quot; &nbsp; &nbsp; &nbsp; // The CSS prefix for the classes used in the .build function.<br />
+&nbsp;smoke.value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= undefined &nbsp; &nbsp; // The initial value to set the prompt input text to.<br />
+&nbsp;smoke.callback &nbsp; &nbsp; &nbsp; &nbsp; = undefined &nbsp; &nbsp; // Function to run after user input is sent.<br />
+&nbsp;smoke.observe_mutation = true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// If true, attachess a mutation observer that will destroy the keyboard listeners when the element is removed from the DOM.<br />
+&nbsp;smoke.window_opened &nbsp; &nbsp;= undefined &nbsp; &nbsp; // Function that runs at the end of smoke.build. Is in the form of &quot;function (dom_window_object, text, processed_params)&quot;.<br />
+&nbsp;smoke.window_closed &nbsp; &nbsp;= undefined &nbsp; &nbsp; // Function that runs after the object is removed from the DOM. Is in the form of &quot;function (dom_window_object, text, processed_params)&quot;. Requires observe_mutation to be true for full functionality.<br />
+&nbsp;<br />
+&nbsp;// Structure:<br />
+&nbsp;// var obj (return value) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| smoke-base<br />
+&nbsp;// &nbsp;obj.dialog_wrapper &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;smoke-dialog_wrapper<br />
+&nbsp;// &nbsp; obj.dialog &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; smoke-dialog<br />
+&nbsp;// &nbsp; &nbsp;obj.text &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= obj.dialog.text &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;smoke-dialog-text<br />
+&nbsp;// &nbsp; &nbsp;obj.prompt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= obj.dialog.prompt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;smoke-dialog-prompt<br />
+&nbsp;// &nbsp; &nbsp; obj.prompt.input &nbsp; = obj.dialog.prompt.input &nbsp; &nbsp;| &nbsp; &nbsp; smoke-dialog-prompt-input<br />
+&nbsp;// &nbsp; &nbsp;obj.buttons &nbsp; &nbsp; &nbsp; &nbsp; = obj.dialog.buttons &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;smoke-dialog-buttons<br />
+&nbsp;// &nbsp; &nbsp; obj.buttons.ok &nbsp; &nbsp; = obj.dialog.buttons.ok &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; smoke-dialog-buttons-ok<br />
+&nbsp;// &nbsp; &nbsp; obj.buttons.cancel = obj.dialog.buttons.cancel &nbsp;| &nbsp; &nbsp; smoke-dialog-buttons-cancel<br />
+&nbsp;//<br />
+&nbsp;// Extras:<br />
+&nbsp;// obj.ok &nbsp; &nbsp; () // &lt;-- programatically run &quot;ok&quot; on the object.<br />
+&nbsp;// obj.cancel () // &lt;-- programatically run &quot;cancel&quot; on the object.<br />
+&nbsp;<br />
+&nbsp;smoke.build = function (text, params) {<br />
+&nbsp; if ((typeof smoke.parent == &quot;undefined&quot;) || (smoke.parent == null)) smoke.parent = document.body<br />
+&nbsp; var ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.ok<br />
+&nbsp; var cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.cancel<br />
+&nbsp; var point_event &nbsp; &nbsp; &nbsp; &nbsp; = (typeof params.point_event &nbsp; &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.point_event &nbsp; &nbsp; &nbsp;: smoke.point_event<br />
+&nbsp; var parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.parent<br />
+&nbsp; var zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.zindex<br />
+&nbsp; var reverse_buttons &nbsp; &nbsp; = (typeof params.reverse_buttons &nbsp;!= &quot;undefined&quot;) ? params.reverse_buttons &nbsp;: smoke.reverse_buttons<br />
+&nbsp; var autoexit &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.autoexit &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.autoexit &nbsp; &nbsp; &nbsp; &nbsp; : smoke.autoexit<br />
+&nbsp; var autofocus &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = (typeof params.autofocus &nbsp; &nbsp; &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.autofocus &nbsp; &nbsp; &nbsp; &nbsp;: smoke.autofocus<br />
+&nbsp; var custom_css &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.custom_css &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.custom_css &nbsp; &nbsp; &nbsp; : smoke.custom_css<br />
+&nbsp; var css_prefix &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.css_prefix &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.css_prefix &nbsp; &nbsp; &nbsp; : smoke.css_prefix<br />
+&nbsp; var input_default_value = (typeof params.value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: smoke.value<br />
+&nbsp; var callback &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.callback &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.callback &nbsp; &nbsp; &nbsp; &nbsp; : smoke.callback<br />
+&nbsp; var observe_mutation &nbsp; &nbsp;= (typeof params.observe_mutation != &quot;undefined&quot;) ? params.observe_mutation : smoke.observe_mutation<br />
+&nbsp; var window_opened &nbsp; &nbsp; &nbsp; = (typeof params.window_opened &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.window_opened &nbsp; &nbsp;: smoke.window_opened<br />
+&nbsp; var window_closed &nbsp; &nbsp; &nbsp; = (typeof params.window_closed &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.window_closed &nbsp; &nbsp;: smoke.window_closed<br />
+&nbsp; var window_closed_ran &nbsp; = false<br />
+&nbsp; params.point_event &nbsp; &nbsp; &nbsp;= point_event<br />
+&nbsp; params.callback &nbsp; &nbsp; &nbsp; &nbsp; = callback<br />
+&nbsp;&nbsp;<br />
+&nbsp; var obj = document.createElement(&#39;div&#39;); obj.className = css_prefix + &#39;-base&#39;; obj.style.zIndex = zindex<br />
+&nbsp; parent.appendChild (obj)<br />
+&nbsp;&nbsp;<br />
+&nbsp; var dialog_wrapper = obj.dialog_wrapper = document.createElement (&#39;div&#39;); dialog_wrapper.className = css_prefix + &#39;-dialog_wrapper&#39;<br />
+&nbsp; obj.appendChild (dialog_wrapper)<br />
+&nbsp;&nbsp;<br />
+&nbsp; // Add an event listener for when the user clicks outside of the dialog, but inside the dialog wrapper.<br />
+&nbsp; // If activated, the parent smoke div removes itself and calls the callback.<br />
+&nbsp; if (autoexit) {<br />
+&nbsp; &nbsp;dialog_wrapper.addEventListener (point_event, function (evt) {<br />
+&nbsp; &nbsp; if (typeof evt.changedTouches != &quot;undefined&quot;) evt = evt.changedTouches[0]<br />
+&nbsp; &nbsp; if (evt.currentTarget != evt.target) return<br />
+&nbsp; &nbsp; obj.parentNode.removeChild (obj)<br />
+&nbsp; &nbsp; params.callback (false, evt)<br />
+&nbsp; &nbsp; if ((!window_closed_ran) &amp;&amp; smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}<br />
+&nbsp; &nbsp;})<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; var dialog = obj.dialog = document.createElement (&#39;div&#39;); dialog.className = css_prefix + &#39;-dialog&#39;<br />
+&nbsp; dialog_wrapper.appendChild (dialog)<br />
+&nbsp;&nbsp;<br />
+&nbsp; var text_div = obj.text = obj.dialog.text = document.createElement (&#39;div&#39;); text_div.className = css_prefix + &#39;-dialog-text&#39;<br />
+&nbsp; text_div.innerHTML = text<br />
+&nbsp; dialog.appendChild (text_div)<br />
+&nbsp;&nbsp;<br />
+&nbsp; if (params.type == &#39;prompt&#39;) {<br />
+&nbsp; &nbsp;var prompt = obj.prompt = obj.dialog.prompt = document.createElement (&#39;div&#39;); prompt.className = css_prefix + &#39;-prompt&#39;<br />
+&nbsp; &nbsp;prompt.input = document.createElement (&#39;input&#39;); prompt.input.type = &#39;text&#39;; &nbsp;prompt.input.className = css_prefix + &#39;-prompt-input&#39;<br />
+&nbsp; &nbsp;if (typeof input_default_value != &quot;undefined&quot;) prompt.input.value = input_default_value<br />
+&nbsp; &nbsp;prompt.appendChild (prompt.input)<br />
+&nbsp; &nbsp;dialog.appendChild (prompt)<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; var buttons = obj.buttons = obj.dialog.buttons = document.createElement (&#39;div&#39;); buttons.className = css_prefix + &#39;-dialog-buttons&#39;<br />
+&nbsp; buttons.ok = document.createElement (&#39;button&#39;); buttons.ok.className = css_prefix + &#39;-dialog-buttons-ok&#39;; buttons.ok.innerHTML = ok<br />
+&nbsp; if (params.type == &#39;alert&#39;) buttons.appendChild (buttons.ok)<br />
+&nbsp; if ((params.type == &#39;prompt&#39;) || (params.type == &#39;confirm&#39;)) {<br />
+&nbsp; &nbsp;buttons.cancel = document.createElement (&#39;button&#39;); buttons.cancel.className = css_prefix + &#39;-dialog-buttons-cancel&#39;; buttons.cancel.innerHTML = cancel<br />
+&nbsp; &nbsp;if (params.reverse_buttons) {<br />
+&nbsp; &nbsp; buttons.appendChild (buttons.cancel); buttons.appendChild (buttons.ok)<br />
+&nbsp; &nbsp;} else {<br />
+&nbsp; &nbsp; buttons.appendChild (buttons.ok); buttons.appendChild (buttons.cancel)<br />
+&nbsp; &nbsp;}<br />
+&nbsp; }<br />
+&nbsp; dialog.appendChild (buttons)<br />
+&nbsp;&nbsp;<br />
+&nbsp; // Append any extra CSS styles on any part of the structure.<br />
+&nbsp; for (var current_structure_name in custom_css) {<br />
+&nbsp; &nbsp;var property_array = current_structure_name.split (&quot;.&quot;)<br />
+&nbsp; &nbsp;var current_element = obj<br />
+&nbsp; &nbsp;property_array.forEach (function (current_property) {current_element = current_element[current_property]})<br />
+&nbsp; &nbsp;var current_class_list = custom_css[current_structure_name]<br />
+&nbsp; &nbsp;if (typeof current_class_list == &quot;string&quot;) current_class_list = [current_class_list]<br />
+&nbsp; &nbsp;current_class_list.forEach (function (current_classname) {current_element.classList.add (current_classname)})<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; if (typeof params.callback != &quot;function&quot;) params.callback = function () {}<br />
+&nbsp; obj.params = params<br />
+&nbsp; smoke[&#39;finishbuilding_&#39; + params.type] (obj, params)<br />
+&nbsp; if ((typeof obj.prompt != &quot;undefined&quot;) &amp;&amp; (autofocus != false)) obj.prompt.input.focus ()<br />
+&nbsp;&nbsp;<br />
+&nbsp; // Add a mutation observer that observes for the object&#39;s removal. If it is removed, destroy the listeners and run smoke.window_closed.<br />
+&nbsp; if (observe_mutation) {<br />
+&nbsp; &nbsp;var MutationObserver = window.MutationObserver || window.WebkitMutationObserver<br />
+&nbsp; &nbsp;if (typeof MutationObserver != &quot;undefined&quot;) {<br />
+&nbsp; &nbsp; var observer = new MutationObserver (function (mutation_list) {<br />
+&nbsp; &nbsp; &nbsp;for (var i = 0, curlen_i = mutation_list.length; i &lt; curlen_i; i++) {<br />
+&nbsp; &nbsp; &nbsp; var mutation_item = mutation_list[i]<br />
+&nbsp; &nbsp; &nbsp; if (mutation_item.type != &#39;childList&#39;) return<br />
+&nbsp; &nbsp; &nbsp; for (var j = 0, curlen_j = mutation_item.removedNodes.length; j &lt; curlen_j; j++) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp;if (mutation_item.removedNodes[j] != obj) continue<br />
+&nbsp; &nbsp; &nbsp; &nbsp;if ((!window_closed_ran) &amp;&amp; smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}<br />
+&nbsp; &nbsp; &nbsp; &nbsp;obj.destroy_listeners (observer)<br />
+&nbsp; &nbsp; &nbsp; &nbsp;return<br />
+&nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp;}<br />
+&nbsp; &nbsp; })<br />
+&nbsp; &nbsp; observer.observe (parent, {attributes: false, childList: true, subtree: false})<br />
+&nbsp; &nbsp;}<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; if (smoke.window_opened) smoke.window_opened (obj, text, params)<br />
+&nbsp;&nbsp;<br />
+&nbsp; return obj<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;smoke.finishbuilding_alert &nbsp; = function (obj) {<br />
+&nbsp; obj.callback_ok = function () {obj.params.callback ()}<br />
+&nbsp; obj.destroy_listeners = function (observer) {if (observer) observer.disconnect (); document.removeEventListener (&#39;keyup&#39;, ok_function_wrapper)}<br />
+&nbsp; var ok_function_wrapper = obj.ok = function (evt) {ok_function(evt, obj)}<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.addEventListener (obj.params.point_event, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.smoke_pure_obj = obj<br />
+&nbsp;}<br />
+&nbsp;smoke.finishbuilding_confirm = function (obj) {<br />
+&nbsp; obj.callback_ok &nbsp; &nbsp; = function () {obj.params.callback (true)}<br />
+&nbsp; obj.callback_cancel = function () {obj.params.callback (false)}<br />
+&nbsp; obj.destroy_listeners = function (observer) {<br />
+&nbsp; &nbsp;if (observer) observer.disconnect ()<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; }<br />
+&nbsp; var ok_function_wrapper &nbsp; &nbsp; = obj.ok &nbsp; &nbsp; = function (evt) {ok_function &nbsp; &nbsp;(evt, obj)}<br />
+&nbsp; var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.addEventListener &nbsp; &nbsp; (obj.params.point_event, ok_function_wrapper)<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.ok.smoke_pure_obj &nbsp; &nbsp; = obj<br />
+&nbsp; obj.buttons.cancel.smoke_pure_obj = obj<br />
+&nbsp;}<br />
+&nbsp;smoke.finishbuilding_prompt &nbsp;= function (obj) {<br />
+&nbsp; obj.callback_ok &nbsp; &nbsp; = function () {obj.params.callback (obj.prompt.input.value)}<br />
+&nbsp; obj.callback_cancel = function () {obj.params.callback (false)}<br />
+&nbsp; obj.destroy_listeners = function (observer) {<br />
+&nbsp; &nbsp;if (observer) observer.disconnect ()<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; }<br />
+&nbsp; var ok_function_wrapper &nbsp; &nbsp; = obj.ok &nbsp; &nbsp; = function (evt) {ok_function &nbsp; &nbsp;(evt, obj)}<br />
+&nbsp; var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.addEventListener &nbsp; &nbsp; (obj.params.point_event, ok_function_wrapper)<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.ok.smoke_pure_obj &nbsp; &nbsp; = obj<br />
+&nbsp; obj.buttons.cancel.smoke_pure_obj = obj<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;function ok_function (evt, obj) {<br />
+&nbsp; if (evt &amp;&amp; (((evt.type == &quot;keyup&quot;) &amp;&amp; (typeof evt.keyCode != &quot;undefined&quot;)) &amp;&amp; ((evt.keyCode == 0) || (evt.keyCode != 13)))) return<br />
+&nbsp; obj.destroy_listeners ()<br />
+&nbsp; if (obj.parentNode) obj.parentNode.removeChild (obj)<br />
+&nbsp; obj.callback_ok ()<br />
+&nbsp;}<br />
+&nbsp;function cancel_function (evt, obj) {<br />
+&nbsp; if (evt &amp;&amp; (((evt.type == &quot;keyup&quot;) &amp;&amp; (typeof evt.keyCode != &quot;undefined&quot;)) &amp;&amp; ((evt.keyCode == 0) || (evt.keyCode != 27)))) return<br />
+&nbsp; obj.destroy_listeners ()<br />
+&nbsp; if (obj.parentNode) obj.parentNode.removeChild (obj)<br />
+&nbsp; obj.callback_cancel ()<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;smoke.action_list = [{name : &#39;alert&#39;}, {name : &#39;confirm&#39;}, {name : &#39;prompt&#39;}]<br />
+&nbsp;<br />
+&nbsp;for (var i = 0; i &lt; smoke.action_list.length; i++) {<br />
+&nbsp; void function (current_action) {<br />
+&nbsp; &nbsp;smoke[current_action] = function (text, callback, params) {return smoke.build (text, merge_objects ({callback: callback, type: current_action}, params))}<br />
+&nbsp; } (smoke.action_list[i].name)<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;function merge_objects (secondary, primary) {<br />
+&nbsp; // The primary object&#39;s duplicate keys are superior. The secondary object&#39;s duplicate keys are inferior.<br />
+&nbsp; if (typeof secondary == &quot;undefined&quot;) var primary = primary.primary, secondary = primary.secondary<br />
+&nbsp; var new_object = {}<br />
+&nbsp; for (var property in secondary) {new_object[property] = secondary[property]}<br />
+&nbsp; for (var property in primary) &nbsp; {new_object[property] = primary &nbsp;[property]}<br />
+&nbsp; return new_object<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;if (typeof module != &#39;undefined&#39; &amp;&amp; module.exports) {<br />
+&nbsp; module.exports = smoke<br />
+&nbsp;} else if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {<br />
+&nbsp; define (&#39;smoke&#39;, [], function() {return smoke})<br />
+&nbsp;} else {<br />
+&nbsp; this.smoke = smoke<br />
+&nbsp;}<br />
+} ()</p>
+
+<p>var gameOver = function (a)<br />
+{</p>
+
+<p>&nbsp; &nbsp; var _min = Math.floor(gameTime / 60);<br />
+&nbsp; &nbsp; var _sec = (&#39;0&#39; + Math.floor(gameTime % 60)).slice(-2);</p>
+
+<p><br />
+&nbsp; &nbsp; switch (a)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; case &#39;win&#39;:</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&quot;✔Уровень пройден! \n\n 📊Статистика: \n ⏱️Время: &quot; + _min + &#39;:&#39; + _sec + &#39;\n☠Подбит: &#39; + counter + &#39;\n⚔Убил: &#39; + counter2 + &#39;.&#39;);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; var log_item = &quot;&lt;h2 align = &#39;center&#39; class = &#39;win&#39;&gt;Игра &quot; + ++gameNum + &quot;: 🏆 Победа ⏱️&quot; + _min + &#39;:&#39; + _sec + &#39; /&#39; + dif[lvl] + &#39; /&#39; + &quot;&lt;/h2&gt;&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (lvl &lt; dif.length - 1) lvl++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var log = document.getElementById(&#39;log&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; log.innerHTML += log_item;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; document.body.style.paddingTop = 50 - (gameNum * 3) + &quot;%&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; log.style.display = &quot;block&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; loader();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; break;</p>
+
+<p>&nbsp; &nbsp; case &#39;loss&#39;:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&quot;❌Поражение! \n\n 📊Статистика: \n ⏱️Время: &quot; + _min + &#39;:&#39; + _sec + &#39;\n☠Подбит: &#39; + counter + &#39;\n⚔Убил: &#39; + counter2 + &#39;.&#39;);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; var log_item = &quot;&lt;h2 align = &#39;center&#39; class = &#39;loss&#39;&gt;Игра &quot; + ++gameNum + &quot;: 💩 Поражение ⏱️&quot; + _min + &#39;:&#39; + _sec + &#39; /&#39; + dif[lvl] + &#39; /&#39; + &quot;&lt;/h2&gt;&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var log = document.getElementById(&#39;log&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; log.innerHTML += log_item;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; document.body.style.paddingTop = 50 - (gameNum * 3)+ &quot;%&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; log.style.display = &quot;block&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; loader();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; break;</p>
+
+<p>&nbsp; &nbsp; }<br />
+}</p>
+
+<p>var reset = function ()<br />
+{</p>
+
+<p>&nbsp; &nbsp; units = [];<br />
+&nbsp; &nbsp; icons = [];<br />
+&nbsp; &nbsp; bullets = [];<br />
+&nbsp; &nbsp; enemies = [];<br />
+&nbsp; &nbsp; explosions = [];<br />
+&nbsp; &nbsp; isGameOver = false;<br />
+&nbsp; &nbsp; gameTime = 0;<br />
+&nbsp; &nbsp; enemydep = 1;<br />
+&nbsp; &nbsp; firstwave = false;<br />
+&nbsp; &nbsp; nextwave = 0;<br />
+&nbsp; &nbsp; deployarea = false;<br />
+&nbsp; &nbsp; counter = 0;<br />
+&nbsp; &nbsp; counter2 = 0;<br />
+}</p>
+
+<p>var xxx = 0,<br />
+&nbsp; &nbsp; yyy = 0;<br />
+var mouse =<br />
+{<br />
+&nbsp; &nbsp; x: 0,<br />
+&nbsp; &nbsp; y: 0,<br />
+&nbsp; &nbsp; down: false<br />
+}</p>
+
+<p>/////////////////////////////</p>
+
+<p>var startGame = function ()<br />
+{</p>
+
+<p>&nbsp; &nbsp; reset();<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; var modal = document.getElementById(&quot;myModal&quot;);<br />
+&nbsp; &nbsp; var span = document.getElementsByClassName(&quot;close&quot;)[0];<br />
+&nbsp; &nbsp; var p = document.getElementsByClassName(&quot;modal-text&quot;)[0];<br />
+&nbsp; &nbsp; span.onclick = function() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;modal.style.display = &quot;none&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;game_paused = !game_paused;<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; var log = document.getElementById(&#39;log&#39;);<br />
+&nbsp; &nbsp; var popup = document.getElementById(&#39;infdiv&#39;);<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; log.style.display = &quot;none&quot;;<br />
+&nbsp; &nbsp; popup.style.display = &#39;none&#39;;<br />
+&nbsp; &nbsp; document.body.style.paddingTop = 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; var maindiv = document.getElementById(&quot;main&quot;);</p>
+
+<p>&nbsp; &nbsp; maindiv.innerHTML = &#39;&lt;canvas id=&quot;c&quot;&gt;&lt;/canvas&gt;&#39;;</p>
+
+<p>&nbsp; &nbsp; var c = document.getElementById(&quot;c&quot;);</p>
+
+<p>&nbsp; &nbsp; var ctx = c.getContext(&quot;2d&quot;);</p>
+
+<p>&nbsp; &nbsp; w = window.innerWidth;<br />
+&nbsp; &nbsp; h = window.innerHeight;<br />
+&nbsp; &nbsp;&nbsp;</p>
+
+<p>&nbsp; &nbsp; if (w &lt; h) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; c.width = w - 46;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; c.height = c.width/0.7;<br />
+&nbsp; &nbsp; } else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; c.height = h - 46;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; c.width = c.height * 0.7;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; k = c.width / 26;</p>
+
+<p>&nbsp; &nbsp; xo = c.offsetLeft;<br />
+&nbsp; &nbsp; yo = c.offsetTop;<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; ////</p>
+
+<p>&nbsp; &nbsp; icons = [<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; active: true,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; pos: [c.width / 28, c.height - c.height / 8],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; defaultpos: [c.width / 28, c.height - c.height / 8],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawn: false,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawnrate: 1,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; sprite: new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [55, 76], [194, 134], [c.width / 5.5, c.height / 10.5])<br />
+&nbsp; &nbsp; },<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; active: true,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; pos: [c.width / 3.4, c.height - c.height / 8.5],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; defaultpos: [c.width / 3.4, c.height - c.height / 8.5],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawn: false,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawnrate: 3,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; sprite: new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [71, 600], [159, 130], [c.width / 6.5, c.height / 12])<br />
+&nbsp; &nbsp; },<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; active: true,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; pos: [c.width / 1.85, c.height - c.height / 8.2],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; defaultpos: [c.width / 1.85, c.height - c.height / 8.2],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawn: false,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawnrate: 0.5,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; sprite: new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [52, 269], [205, 124], [c.width / 5.8, c.height / 12])<br />
+&nbsp; &nbsp; },<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; active: false,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; pos: [c.width / 1.27, c.height - c.height / 8.2],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; defaultpos: [c.width / 1.27, c.height - c.height / 8.2],<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawn: false,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; respawnrate: 0.5,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; sprite: new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [68, 434], [230 - 68, 565 - 434], [c.width / 5.8, c.height / 12])<br />
+&nbsp; &nbsp; }];</p>
+
+<p>&nbsp; &nbsp; ///</p>
+
+<p>&nbsp; &nbsp; c.addEventListener(&quot;touchmove&quot;, function (event)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; var touch = event.touches[0];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; xxx = touch.pageX - xo - 3;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; yyy = touch.pageY - yo - 3;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; checkIcons(xxx, yyy);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; event.preventDefault();<br />
+&nbsp; &nbsp; }, false);</p>
+
+<p>&nbsp; &nbsp; c.addEventListener(&quot;touchend&quot;, function (event)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; checkDeployment(xxx, yyy);</p>
+
+<p>&nbsp; &nbsp; }, false);</p>
+
+<p>&nbsp; &nbsp; c.addEventListener(&quot;mousemove&quot;, function (event)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; mouse.x = event.pageX - xo - 3;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; mouse.y = event.pageY - yo - 3;<br />
+&nbsp; &nbsp; }, false);</p>
+
+<p>&nbsp; &nbsp; c.addEventListener(&quot;mousedown&quot;, function ()<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; mouse.down = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; checkIcons(mouse.x, mouse.y);</p>
+
+<p>&nbsp; &nbsp; }, false);</p>
+
+<p>&nbsp; &nbsp; c.addEventListener(&quot;mouseup&quot;, function ()<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; mouse.down = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; checkDeployment(mouse.x, mouse.y);<br />
+&nbsp; &nbsp; }, false);</p>
+
+<p>&nbsp; &nbsp; function checkIcons(xx, yy)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (xx &gt; icons[0].pos[0] &amp;&amp; xx &lt; icons[0].pos[0] + (k * 5) &amp;&amp; yy &gt; icons[0].pos[1] - (k * 3) &amp;&amp; yy &lt; icons[0].pos[1] + (k * 3) &amp;&amp; !icons[0].respawn &nbsp;&amp;&amp; !game_paused)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!icons[1].dragable &amp;&amp; !icons[2].dragable)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[0].dragable = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; basictank[0] = &#39;readyfordeploy&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployarea = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (xx &gt; icons[1].pos[0] &amp;&amp; xx &lt; icons[1].pos[0] + (k * 5) &amp;&amp; yy &gt; icons[1].pos[1] - (k * 3) &amp;&amp; yy &lt; icons[1].pos[1] + (k * 3) &amp;&amp; !icons[1].respawn &nbsp;&amp;&amp; !game_paused)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!icons[0].dragable &amp;&amp; !icons[2].dragable)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[1].dragable = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lighttank[0] = &#39;readyfordeploy&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployarea = true;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (xx &gt; icons[2].pos[0] &amp;&amp; xx &lt; icons[2].pos[0] + (k * 5) &amp;&amp; yy &gt; icons[2].pos[1] - (k * 3) &amp;&amp; yy &lt; icons[2].pos[1] + (k * 3) &amp;&amp; !icons[2].respawn &nbsp;&amp;&amp; !game_paused)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!icons[0].dragable &amp;&amp; !icons[1].dragable)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[2].dragable = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ttank[0] = &#39;readyfordeploy&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployarea = true;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (xx &gt; icons[3].pos[0] &amp;&amp; xx &lt; icons[3].pos[0] + (k * 5) &amp;&amp; yy &gt; icons[3].pos[1] - (k * 3) &amp;&amp; yy &lt; icons[3].pos[1] + (k * 3))<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;game_paused = !game_paused;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if(modal.style.display == &quot;block&quot;) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; modal.style.display = &quot;none&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.innerHTML = &#39;Игра на паузе...&#39;;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; modal.style.width = c.width*0.8 + &quot;px&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; modal.style.marginLeft = c.width*0.1 + xo + &quot;px&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; modal.style.display = &quot;block&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function checkDeployment(xx, yy)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; var inside = false;<br />
+&nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (xx &gt; c.width / 100 &amp;&amp; yy &gt; c.height / 2 &amp;&amp; xx &lt; c.width - c.width / 100 - 3 &amp;&amp; yy &lt; c.height / 2 + c.height / 3.7)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inside = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var allies = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for(var i = 0; i &lt; units.length; i++) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (getDistance([xx,yy], units[i].pos) &lt; &nbsp;2*k) allies = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (basictank[0] == &#39;readyfordeploy&#39; &amp;&amp; inside &amp;&amp; !allies)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; basictank[0] = &#39; &#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployUnit(basictank, [xx, yy]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; units[units.length - 1].status = &#39;acceleration&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[0].pos = [icons[0].defaultpos[0], icons[0].defaultpos[1] + c.width / 4];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[0].dragable = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[0].respawn = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployarea = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else if ( basictank[0] == &#39;readyfordeploy&#39; &amp;&amp; (!inside &amp;&amp; !icons[0].respawn || allies))<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; returnToBase(icons[0]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; basictank[0] = &#39; &#39;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (lighttank[0] == &#39;readyfordeploy&#39; &amp;&amp; inside &amp;&amp; !allies)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lighttank[0] = &#39; &#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployUnit(lighttank, [xx, yy]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; units[units.length - 1].status = &#39;acceleration&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[1].pos = [icons[1].defaultpos[0], icons[1].defaultpos[1] + c.width / 4];;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[1].dragable = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[1].respawn = true;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else if ( lighttank[0] == &#39;readyfordeploy&#39; &amp;&amp; (!inside &amp;&amp; !icons[1].respawn || allies))<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; returnToBase(icons[1]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lighttank[0] = &quot; &quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (ttank[0] == &#39;readyfordeploy&#39; &amp;&amp; inside &amp;&amp; !allies)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ttank[0] = &#39; &#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployUnit(ttank, [xx, yy]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; units[units.length - 1].status = &#39;acceleration&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[2].pos = [icons[2].defaultpos[0], icons[2].defaultpos[1] + c.width / 4];;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[2].dragable = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[2].respawn = true;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else if ( ttank[0] == &#39;readyfordeploy&#39; &amp;&amp; (!inside &amp;&amp; !icons[2].respawn || allies))<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; returnToBase(icons[2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ttank[0] = &quot; &quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; }</p>
+
+<p><br />
+&nbsp; &nbsp; lastTime = Date.now();</p>
+
+<p><br />
+&nbsp; &nbsp; // твои танки<br />
+&nbsp; &nbsp; // &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stats -- status, pos, hp, speed, maxspeed, &nbsp;range, damage, reload, angle, defaultangle , dir, sprite</p>
+
+<p>&nbsp; &nbsp; var basictank = [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0], 2000, 0, &nbsp; k * 1.5, k * 110, &nbsp; &nbsp;600, &nbsp; &nbsp;1.3, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp; &nbsp;1, &nbsp; new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [55, 76], [194, 135], [c.width / 11, c.height / 21])];<br />
+&nbsp; &nbsp; var lighttank = [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0], 500, &nbsp;0, &nbsp; k * 15.0, k * 110, &nbsp; 250, &nbsp; &nbsp;0.9, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp; &nbsp;1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [71, 600], [159, 130], [c.width / 13, c.height / 24])];<br />
+&nbsp; &nbsp; var ttank = &nbsp; &nbsp; [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0], 200, &nbsp;0, &nbsp; k * 3.5, k * 110, 50, &nbsp; &nbsp; 0.05, &nbsp; - 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp; &nbsp;1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [52, 269], [205, 124], [c.width / 11.6, c.height / 24])];<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; //враги<br />
+&nbsp; &nbsp; var enemybasic = [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0], 2000, 0, &nbsp; k * 1.5, k * 110, &nbsp; &nbsp;600, &nbsp; &nbsp;1.3, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [365, 76], [194, 135], [c.width / 11, c.height / 21])];<br />
+&nbsp; &nbsp; var enemylight = [&#39;acceleration&#39;, [200, &nbsp; &nbsp; &nbsp;200], 500, &nbsp;0, &nbsp; k * 15.0, k * 110, &nbsp; 250, &nbsp; &nbsp;0.9, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [395, 600], [159, 130], [c.width / 13, c.height / 24])];<br />
+&nbsp; &nbsp; var enemyttank = [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0], 200, &nbsp;0, &nbsp; k * 3.5, k * 40, 50, &nbsp; &nbsp; 0.05, &nbsp; - 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [362, 269], [205, 124], [c.width / 11.6, c.height / 24])];<br />
+&nbsp; &nbsp; //hp<br />
+&nbsp; &nbsp; var enemybasichp = [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0], 2000, 0, &nbsp; k * 1.5, k * 110, &nbsp; &nbsp;800, &nbsp; &nbsp;1.3, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&#39;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&#39;, [365, 76], [194, 135], [c.width / 11, c.height / 21])];<br />
+&nbsp; &nbsp; var enemylighthp = [&#39;acceleration&#39;, [200, &nbsp; &nbsp; &nbsp;200], 500, &nbsp;0, &nbsp; k * 15.0, k * 110, &nbsp; 320, &nbsp; &nbsp;0.9, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [395, 600], [159, 130], [c.width / 13, c.height / 24])];<br />
+&nbsp; &nbsp; var enemyttankhp = [&#39;acceleration&#39;, [0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0], 200, &nbsp;0, &nbsp; k * 3.5, k * 40, 70, &nbsp; &nbsp; 0.05, &nbsp; - 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [362, 269], [205, 124], [c.width / 11.6, c.height / 24])];<br />
+&nbsp; &nbsp; //tutorial<br />
+&nbsp; &nbsp; var enemylighttutorial = [&#39;acceleration&#39;, [200, &nbsp; &nbsp; &nbsp;200], 500, &nbsp;0, &nbsp; k * 1, k * 110, &nbsp; 20, &nbsp; &nbsp;0.21, &nbsp; &nbsp;- 90, &nbsp; &nbsp;- 90, &nbsp; &nbsp; &nbsp;- 1, &nbsp; new Sprite(&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;, [395, 600], [159, 130], [c.width / 13, c.height / 24])];</p>
+
+<p><br />
+&nbsp; &nbsp; main()</p>
+
+<p>&nbsp; &nbsp; // The main game loop</p>
+
+<p>&nbsp; &nbsp; function main()<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var now = Date.now();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (!game_paused) {&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var dt = (now - lastTime) / 1000;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; update(dt);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; render();<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; lastTime = now;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if&nbsp;&nbsp;(!isGameOver)&nbsp;requestAnimFrame(main);</p>
+
+<p>&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; function update(dt)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;gameTime += dt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (nextwave &lt; -99999) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nextwave = (enemydep * (-9999999999999 - lvl)-gameTime + -999999999).toFixed(0)&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nextwave -= dt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (Math.floor(gameTime) == 1 &amp;&amp; firstwave == false)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 0) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function sayTutorial1() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&#39;Перетаксивай свои танки на поле боя!&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setTimeout(sayTutorial1, 10);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function sayTutorial2() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&#39;Твоя задача уничтожить их и добраься до зеленой линии в верхней части поля!&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setTimeout(sayTutorial2, 3000);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighttutorial, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighttutorial, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 1) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function sayTutorial3() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&#39;Теперь попробуй сам. Удачи! 😄&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setTimeout(sayTutorial3, 1000);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 2) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function sayTutorial3() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&#39;Отлично, продолжай в том-же духе! 😄&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setTimeout(sayTutorial3, 1000);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 3) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; smoke.alert(&#39;Давай, ты уже на 3/20 уровней, поднажми! 😉&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 4) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 5) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 6) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 7) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 10, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 8) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 10, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 9) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 10, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [c.width / 10, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [c.width / 3, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //new<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 10) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+// Smoke-pure.js: (c) 2013-2014 Michael Romanovsky, or &quot;Agamemnus&quot; on Github. Released under the MIT license.</p>
+
+<p>void function () {<br />
+&nbsp;var smoke = {}</p>
+
+<p>&nbsp;// Options:<br />
+&nbsp;smoke.ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;ОК&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Text for &quot;Ok&quot; button.<br />
+&nbsp;smoke.cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;Отмена&quot; &nbsp; &nbsp; &nbsp;// Text for &quot;Cancel&quot; button.<br />
+&nbsp;smoke.point_event &nbsp; &nbsp; &nbsp;= &#39;click&#39; &nbsp; &nbsp; &nbsp; // Point event (&quot;click&quot;, &quot;touchstart&quot;, etc.)<br />
+&nbsp;smoke.parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = document.body // Where the smoke div attaches. Note that if this is undefined (because document.body hasn&#39;t been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.<br />
+&nbsp;smoke.zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 10000 &nbsp; &nbsp; &nbsp; &nbsp; // Z-index of the smoke DOM object. This should be a high number.<br />
+&nbsp;smoke.reverse_buttons &nbsp;= false &nbsp; &nbsp; &nbsp; &nbsp; // If false, the &quot;Ok&quot; button appears before (left of) the &quot;Cancel&quot; button. If true, the &quot;Cancel&quot; button appears before the &quot;Ok&quot; button.<br />
+&nbsp;smoke.autofocus &nbsp; &nbsp; &nbsp; &nbsp;= true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// If true, the input is automatically focused when the smoke DOM object is created.<br />
+&nbsp;smoke.autoexit &nbsp; &nbsp; &nbsp; &nbsp; = true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// If true, clicking outside the smoke dialog (but inside the dialog_wrapper) closes/detaches the smoke DOM object and runs the callback with a parameter of (false, evt).<br />
+&nbsp;smoke.custom_css &nbsp; &nbsp; &nbsp; = {} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Custom classes for each object in the structure. E.G.: smoke.custom_css = {&quot;button.ok&quot;: &quot;my_ok_button_style&quot;} or smoke.custom_css = {&quot;buttons.ok&quot;: [&quot;my_ok_button_style1&quot;, &quot;my_ok_button_style2&quot;]}<br />
+&nbsp;smoke.css_prefix &nbsp; &nbsp; &nbsp; = &quot;smoke&quot; &nbsp; &nbsp; &nbsp; // The CSS prefix for the classes used in the .build function.<br />
+&nbsp;smoke.value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= undefined &nbsp; &nbsp; // The initial value to set the prompt input text to.<br />
+&nbsp;smoke.callback &nbsp; &nbsp; &nbsp; &nbsp; = undefined &nbsp; &nbsp; // Function to run after user input is sent.<br />
+&nbsp;smoke.observe_mutation = true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// If true, attachess a mutation observer that will destroy the keyboard listeners when the element is removed from the DOM.<br />
+&nbsp;smoke.window_opened &nbsp; &nbsp;= undefined &nbsp; &nbsp; // Function that runs at the end of smoke.build. Is in the form of &quot;function (dom_window_object, text, processed_params)&quot;.<br />
+&nbsp;smoke.window_closed &nbsp; &nbsp;= undefined &nbsp; &nbsp; // Function that runs after the object is removed from the DOM. Is in the form of &quot;function (dom_window_object, text, processed_params)&quot;. Requires observe_mutation to be true for full functionality.<br />
+&nbsp;<br />
+&nbsp;// Structure:<br />
+&nbsp;// var obj (return value) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| smoke-base<br />
+&nbsp;// &nbsp;obj.dialog_wrapper &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;smoke-dialog_wrapper<br />
+&nbsp;// &nbsp; obj.dialog &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; smoke-dialog<br />
+&nbsp;// &nbsp; &nbsp;obj.text &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= obj.dialog.text &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;smoke-dialog-text<br />
+&nbsp;// &nbsp; &nbsp;obj.prompt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= obj.dialog.prompt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;smoke-dialog-prompt<br />
+&nbsp;// &nbsp; &nbsp; obj.prompt.input &nbsp; = obj.dialog.prompt.input &nbsp; &nbsp;| &nbsp; &nbsp; smoke-dialog-prompt-input<br />
+&nbsp;// &nbsp; &nbsp;obj.buttons &nbsp; &nbsp; &nbsp; &nbsp; = obj.dialog.buttons &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;smoke-dialog-buttons<br />
+&nbsp;// &nbsp; &nbsp; obj.buttons.ok &nbsp; &nbsp; = obj.dialog.buttons.ok &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; smoke-dialog-buttons-ok<br />
+&nbsp;// &nbsp; &nbsp; obj.buttons.cancel = obj.dialog.buttons.cancel &nbsp;| &nbsp; &nbsp; smoke-dialog-buttons-cancel<br />
+&nbsp;//<br />
+&nbsp;// Extras:<br />
+&nbsp;// obj.ok &nbsp; &nbsp; () // &lt;-- programatically run &quot;ok&quot; on the object.<br />
+&nbsp;// obj.cancel () // &lt;-- programatically run &quot;cancel&quot; on the object.<br />
+&nbsp;<br />
+&nbsp;smoke.build = function (text, params) {<br />
+&nbsp; if ((typeof smoke.parent == &quot;undefined&quot;) || (smoke.parent == null)) smoke.parent = document.body<br />
+&nbsp; var ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.ok &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.ok<br />
+&nbsp; var cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.cancel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.cancel<br />
+&nbsp; var point_event &nbsp; &nbsp; &nbsp; &nbsp; = (typeof params.point_event &nbsp; &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.point_event &nbsp; &nbsp; &nbsp;: smoke.point_event<br />
+&nbsp; var parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.parent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.parent<br />
+&nbsp; var zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.zindex &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : smoke.zindex<br />
+&nbsp; var reverse_buttons &nbsp; &nbsp; = (typeof params.reverse_buttons &nbsp;!= &quot;undefined&quot;) ? params.reverse_buttons &nbsp;: smoke.reverse_buttons<br />
+&nbsp; var autoexit &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.autoexit &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.autoexit &nbsp; &nbsp; &nbsp; &nbsp; : smoke.autoexit<br />
+&nbsp; var autofocus &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = (typeof params.autofocus &nbsp; &nbsp; &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.autofocus &nbsp; &nbsp; &nbsp; &nbsp;: smoke.autofocus<br />
+&nbsp; var custom_css &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.custom_css &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.custom_css &nbsp; &nbsp; &nbsp; : smoke.custom_css<br />
+&nbsp; var css_prefix &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.css_prefix &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.css_prefix &nbsp; &nbsp; &nbsp; : smoke.css_prefix<br />
+&nbsp; var input_default_value = (typeof params.value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: smoke.value<br />
+&nbsp; var callback &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (typeof params.callback &nbsp; &nbsp; &nbsp; &nbsp; != &quot;undefined&quot;) ? params.callback &nbsp; &nbsp; &nbsp; &nbsp; : smoke.callback<br />
+&nbsp; var observe_mutation &nbsp; &nbsp;= (typeof params.observe_mutation != &quot;undefined&quot;) ? params.observe_mutation : smoke.observe_mutation<br />
+&nbsp; var window_opened &nbsp; &nbsp; &nbsp; = (typeof params.window_opened &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.window_opened &nbsp; &nbsp;: smoke.window_opened<br />
+&nbsp; var window_closed &nbsp; &nbsp; &nbsp; = (typeof params.window_closed &nbsp; &nbsp;!= &quot;undefined&quot;) ? params.window_closed &nbsp; &nbsp;: smoke.window_closed<br />
+&nbsp; var window_closed_ran &nbsp; = false<br />
+&nbsp; params.point_event &nbsp; &nbsp; &nbsp;= point_event<br />
+&nbsp; params.callback &nbsp; &nbsp; &nbsp; &nbsp; = callback<br />
+&nbsp;&nbsp;<br />
+&nbsp; var obj = document.createElement(&#39;div&#39;); obj.className = css_prefix + &#39;-base&#39;; obj.style.zIndex = zindex<br />
+&nbsp; parent.appendChild (obj)<br />
+&nbsp;&nbsp;<br />
+&nbsp; var dialog_wrapper = obj.dialog_wrapper = document.createElement (&#39;div&#39;); dialog_wrapper.className = css_prefix + &#39;-dialog_wrapper&#39;<br />
+&nbsp; obj.appendChild (dialog_wrapper)<br />
+&nbsp;&nbsp;<br />
+&nbsp; // Add an event listener for when the user clicks outside of the dialog, but inside the dialog wrapper.<br />
+&nbsp; // If activated, the parent smoke div removes itself and calls the callback.<br />
+&nbsp; if (autoexit) {<br />
+&nbsp; &nbsp;dialog_wrapper.addEventListener (point_event, function (evt) {<br />
+&nbsp; &nbsp; if (typeof evt.changedTouches != &quot;undefined&quot;) evt = evt.changedTouches[0]<br />
+&nbsp; &nbsp; if (evt.currentTarget != evt.target) return<br />
+&nbsp; &nbsp; obj.parentNode.removeChild (obj)<br />
+&nbsp; &nbsp; params.callback (false, evt)<br />
+&nbsp; &nbsp; if ((!window_closed_ran) &amp;&amp; smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}<br />
+&nbsp; &nbsp;})<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; var dialog = obj.dialog = document.createElement (&#39;div&#39;); dialog.className = css_prefix + &#39;-dialog&#39;<br />
+&nbsp; dialog_wrapper.appendChild (dialog)<br />
+&nbsp;&nbsp;<br />
+&nbsp; var text_div = obj.text = obj.dialog.text = document.createElement (&#39;div&#39;); text_div.className = css_prefix + &#39;-dialog-text&#39;<br />
+&nbsp; text_div.innerHTML = text<br />
+&nbsp; dialog.appendChild (text_div)<br />
+&nbsp;&nbsp;<br />
+&nbsp; if (params.type == &#39;prompt&#39;) {<br />
+&nbsp; &nbsp;var prompt = obj.prompt = obj.dialog.prompt = document.createElement (&#39;div&#39;); prompt.className = css_prefix + &#39;-prompt&#39;<br />
+&nbsp; &nbsp;prompt.input = document.createElement (&#39;input&#39;); prompt.input.type = &#39;text&#39;; &nbsp;prompt.input.className = css_prefix + &#39;-prompt-input&#39;<br />
+&nbsp; &nbsp;if (typeof input_default_value != &quot;undefined&quot;) prompt.input.value = input_default_value<br />
+&nbsp; &nbsp;prompt.appendChild (prompt.input)<br />
+&nbsp; &nbsp;dialog.appendChild (prompt)<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; var buttons = obj.buttons = obj.dialog.buttons = document.createElement (&#39;div&#39;); buttons.className = css_prefix + &#39;-dialog-buttons&#39;<br />
+&nbsp; buttons.ok = document.createElement (&#39;button&#39;); buttons.ok.className = css_prefix + &#39;-dialog-buttons-ok&#39;; buttons.ok.innerHTML = ok<br />
+&nbsp; if (params.type == &#39;alert&#39;) buttons.appendChild (buttons.ok)<br />
+&nbsp; if ((params.type == &#39;prompt&#39;) || (params.type == &#39;confirm&#39;)) {<br />
+&nbsp; &nbsp;buttons.cancel = document.createElement (&#39;button&#39;); buttons.cancel.className = css_prefix + &#39;-dialog-buttons-cancel&#39;; buttons.cancel.innerHTML = cancel<br />
+&nbsp; &nbsp;if (params.reverse_buttons) {<br />
+&nbsp; &nbsp; buttons.appendChild (buttons.cancel); buttons.appendChild (buttons.ok)<br />
+&nbsp; &nbsp;} else {<br />
+&nbsp; &nbsp; buttons.appendChild (buttons.ok); buttons.appendChild (buttons.cancel)<br />
+&nbsp; &nbsp;}<br />
+&nbsp; }<br />
+&nbsp; dialog.appendChild (buttons)<br />
+&nbsp;&nbsp;<br />
+&nbsp; // Append any extra CSS styles on any part of the structure.<br />
+&nbsp; for (var current_structure_name in custom_css) {<br />
+&nbsp; &nbsp;var property_array = current_structure_name.split (&quot;.&quot;)<br />
+&nbsp; &nbsp;var current_element = obj<br />
+&nbsp; &nbsp;property_array.forEach (function (current_property) {current_element = current_element[current_property]})<br />
+&nbsp; &nbsp;var current_class_list = custom_css[current_structure_name]<br />
+&nbsp; &nbsp;if (typeof current_class_list == &quot;string&quot;) current_class_list = [current_class_list]<br />
+&nbsp; &nbsp;current_class_list.forEach (function (current_classname) {current_element.classList.add (current_classname)})<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; if (typeof params.callback != &quot;function&quot;) params.callback = function () {}<br />
+&nbsp; obj.params = params<br />
+&nbsp; smoke[&#39;finishbuilding_&#39; + params.type] (obj, params)<br />
+&nbsp; if ((typeof obj.prompt != &quot;undefined&quot;) &amp;&amp; (autofocus != false)) obj.prompt.input.focus ()<br />
+&nbsp;&nbsp;<br />
+&nbsp; // Add a mutation observer that observes for the object&#39;s removal. If it is removed, destroy the listeners and run smoke.window_closed.<br />
+&nbsp; if (observe_mutation) {<br />
+&nbsp; &nbsp;var MutationObserver = window.MutationObserver || window.WebkitMutationObserver<br />
+&nbsp; &nbsp;if (typeof MutationObserver != &quot;undefined&quot;) {<br />
+&nbsp; &nbsp; var observer = new MutationObserver (function (mutation_list) {<br />
+&nbsp; &nbsp; &nbsp;for (var i = 0, curlen_i = mutation_list.length; i &lt; curlen_i; i++) {<br />
+&nbsp; &nbsp; &nbsp; var mutation_item = mutation_list[i]<br />
+&nbsp; &nbsp; &nbsp; if (mutation_item.type != &#39;childList&#39;) return<br />
+&nbsp; &nbsp; &nbsp; for (var j = 0, curlen_j = mutation_item.removedNodes.length; j &lt; curlen_j; j++) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp;if (mutation_item.removedNodes[j] != obj) continue<br />
+&nbsp; &nbsp; &nbsp; &nbsp;if ((!window_closed_ran) &amp;&amp; smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}<br />
+&nbsp; &nbsp; &nbsp; &nbsp;obj.destroy_listeners (observer)<br />
+&nbsp; &nbsp; &nbsp; &nbsp;return<br />
+&nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp;}<br />
+&nbsp; &nbsp; })<br />
+&nbsp; &nbsp; observer.observe (parent, {attributes: false, childList: true, subtree: false})<br />
+&nbsp; &nbsp;}<br />
+&nbsp; }<br />
+&nbsp;&nbsp;<br />
+&nbsp; if (smoke.window_opened) smoke.window_opened (obj, text, params)<br />
+&nbsp;&nbsp;<br />
+&nbsp; return obj<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;smoke.finishbuilding_alert &nbsp; = function (obj) {<br />
+&nbsp; obj.callback_ok = function () {obj.params.callback ()}<br />
+&nbsp; obj.destroy_listeners = function (observer) {if (observer) observer.disconnect (); document.removeEventListener (&#39;keyup&#39;, ok_function_wrapper)}<br />
+&nbsp; var ok_function_wrapper = obj.ok = function (evt) {ok_function(evt, obj)}<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.addEventListener (obj.params.point_event, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.smoke_pure_obj = obj<br />
+&nbsp;}<br />
+&nbsp;smoke.finishbuilding_confirm = function (obj) {<br />
+&nbsp; obj.callback_ok &nbsp; &nbsp; = function () {obj.params.callback (true)}<br />
+&nbsp; obj.callback_cancel = function () {obj.params.callback (false)}<br />
+&nbsp; obj.destroy_listeners = function (observer) {<br />
+&nbsp; &nbsp;if (observer) observer.disconnect ()<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; }<br />
+&nbsp; var ok_function_wrapper &nbsp; &nbsp; = obj.ok &nbsp; &nbsp; = function (evt) {ok_function &nbsp; &nbsp;(evt, obj)}<br />
+&nbsp; var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.addEventListener &nbsp; &nbsp; (obj.params.point_event, ok_function_wrapper)<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.ok.smoke_pure_obj &nbsp; &nbsp; = obj<br />
+&nbsp; obj.buttons.cancel.smoke_pure_obj = obj<br />
+&nbsp;}<br />
+&nbsp;smoke.finishbuilding_prompt &nbsp;= function (obj) {<br />
+&nbsp; obj.callback_ok &nbsp; &nbsp; = function () {obj.params.callback (obj.prompt.input.value)}<br />
+&nbsp; obj.callback_cancel = function () {obj.params.callback (false)}<br />
+&nbsp; obj.destroy_listeners = function (observer) {<br />
+&nbsp; &nbsp;if (observer) observer.disconnect ()<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; &nbsp;document.removeEventListener (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; }<br />
+&nbsp; var ok_function_wrapper &nbsp; &nbsp; = obj.ok &nbsp; &nbsp; = function (evt) {ok_function &nbsp; &nbsp;(evt, obj)}<br />
+&nbsp; var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, ok_function_wrapper)<br />
+&nbsp; obj.buttons.ok.addEventListener &nbsp; &nbsp; (obj.params.point_event, ok_function_wrapper)<br />
+&nbsp; document.addEventListener &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (&#39;keyup&#39;, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)<br />
+&nbsp; obj.buttons.ok.smoke_pure_obj &nbsp; &nbsp; = obj<br />
+&nbsp; obj.buttons.cancel.smoke_pure_obj = obj<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;function ok_function (evt, obj) {<br />
+&nbsp; if (evt &amp;&amp; (((evt.type == &quot;keyup&quot;) &amp;&amp; (typeof evt.keyCode != &quot;undefined&quot;)) &amp;&amp; ((evt.keyCode == 0) || (evt.keyCode != 13)))) return<br />
+&nbsp; obj.destroy_listeners ()<br />
+&nbsp; if (obj.parentNode) obj.parentNode.removeChild (obj)<br />
+&nbsp; obj.callback_ok ()<br />
+&nbsp;}<br />
+&nbsp;function cancel_function (evt, obj) {<br />
+&nbsp; if (evt &amp;&amp; (((evt.type == &quot;keyup&quot;) &amp;&amp; (typeof evt.keyCode != &quot;undefined&quot;)) &amp;&amp; ((evt.keyCode == 0) || (evt.keyCode != 27)))) return<br />
+&nbsp; obj.destroy_listeners ()<br />
+&nbsp; if (obj.parentNode) obj.parentNode.removeChild (obj)<br />
+&nbsp; obj.callback_cancel ()<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;smoke.action_list = [{name : &#39;alert&#39;}, {name : &#39;confirm&#39;}, {name : &#39;prompt&#39;}]<br />
+&nbsp;<br />
+&nbsp;for (var i = 0; i &lt; smoke.action_list.length; i++) {<br />
+&nbsp; void function (current_action) {<br />
+&nbsp; &nbsp;smoke[current_action] = function (text, callback, params) {return smoke.build (text, merge_objects ({callback: callback, type: current_action}, params))}<br />
+&nbsp; } (smoke.action_list[i].name)<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;function merge_objects (secondary, primary) {<br />
+&nbsp; // The primary object&#39;s duplicate keys are superior. The secondary object&#39;s duplicate keys are inferior.<br />
+&nbsp; if (typeof secondary == &quot;undefined&quot;) var primary = primary.primary, secondary = primary.secondary<br />
+&nbsp; var new_object = {}<br />
+&nbsp; for (var property in secondary) {new_object[property] = secondary[property]}<br />
+&nbsp; for (var property in primary) &nbsp; {new_object[property] = primary &nbsp;[property]}<br />
+&nbsp; return new_object<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;if (typeof module != &#39;undefined&#39; &amp;&amp; module.exports) {<br />
+&nbsp; module.exports = smoke<br />
+&nbsp;} else if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {<br />
+&nbsp; define (&#39;smoke&#39;, [], function() {return smoke})<br />
+&nbsp;} else {<br />
+&nbsp; this.smoke = smoke<br />
+&nbsp;}<br />
+} ()<br />
+//&Icirc;&aacute;&ucirc;&divide;&iacute;&ucirc;&eacute; alert<br />
+smoke.alert (&quot;Характеристики врагов повышены на 20%&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 11) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 12) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 13) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 14) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 15) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 16) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 17) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 18) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (lvl == 19) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttankhp, [c.width / 10, c.height / 6]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylighthp, [c.width / 3, c.height / 4]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; firstwave = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (Math.floor(gameTime) == enemydep * (99999999 - lvl))<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemybasic, [getRandom(30, c.width - 30), getRandom(-20, - 40)]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemylight, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; deployEnemy(enemyttank, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enemydep++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;updateEntities(dt, units);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; updateEntities(dt, enemies);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; updateBullets(dt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; updateIcons(dt);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;checkCollisions();</p>
+
+<p>&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; function updateIcons(dt)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; for (i = 0; i &lt; icons.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (icons[i].pos[1] &gt; icons[i].defaultpos[1] &amp;&amp; icons[i].respawn == true)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[i].pos[1] -= icons[i].respawnrate * k * dt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; icons[i].respawn = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; function updateEntities(dt, list)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Update the tank position</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var i = 0; i &lt; list.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var u = list[i];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var u2;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list == units ? u2 = enemies : u2 = units;</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.time = u.time + dt || 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.lastshot = u.lastshot + dt || 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.avoidCollision(list, i, dt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //remove&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.destroyed)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list.splice(i, 1);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i--;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (list == units)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; counter++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; counter2++;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (list == enemies &amp;&amp; u.pos[1] &gt; c.height - (c.width / 4 + 2 * k))<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; isGameOver = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gameOver(&#39;loss&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list == units &amp;&amp; u.pos[1] &lt; k * 2)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; isGameOver = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gameOver(&#39;win&#39;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.status == &quot;acceleration&quot; &amp;&amp; u.speed &lt; u.maxspeed)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.speed += 15 * dt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; switch (list)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; case units:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.angle &lt; u.defaultangle)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle += Math.floor(80 * dt * u.dir);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (u.angle &gt; u.defaultangle)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle -= Math.floor(80 * dt * u.dir);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; case enemies:</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.cang = u.defaultangle;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.cang &lt; -90)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.cang += 180;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (u.cang &gt; -90)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.cang -= 180;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.cang &lt; u.angle)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle -= Math.floor(75 * dt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (u.cang &gt; u.angle)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle += Math.floor(75 * dt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.time &gt; 1 &amp;&amp; !u.target &amp;&amp; u.pos[1] &gt; k)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.findTarget(u2);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.target &amp;&amp; u.target.destroyed)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.status = &#39;acceleration&#39;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; delete u.target;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (u.status == &quot;targetfound&quot; &amp;&amp; !u.target.destroyed)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.speed &gt; 0)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.speed -= u.maxspeed * 2 * dt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.speed = 0<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.cang = Math.floor(u.getAngle(u.target.pos));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (list == enemies ) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.cang &lt; -90)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.cang += 180;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (u.cang &gt; -90)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.cang -= 180;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.cang &gt; u.angle &amp;&amp; u.cang &lt; u.angle + 3)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle = u.cang;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (u.cang &gt; u.angle )<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle += Math.floor(150 * dt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else if (u.cang &lt; u.angle &amp;&amp; u.cang &gt; u.angle - 3)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle = u.cang;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (u.cang &lt; u.angle )<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.angle -= Math.floor(150 * dt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.lastshot &gt; u.reload &amp;&amp; Math.floor(u.angle) == Math.floor(u.cang) &amp;&amp; u.getDistance(u.target) &lt; u.range)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.fireOnTarget();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;u.findTarget(u2);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (u.time &gt; 0.7 &amp;&amp; u.speed &gt; 0)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u.moveAhead(dt);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function updateBullets(dt)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; // Update all the explosions</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var i = 0; i &lt; explosions.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;explosions[i].sprite.update(dt);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Remove if animation is done<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (explosions[i].sprite.done)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;explosions.splice(i, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i--;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Update all the bullets</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var i = 0; i &lt; bullets.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var b = bullets[i];</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var rad = b.angle / (180 / Math.PI);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.pos[0] += Math.cos(rad) * b.speed * dt * b.dir;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.pos[1] += Math.sin(rad) * b.speed * dt * b.dir;</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Remove the bullet</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (b.pos[1] &lt; b.target.pos[1] + k &amp;&amp; b.pos[1] &gt; b.target.pos[1] - k &amp;&amp; b.pos[0] &lt; b.target.pos[0] + k &amp;&amp; b.pos[0] &gt; b.target.pos[0] - k)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bullets.splice(i, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i--;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (b.target.hp &gt;= 0 &amp;&amp; !b.target.destroyed)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.target.hp -= b.damage;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (b.target.hp &lt; 0)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.target.destroyed = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.target.hp = 0;&nbsp;&nbsp;// Add an explosion<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;explosions.push(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos: b.target.pos,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sprite: new Sprite(&quot;https://hsto.org/webt/f1/fb/m2/f1fbm2uydhk96r1syq2f_jxv3om.png&quot;, [0, 117], &nbsp;&nbsp;[39, 39], [k * 3.2, k * 3.2], 14, &nbsp;&nbsp;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], &nbsp;null, &nbsp;true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function render()<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (!isGameOver)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderArea(ctx);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderEntities(enemies);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderEntities(units);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderBullets();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderEntities(explosions);</p>
+
+<p>&nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; };<br />
+//игровое поле<br />
+&nbsp; &nbsp; function renderArea(ctx) &nbsp;{<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; ctx.globalAlpha = 0.5;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; for (x = 0;x * 102 &lt; c.width;x++) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (y = 0;y * 102 &lt; c.height;y++) { ctx.drawImage(resources.get(&#39;https://hsto.org/webt/ti/r4/sh/tir4shtincszw4peazx3f6znvn4.png&#39;), 0, 0, 512, 512, x*102, y*102,102,102);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; ctx.globalAlpha = 1;<br />
+&nbsp; &nbsp;ctx.fillStyle = &quot;rgba(250,250,250,0.19)&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillRect(0, 0, c.width, c.height );<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillStyle = &quot;rgba(50,200,50,0.9)&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillRect(0, 0, c.width, c.height / 20);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillStyle = &quot; rgba(200,50,50,0.7)&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillRect(0, c.height - c.width / 4 - c.height / 20, c.width, c.height / 20);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.font&nbsp;=&nbsp;c.height / 26 + &quot;px Arial&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillStyle = &quot; rgba(250,250,250,0.7)&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+ctx.fillText(&quot;Прохождение уровней&quot;,&nbsp;c.width/500,&nbsp;c.height/24); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; ctx.beginPath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var x = c.width / 4; x &lt; c.width; x += c.width / 4)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.moveTo(x + 0.1, c.height - c.width / 4);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineTo(x + 0.1, c.height);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; ctx.moveTo(0, c.height - c.width / 4);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.lineTo(c.width, c.height - c.width / 4);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.closePath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.strokeStyle = &quot;#eee&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.stroke();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (deployarea === true)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; drawDeployArea();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp; function drawDeployArea()<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.beginPath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.rect(c.width / 100 -2, c.height / 2 -2, c.width - c.width / 100 - 3 +4, c.height / 3.7 +4);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.strokeStyle = &quot;darkgreen&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.closePath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.stroke();<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.beginPath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.rect(c.width / 100, c.height / 2, c.width - c.width / 100 - 3, c.height / 3.7);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.strokeStyle = &quot;white&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.closePath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.stroke();</p>
+
+<p><br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function drawTrLights()<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; for (i = 0; i &lt; icons.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (icons[i].respawn == true || !icons[i].active)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.fillStyle = &quot;red&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.fillStyle = &quot;green&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.fillRect(c.width / 4.8 + c.width / 4 * i, c.height - c.width / 4.1, c.width / 30, c.width / 30);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; };<br />
+&nbsp; &nbsp; };</p>
+
+<p>&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; function renderEntities(list)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var i = 0; i &lt; list.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;renderEntity(list[i]);&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; drawTrLights();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; drawIcons(icons);<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; function renderBullets() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var i = 0; i &lt; bullets.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;ctx.save();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fillStyle = &quot;black&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.beginPath ();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.arc(bullets[i].pos[0], bullets[i].pos[1], 1 + bullets[i].damage/300, 0, 2*Math.PI) ;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ctx.fill();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.restore();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; function drawIcons(list)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var i = 0; i &lt; list.length; i++)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!list[i].dragable)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;ctx.save();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(list[i].pos[0] + list[i].sprite.resized[0] / 2, list[i].pos[1] + list[i].sprite.resized[1] / 2);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.rotate(Math.PI / 180 * (-90));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(-list[i].sprite.resized[0] / 2, - list[i].sprite.resized[1] / 2);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(!list[i].active) ctx.globalAlpha = 0.2;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list[i].sprite.render(ctx);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.restore();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.save();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (mouse.down)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(mouse.x, mouse.y);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(xxx, yyy);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.rotate(Math.PI / 180 * (-90));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(-list[i].sprite.resized[0] / 2, - list[i].sprite.resized[1] / 2);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list[i].sprite.render(ctx);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list[i].pos = [xxx, yyy]</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.restore();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; };</p>
+
+<p><br />
+&nbsp; &nbsp; function renderEntity(entity)<br />
+&nbsp; &nbsp; {</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (!entity.destroyed)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;ctx.save();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(entity.pos[0], entity.pos[1]);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (entity.time &amp;&amp; entity.time &lt; 0.7)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.scale(1.9 - entity.time * entity.time * 1.7, 1.9 - entity.time * entity.time * 1.7);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.rotate(Math.PI / 180 * (entity.angle));</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.translate(-entity.sprite.resized[0] / 2, - entity.sprite.resized[1] / 2);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;entity.sprite.render(ctx);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderHP(entity);&nbsp;&nbsp;ctx.restore();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function renderHP(entity)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (entity.time &gt; 0.8)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var hp = entity.hp * 100 / entity.maxhp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (hp &lt; 0) hp = 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (entity.dir &lt; 0)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var reverse = entity.sprite.resized[0];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var reverse = 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.beginPath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineWidth = k / 2.5;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineCap = &quot;round&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.strokeStyle = &quot;black&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.moveTo(0 + reverse, 0);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineTo(0 + reverse, entity.sprite.resized[1]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.stroke();</p>
+
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.beginPath();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineWidth = k / 3.2;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineCap = &quot;round&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.strokeStyle = &quot;lightgrey&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.moveTo(0 + reverse, 0);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineTo(0 + reverse, entity.sprite.resized[1]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.stroke();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.beginPath();</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineWidth = k / 4;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineCap = &quot;round&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.strokeStyle = &quot;rgb(&quot; + Math.floor(100 - hp * 2.56) + &quot;,&quot; + Math.floor(hp * 2.56) + &quot;,0)&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.moveTo(0 + reverse, 0);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineTo(0 + reverse, hp / 100 * entity.sprite.resized[1]);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.stroke();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.lineWidth = 1;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }</p>
+
+<p>};</p>
+
+<p><br />
+/////////////^^^^^^^^^^^^^^////////////</p>
+
+<p>var requestAnimFrame = (function ()<br />
+{</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; return window.requestAnimationFrame ||</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.webkitRequestAnimationFrame ||</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.mozRequestAnimationFrame ||</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.oRequestAnimationFrame ||</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.msRequestAnimationFrame ||</p>
+
+<p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; function (callback)<br />
+&nbsp; &nbsp; {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.setTimeout(callback, 1000 / 60);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp; &nbsp; };<br />
+})();</p>
+
+<p>///^^^^^^^///////////^^^^/////////</p>
+
+<p>function loader()<br />
+{</p>
+
+<p>&nbsp; &nbsp; var maindiv = document.getElementById(&quot;main&quot;);<br />
+&nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp;&nbsp;</p>
+
+<p><br />
+&nbsp; &nbsp; maindiv.innerHTML = &#39;&lt;button id=&quot;start&quot; onclick=&quot;startGame ()&quot;&gt;Начать игру&lt;/button&gt;&lt;br&gt;&lt;button id=&quot;info&quot; onclick=&quot;inf()&quot;&gt;Как играть?&lt;/button&gt;&lt;br/&gt;&lt;span class=&quot;dif&quot;&gt;Уровень:&lt;/span&gt;&lt;span class=&quot;dif&quot; &gt;&#39; + dif[lvl] + &#39; &nbsp;&lt;/span&gt;&#39;;</p>
+
+<p>&nbsp; &nbsp; lastTime = Date.now();</p>
+
+<p>};<br />
+//////////////////////////////////</p>
+
+<p>(function ()<br />
+{<br />
+&nbsp; &nbsp; var resourceCache = {};<br />
+&nbsp; &nbsp; var loading = [];<br />
+&nbsp; &nbsp; var readyCallbacks = [];<br />
+&nbsp; &nbsp; // Load an image url or an array of image urls<br />
+&nbsp; &nbsp; function load(urlOrArr)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (urlOrArr instanceof Array)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; urlOrArr.forEach(function (url)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _load(url);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _load(urlOrArr);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function _load(url)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (resourceCache[url])<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return resourceCache[url];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var img = new Image();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; img.onload = function ()<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resourceCache[url] = img;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (isReady())<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; readyCallbacks.forEach(function (func)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; func();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resourceCache[url] = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; img.src = url;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function get(url)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return resourceCache[url];<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; function isReady()<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; var ready = true;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (var k in resourceCache)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (resourceCache.hasOwnProperty(k) &amp;&amp; !resourceCache[k])<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ready = false;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return ready;<br />
+&nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; function onReady(func)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; readyCallbacks.push(func);<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; window.resources =<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; load: load,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; get: get,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; onReady: onReady,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; isReady: isReady<br />
+&nbsp; &nbsp; };<br />
+})();</p>
+
+<p>resources.load([</p>
+
+<p>&quot;https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png&quot;,</p>
+
+<p>&quot;https://hsto.org/webt/f1/fb/m2/f1fbm2uydhk96r1syq2f_jxv3om.png&quot;,</p>
+
+<p>&quot;https://hsto.org/webt/ti/r4/sh/tir4shtincszw4peazx3f6znvn4.png&quot;<br />
+]);</p>
+
+<p>resources.onReady(loader);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &lt;/script&gt;<br />
+&nbsp; &nbsp; &lt;/head&gt;<br />
+&lt;body&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;div id=&quot;main&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;progress class=&quot;progress&quot;&gt; &lt;/progress&gt;&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;div id=&quot;infdiv&quot;&gt;Перестаскивай свои танки в игровую зону.&lt;br/&gt;&lt;br/&gt;Ты выиграешь, когда один из твоих танков коснеться зеленой линии в верхней части поля&lt;br/&gt;&lt;br/&gt;Не позволяй вражеским танкам добраться то твоей базы.&lt;br/&gt;&lt;br/&gt;Удачи, танктист! Пусть везение будет на твоей стороне.&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;div id=&quot;log&quot;&gt;&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;modal-content&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;p class=&quot;modal-text&quot;&gt;&lt;/p&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp;&lt;/div&gt;&nbsp;<br />
+&nbsp; &nbsp;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</body>
+</html>
