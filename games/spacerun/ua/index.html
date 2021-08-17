@@ -73,9 +73,9 @@ function Report(x){
 this.font = c.width/28;
 this.x = x;
 this.y = c.height/3;
-this.text = "Пилот, команда заметила астероиды, будь аккуратнее!";
+this.text = "Пілот, команда помітила астероїди, будь акуратніше!";
 this.string = "";
-this.text2 = "Управление: касание по экрану";
+this.text2 = "Управління: дотик по екрану";
 this.string2 = "";
 this.ready = false;
 this.count = 300;
@@ -351,11 +351,11 @@ if(colision(rocket,asteroids[i])){
 ctx.beginPath();
 ctx.font = c.width/8+"px Arial";
 ctx.fillStyle = "#ff0000";
-ctx.fillText("Поражение",c.width/6,c.height/5*2);
+ctx.fillText("Програщ",c.width/6,c.height/5*2);
 ctx.beginPath();
 ctx.font = c.width/22+"px Arial";
 ctx.fillStyle = "#ffffff";
-ctx.fillText("Начать заново",c.width/3,c.height/2);
+ctx.fillText("Почати знову",c.width/3,c.height/2);
 cancelAnimationFrame(frame);
 addEventListener('click',function restart(){
 removeEventListener('click',restart);

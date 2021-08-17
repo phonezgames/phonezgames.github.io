@@ -1095,12 +1095,12 @@ var startGame = function ()
             
             if (lvl == 0) {
                 function sayTutorial1() {
-                smoke.alert('Перетаксивай свои танки на поле боя!');
+                smoke.alert('Перетягувай свої танки на поле бою!');
                 }
                 setTimeout(sayTutorial1, 10);
 
                 function sayTutorial2() {
-                smoke.alert('Твоя задача уничтожить их и добраься до зеленой линии в верхней части поля!');
+                smoke.alert('Твоя задача знищити їх і дістатися до зеленої лінії у верхній частині поля!');
                 }
                 setTimeout(sayTutorial2, 3000);
                 deployEnemy(enemylighttutorial, [c.width / 4, c.height / 5]);
@@ -1109,7 +1109,7 @@ var startGame = function ()
 
             if (lvl == 1) {
                 function sayTutorial3() {
-                smoke.alert('Теперь попробуй сам. Удачи! 😄');
+                smoke.alert('Тепер спробуй сам. Успіхів! 😄');
                 }
                 setTimeout(sayTutorial3, 1000);
 
@@ -1120,7 +1120,7 @@ var startGame = function ()
 
             if (lvl == 2) {
                 function sayTutorial3() {
-                smoke.alert('Отлично, продолжай в том-же духе! 😄');
+                smoke.alert('Відмінно, продовжуй в тому-ж дусі! 😄');
                 }
                 setTimeout(sayTutorial3, 1000);
 
@@ -1132,7 +1132,7 @@ var startGame = function ()
             }
 
             if (lvl == 3) {
-                smoke.alert('Давай, ты уже на 3/20 уровней, поднажми! 😉');
+                smoke.alert('Давай, ти вже на 3/20 рівнів, поднажмі! 😉');
                 deployEnemy(enemylight, [c.width / 4, c.height / 5]);
                 deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
                 deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
@@ -2093,7 +2093,7 @@ function loader()
     
 
 
-    maindiv.innerHTML = '<button id="start" onclick="startGame ()">Начать игру</button><br><button id="info" onclick="inf()">Как играть?</button><br/><span class="dif">Уровень:</span><span class="dif" >' + dif[lvl] + '  </span>';
+    maindiv.innerHTML = '<button id="start" onclick="startGame ()">Почати гру</button><br><button id="info" onclick="inf()">Як грати?</button><br/><span class="dif">Рівень:</span><span class="dif" >' + dif[lvl] + '  </span>';
 
     lastTime = Date.now();
 
@@ -2195,7 +2195,7 @@ resources.onReady(loader);
        <div id="main">
           <progress class="progress"> </progress> 
        </div>
-      <div id="infdiv">Перестаскивай свои танки в игровую зону.<br/><br/>Ты выиграешь, когда один из твоих танков коснеться зеленой линии в верхней части поля<br/><br/>Не позволяй вражеским танкам добраться то твоей базы.<br/><br/>Удачи, танктист! Пусть везение будет на твоей стороне.</div>
+      <div id="infdiv">Перестасківай свої танки в ігрову зону. <br/> <br/> Ти виграєш, коли один з твоїх танків торкнеться зеленої лінії у верхній частині поля <br/> <br/> Не дозволяй ворожим танкам дістатися то твоєї бази. <Br / > <br/> Удачі, танктіст! Нехай везіння буде на твоєму боці.</div>
        <div id="log"></div>
        
        <div id="myModal" class="modal">

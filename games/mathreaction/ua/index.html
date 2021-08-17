@@ -321,22 +321,22 @@
         
         <div class="in" id="timeTrialIn" align="center">
             <span style="position: absolute; left: 90%; color: red;" onclick="closeTimeTrialIn()">X</span>
-            <h2 style="color: green;">Обычный</h2>
+            <h2 style="color: green;">Звичайний</h2>
             <p>
-            Добро пожаловать в Обычный режим, у вас есть 120 секунд, чтобы выполнить все математические примеры, и в конце вы получите результат по 5-ти бальной системе. Вы должны быть очень быстрыми!
+            Ласкаво просимо в Звичайний режим, у вас є 120 секунд, щоб виконати всі математичні приклади, і в кінці ви отримаєте результат по 5-ти бальною системою. Ви повинні бути дуже швидкими!
             </p><br />
-            <button class="btn" onclick="startTimeTrial()">Начать</button>
+            <button class="btn" onclick="startTimeTrial()">Почати</button>
         </div>
         
         <!-- introdution to the game mode survival -->
         
         <div class="in" id="survivalIn" align="center">
             <span style="position: absolute; left: 90%; color: red;" onclick="closeSurvivalIn()">X</span>
-            <h2 style="color: cyan;">Время</h2>
+            <h2 style="color: cyan;">Час</h2>
             <p>
-            Добро пожаловать, в этом игровом режиме вам придется решать математические примеры, чтобы остаться в игре, если вы ответите правильно, вы получаете больше времени, но если вы ответите неправильно, времени станет меньше. Ну же!
+            Ласкаво просимо, в цьому ігровому режимі вам доведеться вирішувати математичні приклади, щоб залишитися в грі, якщо ви відповісте правильно, ви отримуєте більше часу, але якщо ви відповісте неправильно, стане менше. Ну ж бо!
             </p><br />
-            <button class="btn" onclick="startSurvival()">Начать</button>
+            <button class="btn" onclick="startSurvival()">Почати</button>
         </div>
         
         <!-- introdution to the game mode hard core -->
@@ -345,20 +345,20 @@
             <span style="position: absolute; left: 90%; color: red;" onclick="closeHardCoreIn()">X</span>
             <h2 style="color: red;">Хардкор</h2>
             <p>
-            Добро пожаловать, в этом режиме игры у вас есть <b>3 секунды</b>, чтобы решить каждый математический пример, который появляется. Но если вы ошибетесь, то сразу же проиграете.
-            <br>Удачи!
+            Ласкаво просимо, в цьому режимі гри у вас є <b> 3 секунди </ b>, щоб вирішити кожен математичний приклад, який з'являється. Але якщо ви помилитеся, то відразу ж програєте.
+             <br> Удачі!
             </p><br />
-            <button class="btn" onclick="startHardCore()">Начать</button>
+            <button class="btn" onclick="startHardCore()">Почати</button>
         </div>
         
         <!-- The menu of the game -->
         
         <div id="menu" align="center" style="display: none;">
             <h2 id="title"><span id="title1">Math </span><span id=title2>Reaction</span></h2><br />
-            <p id="msgtitle" style=" transform: rotate(-15deg); font-size: small;">Выбери режим игры</p>
+            <p id="msgtitle" style=" transform: rotate(-15deg); font-size: small;">Обери режим гри:</p>
             <br /><br /><br /><br />
-            <h3 id="timetrial" onclick="timeTrial()">Обычный</h3>
-            <h3 id="survival" onclick="survival()">Время</h3>
+            <h3 id="timetrial" onclick="timeTrial()">Звичайний</h3>
+            <h3 id="survival" onclick="survival()">Час</h3>
             <h3 id="hardcore" onclick="hardCore()">Хардкор</h3>
             <br /><br /><br />
           <!--  <p id="creator" style="text-align: center;">COPYRIGHT© 2020 <a href="https://www.sololearn.com/Profile/12916923/?ref=app">Propy Grammar</a></p>-->
@@ -368,16 +368,16 @@
         
         <div id="pauseMenu" style="text-align: center;">
             <span style="position: absolute; left: 90%; top: 5%; color: red; font-size: 20px;" onclick="closePauseMenu()">x</span>
-            <h2 style="color: cyan;">На паузе</h2><br />
-            <span><span style="color: red; padding-right: 25px;" onclick="retry()">Заново</span> <span style="color: orange;" onclick="menuOfPaused()">Меню</span></span>
-            <p style="color: green;" onclick="continUe()">Продолжить</p>
+            <h2 style="color: cyan;">На паузі</h2><br />
+            <span><span style="color: red; padding-right: 25px;" onclick="retry()">Знову</span> <span style="color: orange;" onclick="menuOfPaused()">Меню</span></span>
+            <p style="color: green;" onclick="continUe()">Продовжити</p>
         </div>
         
         <!-- The game -->
         
         <div id="game">
         <span onclick="pause()" style="padding: 5px; font-size: small; color: purple;">Пауза</span>
-        <h2 id="wtr" style="text-align: center;">Сколько будет?</h2>
+        <h2 id="wtr" style="text-align: center;">Скільки буде?</h2>
         <div class="countdown">
         <div id="countdown1"></div>
         <div id="countdown2"></div>
@@ -416,34 +416,34 @@
         <!-- The finish of time trial game mode -->
         
         <div id="finish1" style="text-align: center;">
-            <h2 style="color: green;">Конец!</h2><br />
+            <h2 style="color: green;">Кінець!</h2><br />
             <p style="color: green;">Правильно: <span id="corrects">0</span></p>
-            <p style="color: red;">Ошибки: <span id="incorrects">0</span></p><br />
-            <p style="color: orange;">Оценка: <p id="qualification">A</p></p><small id="msg"></small><br /><br />
+            <p style="color: red;">Помилки: <span id="incorrects">0</span></p><br />
+            <p style="color: orange;">Оцінка: <p id="qualification">A</p></p><small id="msg"></small><br /><br />
             <span style="position: absolute; left: 13%; color: green;" onclick="menu()">Меню</span>
-            <span style="position: absolute; left: 70%; color: orange;" onclick="retryFinish()">Заново</span>
+            <span style="position: absolute; left: 70%; color: orange;" onclick="retryFinish()">Знову</span>
         </div>
         
         <!-- The finish of survival game mode -->
         
         <div id="finish2" style="text-align: center;">
-            <h2 style="color: green;">Конец!</h2><br />
-            <p style="color: blue;">Время:</p>
-            <p><span id="minutes">0</span> минут и <span id="seconds">0</span> секунд</p><br /><br />
-            <p style="color: #54CD0D;">Соревнуйтесь со своими друзьями за лучшее время! :D</p><br /><br />
+            <h2 style="color: green;">Кінец!</h2><br />
+            <p style="color: blue;">Час:</p>
+            <p><span id="minutes">0</span> хвилин і <span id="seconds">0</span> секунд</p><br /><br />
+            <p style="color: #54CD0D;">Змагайся сі своїми друзями на кращий час</p><br /><br />
             <span style="position: absolute; left: 13%; color: green;" onclick="menu()">Меню</span>
-            <span style="position: absolute; left: 70%; color: orange;" onclick="retryFinish()">Заново</span>
+            <span style="position: absolute; left: 70%; color: orange;" onclick="retryFinish()">Знову</span>
         </div>
         
         <!-- The finish of hard core game mode -->
         
         <div id="finish3" style="text-align: center;">
-            <h2 id="youWin" style="color: red;">Поражение!</h2><br />
+            <h2 id="youWin" style="color: red;">Програш!</h2><br />
             <p style="color: gold;">Результат:</p>
             <p id="score" style="color: #54CD0F; font-size: 20px;">0</p><br /><br />
-            <p style="color: #0155DF;">Соревнуйтесь со своими друзьями за лучшее время! :D</p><br /><br />
+            <p style="color: #0155DF;">Змагайся сі своїми друзями на кращий час :D</p><br /><br />
             <span style="position: absolute; left: 13%; color: green;" onclick="menu()">Меню</span>
-            <span style="position: absolute; left: 70%; color: orange;" onclick="retryFinish()">Заново</span>
+            <span style="position: absolute; left: 70%; color: orange;" onclick="retryFinish()">Знову</span>
         </div>
     </body>
     <script>
@@ -840,28 +840,28 @@
                     calif.style.color = "gold";
                     calif.innerHTML = '5+';
                     msg.style.color = 'gold';
-                    msg.innerHTML = "Та ты мастер!";
+                    msg.innerHTML = "Та ти мастер!";
                 }
                 else if (corrects >= 27 && corrects < 33) {
                     calif.style.color = "green";
                     calif.innerHTML = '5';
                     msg.style.color = 'green';
-                    msg.innerHTML = "Отличный результат, но ведь до 5+ ещё чуть-чуть оставалось!"
+                    msg.innerHTML = "Чудовий результат!"
                 } else if (corrects >= 23 && corrects < 27) {
                     calif.style.color = "#F39C12";
                     msg.style.color = "#F39C12"
                     calif.innerHTML = '4';
-                    msg.innerHTML = "Молодец, но ведь можно ещё лучше сыграть?"
+                    msg.innerHTML = "Молодець"
                 } else if (corrects >= 13 && corrects < 23) {
                     calif.style.color = "#FF5733";
                     calif.innerHTML = '3';
                     msg.style.color = '#FF5733'
-                    msg.innerHTML = "Можно и лучше, может ещё раз?";
+                    msg.innerHTML = "Можна краще, може ще раз?";
                 } else {
                     calif.style.color = "#839192";
                     calif.innerHTML = '2';
                     msg.style.color = '#839192';
-                    msg.innerHTML = "Попробуй ещё раз!";
+                    msg.innerHTML = "Спробуй ще раз";
                 }
                     finish1.style.display = "block";
 
@@ -1129,7 +1129,7 @@ void function () {
 
  // Options:
  smoke.ok               = "ОК"          // Text for "Ok" button.
- smoke.cancel           = "Отмена"      // Text for "Cancel" button.
+ smoke.cancel           = "Відміна"      // Text for "Cancel" button.
  smoke.point_event      = 'click'       // Point event ("click", "touchstart", etc.)
  smoke.parent           = document.body // Where the smoke div attaches. Note that if this is undefined (because document.body hasn't been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.
  smoke.zindex           = 10000         // Z-index of the smoke DOM object. This should be a high number.
