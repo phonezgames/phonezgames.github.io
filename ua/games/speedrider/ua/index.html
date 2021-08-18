@@ -2,7 +2,8 @@
 <html lang="en">
 <meta charset="utf-8">
 <head>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
+<meta name="viewport" charset="UTF-8" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNNB351D9W"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,6 +16,26 @@
     <meta charset="UTF-8">
     <title>SpeedRider</title>
     <style type="text/css">
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+.hide-on-mobile { display: inline; }
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ .hide-on-mobile { display: none; }}
+
+
+.show-on-mobile { 
+    margin-top: 40%;
+    display: none; }
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ .show-on-mobile { display: inline; }}
+
+
         body {
     height: 100%;
     width: 100%;
@@ -193,6 +214,23 @@
     </style>
 
 <body>
+
+    <div class="show-on-mobile">
+
+<center>  
+      <h1>301</h1>
+      <p><strong>Даний контент доступний тільки на комп'ютерних пристроях</strong></p>
+
+      <p>
+        Поверніться на головну сторінку <a href = 'https://phonezgames.github.io/'>тут</a>
+      </p>
+
+    
+</center>  
+      
+    </div>
+
+    <div class="hide-on-mobile">
     <div id="help">
         <p>Управління: стрілки на клавіатурі</p>
     </div>
@@ -490,7 +528,7 @@ $(function () {
 });
 
     </script>
-
+</div>
 </body>
 
 </html>
