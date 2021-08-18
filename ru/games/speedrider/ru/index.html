@@ -20,6 +20,13 @@
         display:none;
     }  
 }
+.show-on-mobile { display: none; }
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ .show-on-mobile { display: inline; }}
+
+
         body {
     height: 100%;
     width: 100%;
@@ -197,8 +204,11 @@
 }
     </style>
 
-<!--<body class="HideMobile">-->
-    <body>
+<body class="HideMobile">
+<div class="show-on-mobile">
+Данный контент доступен только на компьютерных устройствах.
+</div>
+
     <div id="help">
         <p>Управление: стрелками на клавиатуре</p>
     </div>
