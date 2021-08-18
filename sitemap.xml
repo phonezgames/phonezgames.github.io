@@ -1,64 +1,117 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-	<loc>https://phonezgames.github.io/</loc>
-	<lastmod>2021-08-18T15:24:10+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://phonezgames.github.io/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/index_ru.html</loc>
-	<lastmod>2021-08-18T15:24:10+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://phonezgames.github.io/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/index_ua.html</loc>
-	<lastmod>2021-08-18T15:24:13+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://phonezgames.github.io/ua/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/privacy.html</loc>
-	<lastmod>2021-08-18T15:24:13+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://phonezgames.github.io/ru/index.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/clashoftanks/ru/</loc>
-	<lastmod>2021-08-18T15:24:13+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/blog.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/mathreaction/ru/</loc>
-	<lastmod>2021-08-18T15:24:14+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/contact.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/spacerun/ru/</loc>
-	<lastmod>2021-08-18T15:24:14+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/games/clashoftanks/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/speedrider/ru/</loc>
-	<lastmod>2021-08-18T15:24:14+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/games/spacerun/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/clashoftanks/ua/</loc>
-	<lastmod>2021-08-18T15:24:14+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/games/mathreaction/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/mathreaction/ua/</loc>
-	<lastmod>2021-08-18T15:24:16+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/games/speedrider/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/spacerun/ua/</loc>
-	<lastmod>2021-08-18T15:24:14+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/games/musicpuzzle/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>https://phonezgames.github.io/games/speedrider/ua/</loc>
-	<lastmod>2021-08-18T15:24:15+01:00</lastmod>
-	<priority>0.4</priority>
+  <loc>https://phonezgames.github.io/ru/privacy.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://phonezgames.github.io/ua/index.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/blog.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/contact.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/games/clashoftanks/ua/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/games/spacerun/ua/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/games/mathreaction/ua/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/games/speedrider/ua/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/games/musicpuzzle/ru/</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://phonezgames.github.io/ua/privacy.html</loc>
+  <lastmod>2021-08-18T20:37:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
