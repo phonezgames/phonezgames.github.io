@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNNB351D9W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KNNB351D9W');
+</script>
+<script data-ad-client="ca-pub-2100948222892131" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <title>Music Constructor</title>
+        <style type="text/css">
+        	:root {
+    --divSize: 10vh;
+    --barWidth: 18px;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #222;
+}
+
+canvas {
+    background: #222;
+}
+
+canvas:not(#a) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+button, input {
+    position: inline-block;
+    font-family: Arial;
+    font-size: 2vw;
+    color: #eee;
+    background-color: #555;
+    padding: 0;
+    border: 2px solid #999;
+    text-align: center;
+    opacity: 0.7;
+    line-height: 2.5vh;
+    box-shadow: 0 0.75vh #777;
+}
+
+button:active {
+    transform: translate(0, 0.5vh);
+    box-shadow: 0 0 #000;
+}
+
+button > span {
+    font-size: 3vw;
+}
+
+#menuLeft {
+    width: calc(var(--divSize) + var(--barWidth));
+    height: calc(100vh - var(--divSize));
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#menuLeft > button:not(.disabled), input {
+    width: calc(var(--divSize) * 0.8);
+    height: calc(var(--divSize) * 0.8);
+    margin: calc(var(--divSize) * 0.1);
+}
+
+#analyser {
+    width: 100vw;
+    height: var(--divSize + 2vh);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+hr {
+    z-index: -1;
+}
+
+.disabled {
+    width: calc(var(--divSize) * 0.7);
+    height: calc(var(--divSize) * 0.7);
+    margin: calc(var(--divSize) * 0.15);
+    opacity: 0.5;
+}
+.disabled:active {
+    transform: translate(0, 0);
+    box-shadow: 0 0.75vh #777;
+}
+
+        </style>
+    </head>
+    <body>
+        <div id=menuLeft>
+            <button class=disabled>пролистать<br/>ниже</button>
+            <br/>
+            <hr>
+            <br/>
+            <button id=play onclick=togglePlaying() alt=play/pause>▶ <br/>Играть</button>
+            <br/>
+            <br/>
+            <hr>
+            <br/>
+            <button id=next onclick=move(1)><span>›</span><br/>След.</button>
+            <input type=number class=disabled id=curIndex value=0 onchange='move(this.value - cycle)' />
+            <button id=prev onclick=move(-1)><span>‹</span><br/>Пред.</button>
+            <br/>
+            <br/>
+            <hr>
+            <br/>
+            <button onclick=decSpeed() alt='increase speed'><span>+</span><br/>+</button>
+            <button id=speedTeller class=disabled>Скорость: <br/>20</button>
+            <button onclick=incSpeed() alt='decrease speed'><span>-</span><br/>-</button>
+            <br/>
+            <br/>
+            <hr>
+            <br/>
+            <button onclick='bars = !bars'>Частота<br/></button>
+            <br/>
+            <br/>
+            <hr>
+            <br/>
+            <!--<input type="button" value="Очистить" onClick="window.location.reload()">-->
+            <!--<button onclick=clearGrid()><span>҉</span><br/>Очистить</button>-->
+        </div>
+        <canvas></canvas>
+        <div id=analyser>
+            <canvas id=a></canvas>
+        </div>
+
+        <script type="text/javascript">
+        	//alert("Thanks to @wout werkman for helping me discover the feature that makes this code possible.\nAnd also thanks to Kirk Schafer for the analyser demo.");
+
+var canvas,
+    ctx,
+    analyser,
+    analyserCanvas,
+    analyerCtx,
+    lastTime,
+    audioCtx,
+    boundingRect,
+    interval,
+    bars        = true;
+    offset      = 0,
+    grid        = [],
+    opening     = [4, 4, 4, 0, 2, 4, 0, 6, 2];
+    states      = ['none', 'sine', 'triangle', 'square', 'sawtooth'],
+    colors      = ['333', '22f', 'a2f', 'd82', '3d4'],
+    frequencies = [440, 494, 523, 587, 659, 698, 784],
+    noteNames   = ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+    WIDTH       = window.innerWidth - window.innerHeight * 0.1,
+    HEIGHT      = window.innerHeight * 0.90,
+    tileAmtH    = 16,
+    tileAmtV    = 7,
+    tileWidth   = WIDTH  / tileAmtH,
+    tileHeight  = HEIGHT / tileAmtV,
+    playSpeed   = 100,
+    cycle       = -1,
+    playing     = false;
+    
+onload = function() {
+    initCanvas();
+    initGrid();
+    offsetCycle();
+    update();
+    analyseSound();
+}
+
+function handleClick(e) {
+    var x    = e.pageX;
+    var y    = e.pageY;
+    var note = getNote(x, y);
+    
+    if(!note)
+        return;
+    
+    note.changeState();
+    drawGrid();
+    
+    playNote(note);
+}
+
+function update() {
+    clear();
+    drawGrid();
+    analyseSound();
+    
+    requestAnimationFrame(update);
+}
+
+function offsetCycle(val) {
+    var value = (val == undefined ? 1 : val);
+        
+    cycle += value;
+    
+    if(cycle >= grid.length) {
+        cycle  = 0;
+        offset = 0;
+    }
+    if(cycle < 0) {
+        cycle  = grid.length - 1;
+        offset = grid.length - tileAmtH;
+    }
+    
+    if(cycle == offset + tileAmtH && value > 0)
+        offset++;
+    if(cycle == offset - 1 && value < 0)
+        offset--;
+    
+    for(var i in grid) {
+        for(var j in grid[i]) {
+            if(i == cycle) {
+                playNote(grid[i][j]);
+                grid[i][j].alpha = 1;
+            } else
+                grid[i][j].alpha = 0.5;
+        }
+    }
+    
+    move();
+}
+
+
+
+
+
+
+class Note {
+    constructor(y) {
+        this.y       = y;
+        this.alpha   = 0.5;
+        this.freq    = frequencies[Math.floor(y / tileHeight)];
+        this.state   = 0;
+        this.playing = false;
+    }
+    
+    changeState() {
+        this.state++;
+        this.state > states.length - 1 ? this.state = 0 : 1;
+    }
+}
+
+class Sound {
+    constructor(ctx) {
+        this.ctx = ctx;
+    }
+  
+    init(type) {
+        this.oscillator = this.ctx.createOscillator();
+        this.gainNode = this.ctx.createGain();
+    
+        this.oscillator.connect(this.gainNode);
+        this.gainNode.connect(analyser);
+        this.oscillator.type = type;
+    }
+
+    play(type, freq) {
+        this.init(type);
+    
+        this.oscillator.frequency.value = freq;
+        this.gainNode.gain.setValueAtTime(0, this.ctx.currentTime);
+        this.gainNode.gain.linearRampToValueAtTime(0.1, this.ctx.currentTime + 0.01);
+                
+        this.oscillator.start(this.ctx.currentTime);
+        this.stop(this.ctx.currentTime);
+    }
+  
+    stop() {
+        this.gainNode.gain.linearRampToValueAtTime(1, this.ctx.currentTime + 0.01);
+        this.oscillator.stop(this.ctx.currentTime + playSpeed / 1000);
+    }
+ 
+}
+
+function drawGrid() {
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#777';
+    for(var i = offset; i < grid.length; i++) {
+        for(var tile of grid[i]) {
+            ctx.globalAlpha = tile.alpha;
+            ctx.fillStyle = '#' + colors[tile.state];
+            ctx.fillRect((i - offset) * tileWidth + 1, tile.y + 1, tileWidth - 2, tileHeight - 2);
+            ctx.strokeRect((i - offset) * tileWidth, tile.y, tileWidth, tileHeight);
+        }
+    }
+    
+    ctx.fillStyle = '#aaa';
+    ctx.font = '15px Lucida Console'
+    for(var i = offset; i < grid.length; i++)
+        ctx.fillText(i, (i - offset) * tileWidth + 2, 14);
+        
+    for(var i of noteNames)
+        ctx.fillText(i, 2, noteNames.indexOf(i) * tileHeight + tileHeight - 2);
+    
+    
+}
+
+function togglePlaying() {
+    playing = !playing;
+    if(playing) {
+        interval = setInterval(offsetCycle, playSpeed * 2);
+        document.querySelector('#play').innerHTML = '| | <br/>пауза';
+    } else {
+        clearInterval(interval);
+        document.querySelector('#play').innerHTML = '\u25BA <br/>играть';
+    }
+}
+
+function playNote(note) {
+    if(note.state == 0)
+        return;
+    
+    var sound = new Sound(audioCtx);
+    
+    sound.play(states[note.state], note.freq);
+    sound.stop();
+}
+
+function getNote(x, y) {
+    var gx = Math.floor(((x + offset * tileWidth) - boundingRect.left) / tileWidth);
+    var gy = Math.floor((y - boundingRect.top) / tileHeight);
+    
+    if(gx < 0 || gy < 0 || gx == undefined || gy == undefined)
+        return false;
+    
+    return grid[gx][gy];
+}
+
+function move(val) {
+    if(val != undefined) {
+        offsetCycle(val);
+        togglePlaying();
+        togglePlaying();
+    }
+    document.querySelector('#curIndex').value = cycle;
+}
+
+function initGrid() {
+    for(var i = 0; i < tileAmtH * 2; i++) {
+        grid.push([]);
+        for(var j = 0; j < tileAmtV; j++) {
+            grid[i].push(new Note(j * tileHeight));
+        }
+    }
+}
+
+function clearGrid() {
+    if(!confirm('Ты действительно всё хочешь удалить?'))
+        return;
+    
+    grid = [];
+    initGrid()
+}
+
+function incSpeed() {
+    playSpeed += 10;
+    playSpeed > 1000 ? playSpeed = 0 : 1;
+    document.querySelector('#speedTeller').innerHTML = 'скорость:<br/>' + (1000 - playSpeed) / 10;
+}
+
+function decSpeed() {
+    playSpeed -= 10;
+    playSpeed < 0 ? playSpeed = 0 : 1;
+    document.querySelector('#speedTeller').innerHTML = 'скорость:<br/>' + (1000 - playSpeed) / 10;
+}
+
+function clear() {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+function analyseSound() {
+    analyser.getByteTimeDomainData(dataArray);
+    
+    analyserCtx.clearRect(0, 0, analyserCanvas.width, analyserCanvas.height);
+    analyserCtx.globalAlpha = 0.5;
+    analyserCtx.lineWidth   = 2;
+    analyserCtx.strokeStyle = '#5dd';
+    
+    if(!bars) {
+        analyserCtx.beginPath();
+        
+        var sliceWidth = analyserCanvas.width * 1.0 / bufferLength;
+        var x = 0;
+        for (var i = 0; i < bufferLength; i++) {
+            var v = dataArray[i] / 128.0;
+            var y = v * analyserCanvas.height / 2;
+        
+            if (i === 0)
+                analyserCtx.moveTo(x, y);
+            else
+                analyserCtx.lineTo(x, y);
+        
+            x += sliceWidth;
+        }
+        analyserCtx.lineTo(analyserCanvas.width, analyserCanvas.height / 2);
+          
+        analyserCtx.stroke();
+    } else { 
+        var barWidth = (analyserCanvas.width / bufferLength) * 5;
+        var barHeight;
+        var x = 0;
+          
+        for(var i = 0; i < bufferLength; i++) {
+            barHeight = dataArray[i];
+    
+            analyserCtx.fillStyle = 'rgb(50, ' + barHeight + ', ' + barHeight +')';
+            analyserCtx.fillRect(x, analyserCanvas.height - barHeight / 7, barWidth, barHeight);
+    
+            x += barWidth + 1;
+        }
+    }
+}
+
+function initCanvas() {
+    canvas  = document.querySelector('canvas');
+    ctx     = canvas.getContext('2d');
+    canvas.width  = WIDTH;
+    canvas.height = HEIGHT;
+    
+    
+    analyserCanvas  = document.querySelector('#a');
+    analyserCtx     = analyserCanvas.getContext('2d');
+    analyserCanvas.width  = window.innerWidth;
+    analyserCanvas.height = window.innerHeight * 0.1;
+    
+    
+    canvas.addEventListener('click', handleClick);
+    audioCtx     = new (window.AudioContext || window.webkitAudioContext)();
+    boundingRect = canvas.getBoundingClientRect();
+    analyser     = new AnalyserNode(audioCtx);
+    
+    analyser.fftSize = 2048;
+    bufferLength = analyser.frequencyBinCount;
+    dataArray = new Uint8Array(bufferLength);
+    analyser.connect(audioCtx.destination);
+    analyser.getByteTimeDomainData(dataArray);
+
+    
+    incSpeed();
+    decSpeed();
+}
+        </script>
+    </body>
+</html>
