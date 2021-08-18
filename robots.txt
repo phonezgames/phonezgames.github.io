@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: 
-Sitemap: phonezgames.github.io/sitemap.xml
+Sitemap: https://phonezgames.github.io/sitemap.xml
