@@ -1,0 +1,2218 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNNB351D9W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KNNB351D9W');
+</script>
+<script data-ad-client="ca-pub-2100948222892131" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <meta charset="utf-8">
+        <title>Clash of Tanks</title>
+        <style type="text/css">
+          body {
+    margin: 0;
+    padding-top: 50%;
+    position: relative;
+}
+
+#main {
+        
+    padding: 20px;
+    box-shadow: 0 0 100px 80px  lightblue;
+    background: lightblue;
+    text-align: center;
+    
+}
+
+.smoke-base {
+ position         : absolute;
+ left             : 0%;
+ top              : 0%;
+ width            : 100%;
+ height           : 100%;
+ background-color : rgba(0,0,0,.4);
+ display          : table;
+ z-index          : 1001;
+}
+
+.smoke-dialog_wrapper {
+ position       : relative;
+ vertical-align : middle;
+ display        : table-cell;
+}
+
+.smoke-dialog {
+ width            : 80%;
+ margin           : 0 auto;
+ padding          : 20px;
+ color            : #202020;
+ border           : 1px solid #B6B6B6;
+ border-radius    : 28px;
+ background-color : #f3f3f3;
+ font-family      : Arial;
+ font-size        : 18px;
+ font-weight      : normal;
+ text-align       : center;
+ line-height: 24px;
+}
+
+.smoke-dialog-buttons {
+ vertical-align : middle;
+    margin-top: 10px;
+}
+
+.smoke-dialog-buttons-ok, .smoke-dialog-buttons-cancel {
+    margin: 0 7px;
+    padding: 8px 24px;
+    border: 0;
+    border-radius: 7px;
+    outline: 0;
+    color: white;
+    background: #00BD20;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 18px;
+    vertical-align: baseline;
+    display: inline-block;
+    cursor: pointer;
+}
+.smoke-dialog-buttons-ok:hover, .smoke-dialog-buttons-cancel:hover {
+  background: #222;
+}
+
+.smoke-prompt {
+ margin-top : 15px;
+ text-align : center;
+}
+
+.smoke-prompt-input {
+ -moz-box-sizing  : border-box;
+ box-sizing       : border-box;
+ width            : 75%;
+ margin           : 0;
+ padding          : 11.2px;
+ border           : 1.4px solid #aaa;
+ outline          : none;
+ font-family      : arial;
+ font-size        : 22.4px;
+ background-color : white;
+ display          : inline-block;
+}
+
+.smoke-dialog-buttons-cancel {
+ background-color : rgba(0, 0, 0, .40);
+}
+
+
+.dif {
+    display: inline-block ;
+    margin-top: 8px;
+    margin-left: 14px;
+    margin-right: -12px;
+    font-weight: bold;
+    font-size: 2em;
+    width: 95px;
+}
+
+#log {
+   display:none;
+   position: relative;
+   font-weight: bolder;
+   font-size: 0.8em;
+   text-align: center;
+}
+
+.win{
+   margin-top: -10px;
+   color: green;
+}
+
+.loss{
+   margin-top: -10px;
+   color: red;
+}
+
+canvas {
+    position: fixed;
+    display: block; 
+    border: 3px solid #eee;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0 0 15px;
+-webkit-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);
+-moz-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);
+box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);
+
+}
+#start{
+    color: green;
+    margin-bottom: 10px;
+}
+#info {
+    color: red;
+}
+button {
+    width: 300px;
+    height: 50px;
+    font-size: 1.75em;
+    border:1px solid white;
+    border-radius: 7px;
+    box-shadow: 0 0 5px, inset 0 0 25px;
+    padding: 10px 40px;
+    background-color: #f3f3f3;
+    font-weight: bold;
+    outline-style: none;
+
+}
+
+#btn-left, #btn-right {
+    border-radius: 50%;
+    padding: 0 20px ;
+    font-size: 2em;
+}
+
+#infdiv {
+    display:none;
+    position: relative;
+    margin-auto
+    width: 80%;
+    border: 3px solid lightblue;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px;
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+
+.modal {
+  border-radius: 10px;
+  display: none; 
+  position: relative;
+  z-index: 99; 
+  overflow: auto;
+  background-color: rgba(0,100,0,0.5); 
+}
+
+
+.modal-content {
+  color: white;
+  background-color: rgba(0,100,0,0.4); 
+  margin: 15% auto; 
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.units{
+    -webkit-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);
+}
+
+
+        </style>
+      <script type="text/javascript">
+var w, h, k, xo, yo,
+units = [],
+    icons = [],
+    bullets = [],
+    enemies = [],
+    explosions = [],
+    dif = [' 1', ' 2', ' 3', ' 4', ' 5', ' 6', ' 7', ' 8', ' 9', ' 10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+    gameTime = 0,
+    isGameOver,
+    nextwave = 0,
+    enemydep = 1,
+    firstwave = false,
+    deployarea = false,
+    counter = 0,
+    counter2 = 0,
+    gameNum = 0,
+    game_paused = false,
+    lvl = 0,     // 0...9
+    inf = function ()
+    {
+        var popup = document.getElementById('infdiv');
+        var btn = document.getElementById('info'); 
+        if (popup.style.display !== 'block')
+        {
+            popup.style.display = 'block';
+            info.style.color = 'white';
+            info.style.backgroundColor = 'red';
+        }
+        else
+        {
+            popup.style.display = 'none';
+            info.style.color = 'red';
+            info.style.backgroundColor = '#f3f3f3';
+        }
+    },
+    changeLvl = function (op) {
+        if (op == 1 && lvl < 19) {
+            lvl++;
+        }
+        if (op == 0 && lvl > 0) {            
+            lvl--;
+        }
+        
+        var _dif = document.getElementsByClassName("dif");
+            _dif[1].innerHTML = dif[lvl];
+    };
+    
+ 
+
+(function ()
+{
+    function Sprite(url, pos, size, resized, animspeed, frames, _index, once)
+    {
+        this.pos = pos;
+        this.size = size;
+        this.resized = resized;
+        this.url = url;
+        this.animspeed = animspeed;
+        this.frames = frames;
+        this._index = _index;
+        this.once = once;
+    }
+
+    Sprite.prototype =
+    {
+
+        update: function (dt)
+        {
+
+                        this._index += this.animspeed * dt;
+
+                    
+        },
+
+
+
+                 render: function (ctx)
+        {
+
+            var frame;
+
+
+                        
+            if (this.animspeed > 0)
+            {                
+                var max = this.frames.length;                
+                var idx = Math.floor(this._index);                frame = this.frames[idx % max];               
+                if (this.once && idx >= max)
+                {                    this.done = true;                    
+                    return;                
+                }            
+            }            
+            else
+            {                frame = 0;            
+            }
+
+                           
+            var x = this.pos[0];     
+            var y = this.pos[1];  
+
+             x += frame * this.size[0];   ctx.drawImage(resources.get(this.url),  x, y,  this.size[0], this.size[1],  0, 0,  this.resized[0], this.resized[1]);
+
+                    
+        }
+
+            
+    };
+
+        window.Sprite = Sprite;
+})();
+
+(function ()
+{
+    function Unit(status, pos, hp, speed, maxspeed, range, damage, reload, angle, defaultangle, dir, sprite)
+    {
+        this.status = status;
+        this.pos = pos;
+        this.hp = hp;
+        this.maxhp = hp;
+        this.speed = speed;
+        this.maxspeed = maxspeed;
+        this.range = range;
+        this.damage = damage;
+        this.reload = reload;
+        this.angle = angle;
+        this.defaultangle = defaultangle;
+        this.dir = dir;
+        this.sprite = sprite
+    }
+
+    Unit.prototype =
+    {
+
+                 getAngle: function (target)
+        {
+
+            var x = this.pos[0] - target[0];
+            var y = this.pos[1] - target[1];
+            if (x < 0)
+            {
+                return Math.floor(Math.atan(y / x) * (180 / Math.PI));
+            }
+            else
+            {
+                return Math.floor(Math.atan(y / x) * (180 / Math.PI) - 180);
+            }
+        },
+
+        moveAhead: function (dt)
+        {
+            var rad = this.angle / (180 / Math.PI);
+            this.pos[0] += Math.cos(rad) * this.speed * dt * this.dir;
+            this.pos[1] += Math.sin(rad) * this.speed * dt * this.dir;
+            
+        },
+
+        findTarget: function (t)
+        {
+            for (i = 0; i < t.length; i++)
+            {
+
+                var dis = this.getDistance(t[i]);
+                if (dis < this.range && !t[i].destroyed && t[i].time > 0.7 && t[i].pos[1] > k)
+                {
+                    this.target = t[i];
+                    this.status = "targetfound";
+                    return;
+                }
+            }
+
+        },
+
+        avoidCollision: function (list, ownindx, dt)
+        {
+
+            var l = list;
+
+            for (i = 0; i < l.length; i++)
+            {
+                if (i == ownindx) continue;
+                if (this.getDistance(l[i]) < k * 8)
+                {
+                  for (var sec = 2; sec > 0; sec--) {
+
+                    var ownfuturepos = [this.pos[0] + (Math.cos(this.angle / (180 / Math.PI)) * this.speed * sec * this.dir), this.pos[1] + (Math.sin(this.angle / (180 / Math.PI)) * this.speed * sec * this.dir)];
+
+                    var allyfuturepos = [l[i].pos[0] + (Math.cos(l[i].angle / (180 / Math.PI)) * l[i].speed * sec * this.dir), l[i].pos[1] + (Math.sin(l[i].angle / (180 / Math.PI)) * l[i].speed * sec * this.dir)];
+                    if (getDistance(ownfuturepos, allyfuturepos) < k * 3 && this.pos[1] * this.dir > l[i].pos[1] * l[i].dir && Math.abs(ownfuturepos[0] - allyfuturepos[0]) < this.sprite.resized[0])
+                    {
+                        this.speed -= 160/Math.pow(sec, 4) * dt;
+                    }
+                 }
+
+                }
+            }
+
+
+        },
+
+        getDistance: function (t)
+        {
+
+            return Math.floor(Math.sqrt(Math.pow(this.pos[0] - t.pos[0], 2) + Math.pow(this.pos[1] - t.pos[1], 2)));
+        },
+
+        fireOnTarget: function ()
+        {
+
+            var x = Math.floor(this.pos[0] + ((this.sprite.resized[1] / 2 * this.dir) * Math.cos(this.angle / (180 / Math.PI))));
+            var y = Math.floor(this.pos[1] + ((this.sprite.resized[0] / 2 * this.dir) * Math.sin(this.angle / (180 / Math.PI))));
+            bullets.push(
+            {
+                pos: [x, y],
+                target: this.target,
+                speed: k * 12,
+                damage: this.damage,
+                angle: this.angle + getRandom (-5,3),
+                dir: this.dir,
+
+            });
+
+            this.lastshot = 0;
+
+        }    
+    };
+
+        window.Unit = Unit;
+})();
+
+var getRandom = function (min, max)
+{
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+var getDistance = function (own, ally)
+{
+
+    return Math.floor(Math.sqrt(Math.pow(own[0] - ally[0], 2) + Math.pow(own[1] - ally[1], 2)));
+};
+
+
+
+var deployUnit = function (unit, pos)
+{
+    var u = unit;
+    units.push(new Unit(u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8], u[9], u[10], u[11], u[12], u[13]));
+    units[units.length - 1].pos = pos;
+    deployarea = false;
+};
+
+var deployEnemy = function (unit, pos)
+{
+    var u = unit;
+    enemies.push(new Unit(u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8], u[9], u[10], u[11], u[12], u[13]));
+    enemies[enemies.length - 1].pos = pos;
+
+};
+
+
+
+var returnToBase = function (icon)
+{
+    icon.pos = icon.defaultpos;
+    icon.dragable = false;
+};
+// Smoke-pure.js: (c) 2013-2014 Michael Romanovsky, or "Agamemnus" on Github. Released under the MIT license.
+
+void function () {
+ var smoke = {}
+
+ // Options:
+ smoke.ok               = "ОК"          // Text for "Ok" button.
+ smoke.cancel           = "Отмена"      // Text for "Cancel" button.
+ smoke.point_event      = 'click'       // Point event ("click", "touchstart", etc.)
+ smoke.parent           = document.body // Where the smoke div attaches. Note that if this is undefined (because document.body hasn't been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.
+ smoke.zindex           = 10000         // Z-index of the smoke DOM object. This should be a high number.
+ smoke.reverse_buttons  = false         // If false, the "Ok" button appears before (left of) the "Cancel" button. If true, the "Cancel" button appears before the "Ok" button.
+ smoke.autofocus        = true          // If true, the input is automatically focused when the smoke DOM object is created.
+ smoke.autoexit         = true          // If true, clicking outside the smoke dialog (but inside the dialog_wrapper) closes/detaches the smoke DOM object and runs the callback with a parameter of (false, evt).
+ smoke.custom_css       = {}            // Custom classes for each object in the structure. E.G.: smoke.custom_css = {"button.ok": "my_ok_button_style"} or smoke.custom_css = {"buttons.ok": ["my_ok_button_style1", "my_ok_button_style2"]}
+ smoke.css_prefix       = "smoke"       // The CSS prefix for the classes used in the .build function.
+ smoke.value            = undefined     // The initial value to set the prompt input text to.
+ smoke.callback         = undefined     // Function to run after user input is sent.
+ smoke.observe_mutation = true          // If true, attachess a mutation observer that will destroy the keyboard listeners when the element is removed from the DOM.
+ smoke.window_opened    = undefined     // Function that runs at the end of smoke.build. Is in the form of "function (dom_window_object, text, processed_params)".
+ smoke.window_closed    = undefined     // Function that runs after the object is removed from the DOM. Is in the form of "function (dom_window_object, text, processed_params)". Requires observe_mutation to be true for full functionality.
+ 
+ // Structure:
+ // var obj (return value)                              | smoke-base
+ //  obj.dialog_wrapper                                 |  smoke-dialog_wrapper
+ //   obj.dialog                                        |   smoke-dialog
+ //    obj.text            = obj.dialog.text            |    smoke-dialog-text
+ //    obj.prompt          = obj.dialog.prompt          |    smoke-dialog-prompt
+ //     obj.prompt.input   = obj.dialog.prompt.input    |     smoke-dialog-prompt-input
+ //    obj.buttons         = obj.dialog.buttons         |    smoke-dialog-buttons
+ //     obj.buttons.ok     = obj.dialog.buttons.ok      |     smoke-dialog-buttons-ok
+ //     obj.buttons.cancel = obj.dialog.buttons.cancel  |     smoke-dialog-buttons-cancel
+ //
+ // Extras:
+ // obj.ok     () // <-- programatically run "ok" on the object.
+ // obj.cancel () // <-- programatically run "cancel" on the object.
+ 
+ smoke.build = function (text, params) {
+  if ((typeof smoke.parent == "undefined") || (smoke.parent == null)) smoke.parent = document.body
+  var ok                  = (typeof params.ok               != "undefined") ? params.ok               : smoke.ok
+  var cancel              = (typeof params.cancel           != "undefined") ? params.cancel           : smoke.cancel
+  var point_event         = (typeof params.point_event      != "undefined") ? params.point_event      : smoke.point_event
+  var parent              = (typeof params.parent           != "undefined") ? params.parent           : smoke.parent
+  var zindex              = (typeof params.zindex           != "undefined") ? params.zindex           : smoke.zindex
+  var reverse_buttons     = (typeof params.reverse_buttons  != "undefined") ? params.reverse_buttons  : smoke.reverse_buttons
+  var autoexit            = (typeof params.autoexit         != "undefined") ? params.autoexit         : smoke.autoexit
+  var autofocus           = (typeof params.autofocus        != "undefined") ? params.autofocus        : smoke.autofocus
+  var custom_css          = (typeof params.custom_css       != "undefined") ? params.custom_css       : smoke.custom_css
+  var css_prefix          = (typeof params.css_prefix       != "undefined") ? params.css_prefix       : smoke.css_prefix
+  var input_default_value = (typeof params.value            != "undefined") ? params.value            : smoke.value
+  var callback            = (typeof params.callback         != "undefined") ? params.callback         : smoke.callback
+  var observe_mutation    = (typeof params.observe_mutation != "undefined") ? params.observe_mutation : smoke.observe_mutation
+  var window_opened       = (typeof params.window_opened    != "undefined") ? params.window_opened    : smoke.window_opened
+  var window_closed       = (typeof params.window_closed    != "undefined") ? params.window_closed    : smoke.window_closed
+  var window_closed_ran   = false
+  params.point_event      = point_event
+  params.callback         = callback
+  
+  var obj = document.createElement('div'); obj.className = css_prefix + '-base'; obj.style.zIndex = zindex
+  parent.appendChild (obj)
+  
+  var dialog_wrapper = obj.dialog_wrapper = document.createElement ('div'); dialog_wrapper.className = css_prefix + '-dialog_wrapper'
+  obj.appendChild (dialog_wrapper)
+  
+  // Add an event listener for when the user clicks outside of the dialog, but inside the dialog wrapper.
+  // If activated, the parent smoke div removes itself and calls the callback.
+  if (autoexit) {
+   dialog_wrapper.addEventListener (point_event, function (evt) {
+    if (typeof evt.changedTouches != "undefined") evt = evt.changedTouches[0]
+    if (evt.currentTarget != evt.target) return
+    obj.parentNode.removeChild (obj)
+    params.callback (false, evt)
+    if ((!window_closed_ran) && smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}
+   })
+  }
+  
+  var dialog = obj.dialog = document.createElement ('div'); dialog.className = css_prefix + '-dialog'
+  dialog_wrapper.appendChild (dialog)
+  
+  var text_div = obj.text = obj.dialog.text = document.createElement ('div'); text_div.className = css_prefix + '-dialog-text'
+  text_div.innerHTML = text
+  dialog.appendChild (text_div)
+  
+  if (params.type == 'prompt') {
+   var prompt = obj.prompt = obj.dialog.prompt = document.createElement ('div'); prompt.className = css_prefix + '-prompt'
+   prompt.input = document.createElement ('input'); prompt.input.type = 'text';  prompt.input.className = css_prefix + '-prompt-input'
+   if (typeof input_default_value != "undefined") prompt.input.value = input_default_value
+   prompt.appendChild (prompt.input)
+   dialog.appendChild (prompt)
+  }
+  
+  var buttons = obj.buttons = obj.dialog.buttons = document.createElement ('div'); buttons.className = css_prefix + '-dialog-buttons'
+  buttons.ok = document.createElement ('button'); buttons.ok.className = css_prefix + '-dialog-buttons-ok'; buttons.ok.innerHTML = ok
+  if (params.type == 'alert') buttons.appendChild (buttons.ok)
+  if ((params.type == 'prompt') || (params.type == 'confirm')) {
+   buttons.cancel = document.createElement ('button'); buttons.cancel.className = css_prefix + '-dialog-buttons-cancel'; buttons.cancel.innerHTML = cancel
+   if (params.reverse_buttons) {
+    buttons.appendChild (buttons.cancel); buttons.appendChild (buttons.ok)
+   } else {
+    buttons.appendChild (buttons.ok); buttons.appendChild (buttons.cancel)
+   }
+  }
+  dialog.appendChild (buttons)
+  
+  // Append any extra CSS styles on any part of the structure.
+  for (var current_structure_name in custom_css) {
+   var property_array = current_structure_name.split (".")
+   var current_element = obj
+   property_array.forEach (function (current_property) {current_element = current_element[current_property]})
+   var current_class_list = custom_css[current_structure_name]
+   if (typeof current_class_list == "string") current_class_list = [current_class_list]
+   current_class_list.forEach (function (current_classname) {current_element.classList.add (current_classname)})
+  }
+  
+  if (typeof params.callback != "function") params.callback = function () {}
+  obj.params = params
+  smoke['finishbuilding_' + params.type] (obj, params)
+  if ((typeof obj.prompt != "undefined") && (autofocus != false)) obj.prompt.input.focus ()
+  
+  // Add a mutation observer that observes for the object's removal. If it is removed, destroy the listeners and run smoke.window_closed.
+  if (observe_mutation) {
+   var MutationObserver = window.MutationObserver || window.WebkitMutationObserver
+   if (typeof MutationObserver != "undefined") {
+    var observer = new MutationObserver (function (mutation_list) {
+     for (var i = 0, curlen_i = mutation_list.length; i < curlen_i; i++) {
+      var mutation_item = mutation_list[i]
+      if (mutation_item.type != 'childList') return
+      for (var j = 0, curlen_j = mutation_item.removedNodes.length; j < curlen_j; j++) {
+       if (mutation_item.removedNodes[j] != obj) continue
+       if ((!window_closed_ran) && smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}
+       obj.destroy_listeners (observer)
+       return
+      }
+     }
+    })
+    observer.observe (parent, {attributes: false, childList: true, subtree: false})
+   }
+  }
+  
+  if (smoke.window_opened) smoke.window_opened (obj, text, params)
+  
+  return obj
+ }
+ 
+ smoke.finishbuilding_alert   = function (obj) {
+  obj.callback_ok = function () {obj.params.callback ()}
+  obj.destroy_listeners = function (observer) {if (observer) observer.disconnect (); document.removeEventListener ('keyup', ok_function_wrapper)}
+  var ok_function_wrapper = obj.ok = function (evt) {ok_function(evt, obj)}
+  document.addEventListener       ('keyup', ok_function_wrapper)
+  obj.buttons.ok.addEventListener (obj.params.point_event, ok_function_wrapper)
+  obj.buttons.ok.smoke_pure_obj = obj
+ }
+ smoke.finishbuilding_confirm = function (obj) {
+  obj.callback_ok     = function () {obj.params.callback (true)}
+  obj.callback_cancel = function () {obj.params.callback (false)}
+  obj.destroy_listeners = function (observer) {
+   if (observer) observer.disconnect ()
+   document.removeEventListener ('keyup', ok_function_wrapper)
+   document.removeEventListener ('keyup', cancel_function_wrapper)
+  }
+  var ok_function_wrapper     = obj.ok     = function (evt) {ok_function    (evt, obj)}
+  var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}
+  document.addEventListener           ('keyup', ok_function_wrapper)
+  obj.buttons.ok.addEventListener     (obj.params.point_event, ok_function_wrapper)
+  document.addEventListener           ('keyup', cancel_function_wrapper)
+  obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)
+  obj.buttons.ok.smoke_pure_obj     = obj
+  obj.buttons.cancel.smoke_pure_obj = obj
+ }
+ smoke.finishbuilding_prompt  = function (obj) {
+  obj.callback_ok     = function () {obj.params.callback (obj.prompt.input.value)}
+  obj.callback_cancel = function () {obj.params.callback (false)}
+  obj.destroy_listeners = function (observer) {
+   if (observer) observer.disconnect ()
+   document.removeEventListener ('keyup', ok_function_wrapper)
+   document.removeEventListener ('keyup', cancel_function_wrapper)
+  }
+  var ok_function_wrapper     = obj.ok     = function (evt) {ok_function    (evt, obj)}
+  var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}
+  document.addEventListener           ('keyup', ok_function_wrapper)
+  obj.buttons.ok.addEventListener     (obj.params.point_event, ok_function_wrapper)
+  document.addEventListener           ('keyup', cancel_function_wrapper)
+  obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)
+  obj.buttons.ok.smoke_pure_obj     = obj
+  obj.buttons.cancel.smoke_pure_obj = obj
+ }
+ 
+ function ok_function (evt, obj) {
+  if (evt && (((evt.type == "keyup") && (typeof evt.keyCode != "undefined")) && ((evt.keyCode == 0) || (evt.keyCode != 13)))) return
+  obj.destroy_listeners ()
+  if (obj.parentNode) obj.parentNode.removeChild (obj)
+  obj.callback_ok ()
+ }
+ function cancel_function (evt, obj) {
+  if (evt && (((evt.type == "keyup") && (typeof evt.keyCode != "undefined")) && ((evt.keyCode == 0) || (evt.keyCode != 27)))) return
+  obj.destroy_listeners ()
+  if (obj.parentNode) obj.parentNode.removeChild (obj)
+  obj.callback_cancel ()
+ }
+ 
+ smoke.action_list = [{name : 'alert'}, {name : 'confirm'}, {name : 'prompt'}]
+ 
+ for (var i = 0; i < smoke.action_list.length; i++) {
+  void function (current_action) {
+   smoke[current_action] = function (text, callback, params) {return smoke.build (text, merge_objects ({callback: callback, type: current_action}, params))}
+  } (smoke.action_list[i].name)
+ }
+ 
+ function merge_objects (secondary, primary) {
+  // The primary object's duplicate keys are superior. The secondary object's duplicate keys are inferior.
+  if (typeof secondary == "undefined") var primary = primary.primary, secondary = primary.secondary
+  var new_object = {}
+  for (var property in secondary) {new_object[property] = secondary[property]}
+  for (var property in primary)   {new_object[property] = primary  [property]}
+  return new_object
+ }
+ 
+ if (typeof module != 'undefined' && module.exports) {
+  module.exports = smoke
+ } else if (typeof define === 'function' && define.amd) {
+  define ('smoke', [], function() {return smoke})
+ } else {
+  this.smoke = smoke
+ }
+} ()
+
+var gameOver = function (a)
+{
+
+    var _min = Math.floor(gameTime / 60);
+    var _sec = ('0' + Math.floor(gameTime % 60)).slice(-2);
+
+
+    switch (a)
+    {
+
+    case 'win':
+
+        smoke.alert("✔Уровень пройден! \n\n 📊Статистика: \n ⏱️Время: " + _min + ':' + _sec + '\n☠Подбит: ' + counter + '\n⚔Убил: ' + counter2 + '.');
+
+        var log_item = "<h2 align = 'center' class = 'win'>Игра " + ++gameNum + ": 🏆 Победа ⏱️" + _min + ':' + _sec + ' /' + dif[lvl] + ' /' + "</h2>";
+        if (lvl < dif.length - 1) lvl++;
+        var log = document.getElementById('log');
+        log.innerHTML += log_item;
+        document.body.style.paddingTop = 50 - (gameNum * 3) + "%";
+        log.style.display = "block";
+        loader();
+        break;
+
+    case 'loss':
+        smoke.alert("❌Поражение! \n\n 📊Статистика: \n ⏱️Время: " + _min + ':' + _sec + '\n☠Подбит: ' + counter + '\n⚔Убил: ' + counter2 + '.');
+
+        var log_item = "<h2 align = 'center' class = 'loss'>Игра " + ++gameNum + ": 💩 Поражение ⏱️" + _min + ':' + _sec + ' /' + dif[lvl] + ' /' + "</h2>";
+        var log = document.getElementById('log');
+        log.innerHTML += log_item;
+        document.body.style.paddingTop = 50 - (gameNum * 3)+ "%";
+        log.style.display = "block";
+        loader();
+        break;
+
+    }
+}
+
+var reset = function ()
+{
+
+    units = [];
+    icons = [];
+    bullets = [];
+    enemies = [];
+    explosions = [];
+    isGameOver = false;
+    gameTime = 0;
+    enemydep = 1;
+    firstwave = false;
+    nextwave = 0;
+    deployarea = false;
+    counter = 0;
+    counter2 = 0;
+}
+
+var xxx = 0,
+    yyy = 0;
+var mouse =
+{
+    x: 0,
+    y: 0,
+    down: false
+}
+
+/////////////////////////////
+
+var startGame = function ()
+{
+
+    reset();
+    
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var p = document.getElementsByClassName("modal-text")[0];
+    span.onclick = function() {
+         modal.style.display = "none";
+         game_paused = !game_paused;
+    }
+
+    var log = document.getElementById('log');
+    var popup = document.getElementById('infdiv');
+    
+    
+    log.style.display = "none";
+    popup.style.display = 'none';
+    document.body.style.paddingTop = 0;
+        
+    var maindiv = document.getElementById("main");
+
+    maindiv.innerHTML = '<canvas id="c"></canvas>';
+
+    var c = document.getElementById("c");
+
+    var ctx = c.getContext("2d");
+
+    w = window.innerWidth;
+    h = window.innerHeight;
+    
+
+    if (w < h) {
+        c.width = w - 46;
+        c.height = c.width/0.7;
+    } else {
+        c.height = h - 46;
+        c.width = c.height * 0.7;
+    }
+    
+    k = c.width / 26;
+
+    xo = c.offsetLeft;
+    yo = c.offsetTop;
+    
+    
+    ////
+
+    icons = [
+    {
+        active: true,
+        pos: [c.width / 28, c.height - c.height / 8],
+        defaultpos: [c.width / 28, c.height - c.height / 8],
+        respawn: false,
+        respawnrate: 1,
+        sprite: new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [55, 76], [194, 134], [c.width / 5.5, c.height / 10.5])
+    },
+    {
+        active: true,
+        pos: [c.width / 3.4, c.height - c.height / 8.5],
+        defaultpos: [c.width / 3.4, c.height - c.height / 8.5],
+        respawn: false,
+        respawnrate: 3,
+        sprite: new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [71, 600], [159, 130], [c.width / 6.5, c.height / 12])
+    },
+    {
+        active: true,
+        pos: [c.width / 1.85, c.height - c.height / 8.2],
+        defaultpos: [c.width / 1.85, c.height - c.height / 8.2],
+        respawn: false,
+        respawnrate: 0.5,
+        sprite: new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [52, 269], [205, 124], [c.width / 5.8, c.height / 12])
+    },
+    {
+        active: false,
+        pos: [c.width / 1.27, c.height - c.height / 8.2],
+        defaultpos: [c.width / 1.27, c.height - c.height / 8.2],
+        respawn: false,
+        respawnrate: 0.5,
+        sprite: new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [68, 434], [230 - 68, 565 - 434], [c.width / 5.8, c.height / 12])
+    }];
+
+    ///
+
+    c.addEventListener("touchmove", function (event)
+    {
+
+        var touch = event.touches[0];
+        xxx = touch.pageX - xo - 3;
+        yyy = touch.pageY - yo - 3;
+
+        checkIcons(xxx, yyy);
+
+        event.preventDefault();
+    }, false);
+
+    c.addEventListener("touchend", function (event)
+    {
+
+        checkDeployment(xxx, yyy);
+
+    }, false);
+
+    c.addEventListener("mousemove", function (event)
+    {
+        mouse.x = event.pageX - xo - 3;
+        mouse.y = event.pageY - yo - 3;
+    }, false);
+
+    c.addEventListener("mousedown", function ()
+    {
+        mouse.down = true;
+        checkIcons(mouse.x, mouse.y);
+
+    }, false);
+
+    c.addEventListener("mouseup", function ()
+    {
+        mouse.down = false;
+        checkDeployment(mouse.x, mouse.y);
+    }, false);
+
+    function checkIcons(xx, yy)
+    {
+
+        if (xx > icons[0].pos[0] && xx < icons[0].pos[0] + (k * 5) && yy > icons[0].pos[1] - (k * 3) && yy < icons[0].pos[1] + (k * 3) && !icons[0].respawn  && !game_paused)
+        {
+            if (!icons[1].dragable && !icons[2].dragable)
+            {
+                icons[0].dragable = true;
+                basictank[0] = 'readyfordeploy';
+                deployarea = true;
+            }
+        }
+
+        if (xx > icons[1].pos[0] && xx < icons[1].pos[0] + (k * 5) && yy > icons[1].pos[1] - (k * 3) && yy < icons[1].pos[1] + (k * 3) && !icons[1].respawn  && !game_paused)
+        {
+            if (!icons[0].dragable && !icons[2].dragable)
+            {
+                icons[1].dragable = true;
+                lighttank[0] = 'readyfordeploy';
+                deployarea = true;
+
+            }
+        }
+
+        if (xx > icons[2].pos[0] && xx < icons[2].pos[0] + (k * 5) && yy > icons[2].pos[1] - (k * 3) && yy < icons[2].pos[1] + (k * 3) && !icons[2].respawn  && !game_paused)
+        {
+            if (!icons[0].dragable && !icons[1].dragable)
+            {
+                icons[2].dragable = true;
+                ttank[0] = 'readyfordeploy';
+                deployarea = true;
+
+            }
+        }
+        
+        if (xx > icons[3].pos[0] && xx < icons[3].pos[0] + (k * 5) && yy > icons[3].pos[1] - (k * 3) && yy < icons[3].pos[1] + (k * 3))
+        {
+           game_paused = !game_paused;
+           
+           if(modal.style.display == "block") {
+                modal.style.display = "none";
+           } else {
+              
+                p.innerHTML = 'Игра на паузе...'; 
+                modal.style.width = c.width*0.8 + "px";
+                modal.style.marginLeft = c.width*0.1 + xo + "px";
+                modal.style.display = "block";
+           }
+           
+           
+          
+        }
+    }
+
+    function checkDeployment(xx, yy)
+    {
+
+        var inside = false;
+     
+        if (xx > c.width / 100 && yy > c.height / 2 && xx < c.width - c.width / 100 - 3 && yy < c.height / 2 + c.height / 3.7)
+        {
+            inside = true;
+        }
+                
+        var allies = false;
+        for(var i = 0; i < units.length; i++) {
+            if (getDistance([xx,yy], units[i].pos) <  2*k) allies = true;
+        }
+        
+        if (basictank[0] == 'readyfordeploy' && inside && !allies)
+        {
+            basictank[0] = ' ';
+            deployUnit(basictank, [xx, yy]);
+            units[units.length - 1].status = 'acceleration';
+            icons[0].pos = [icons[0].defaultpos[0], icons[0].defaultpos[1] + c.width / 4];
+            icons[0].dragable = false;
+            icons[0].respawn = true;
+            deployarea = false;
+        }
+        else if ( basictank[0] == 'readyfordeploy' && (!inside && !icons[0].respawn || allies))
+        {
+            returnToBase(icons[0]);
+            basictank[0] = ' '
+        }
+
+        if (lighttank[0] == 'readyfordeploy' && inside && !allies)
+        {
+            lighttank[0] = ' ';
+            deployUnit(lighttank, [xx, yy]);
+            units[units.length - 1].status = 'acceleration';
+            icons[1].pos = [icons[1].defaultpos[0], icons[1].defaultpos[1] + c.width / 4];;
+            icons[1].dragable = false;
+            icons[1].respawn = true;
+
+        }
+        else if ( lighttank[0] == 'readyfordeploy' && (!inside && !icons[1].respawn || allies))
+        {
+            returnToBase(icons[1]);
+            lighttank[0] = " ";
+        }
+
+        if (ttank[0] == 'readyfordeploy' && inside && !allies)
+        {
+            ttank[0] = ' ';
+            deployUnit(ttank, [xx, yy]);
+            units[units.length - 1].status = 'acceleration';
+            icons[2].pos = [icons[2].defaultpos[0], icons[2].defaultpos[1] + c.width / 4];;
+            icons[2].dragable = false;
+            icons[2].respawn = true;
+
+        }
+        else if ( ttank[0] == 'readyfordeploy' && (!inside && !icons[2].respawn || allies))
+        {
+            returnToBase(icons[2]);
+            ttank[0] = " ";
+        }
+
+    }
+
+
+    lastTime = Date.now();
+
+
+    // твои танки
+    //                           stats -- status, pos, hp, speed, maxspeed,  range, damage, reload, angle, defaultangle , dir, sprite
+
+    var basictank = ['acceleration', [0,           0], 2000, 0,   k * 1.5, k * 110,    600,    1.3,    - 90,    - 90,        1,   new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [55, 76], [194, 135], [c.width / 11, c.height / 21])];
+    var lighttank = ['acceleration', [0,           0], 500,  0,   k * 15.0, k * 110,   250,    0.9,    - 90,    - 90,        1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [71, 600], [159, 130], [c.width / 13, c.height / 24])];
+    var ttank =     ['acceleration', [0,           0], 200,  0,   k * 3.5, k * 110, 50,     0.05,   - 90,    - 90,        1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [52, 269], [205, 124], [c.width / 11.6, c.height / 24])];
+    
+    //враги
+    var enemybasic = ['acceleration', [0,          0], 2000, 0,   k * 1.5, k * 110,    600,    1.3,    - 90,    - 90,        - 1,   new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [365, 76], [194, 135], [c.width / 11, c.height / 21])];
+    var enemylight = ['acceleration', [200,      200], 500,  0,   k * 15.0, k * 110,   250,    0.9,    - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [395, 600], [159, 130], [c.width / 13, c.height / 24])];
+    var enemyttank = ['acceleration', [0,          0], 200,  0,   k * 3.5, k * 40, 50,     0.05,   - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [362, 269], [205, 124], [c.width / 11.6, c.height / 24])];
+    //hp
+    var enemybasichp = ['acceleration', [0,          0], 2000, 0,   k * 1.5, k * 110,    800,    1.3,    - 90,    - 90,        - 1,   new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [365, 76], [194, 135], [c.width / 11, c.height / 21])];
+    var enemylighthp = ['acceleration', [200,      200], 500,  0,   k * 15.0, k * 110,   320,    0.9,    - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [395, 600], [159, 130], [c.width / 13, c.height / 24])];
+    var enemyttankhp = ['acceleration', [0,          0], 200,  0,   k * 3.5, k * 40, 70,     0.05,   - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [362, 269], [205, 124], [c.width / 11.6, c.height / 24])];
+    //tutorial
+    var enemylighttutorial = ['acceleration', [200,      200], 500,  0,   k * 1, k * 110,   20,    0.21,    - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [395, 600], [159, 130], [c.width / 13, c.height / 24])];
+
+
+    main()
+
+    // The main game loop
+
+
+
+    function main()
+    {
+
+            
+        var now = Date.now();
+
+        if (!game_paused) { 
+            
+          var dt = (now - lastTime) / 1000;
+
+          update(dt);
+
+          render();
+        
+        }
+
+        lastTime = now;
+
+          
+        if  (!isGameOver) requestAnimFrame(main);
+
+    };
+
+    function update(dt)
+    {
+
+            gameTime += dt;
+            
+            if (nextwave < -99999) {
+                nextwave = (enemydep * (-9999999999999 - lvl)-gameTime + -999999999).toFixed(0) 
+            } else {
+               nextwave -= dt;
+            }
+
+        if (Math.floor(gameTime) == 1 && firstwave == false)
+        {
+            
+            if (lvl == 0) {
+                function sayTutorial1() {
+                smoke.alert('Перетягувай свої танки на поле бою!');
+                }
+                setTimeout(sayTutorial1, 10);
+
+                function sayTutorial2() {
+                smoke.alert('Твоя задача знищити їх і дістатися до зеленої лінії у верхній частині поля!');
+                }
+                setTimeout(sayTutorial2, 3000);
+                deployEnemy(enemylighttutorial, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighttutorial, [c.width - (c.width / 4), c.height / 5]);
+            }
+
+            if (lvl == 1) {
+                function sayTutorial3() {
+                smoke.alert('Тепер спробуй сам. Успіхів! 😄');
+                }
+                setTimeout(sayTutorial3, 1000);
+
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+            }
+
+            if (lvl == 2) {
+                function sayTutorial3() {
+                smoke.alert('Відмінно, продовжуй в тому-ж дусі! 😄');
+                }
+                setTimeout(sayTutorial3, 1000);
+
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+
+            }
+
+            if (lvl == 3) {
+                smoke.alert('Давай, ти вже на 3/20 рівнів, поднажмі! 😉');
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+            }
+
+            if (lvl == 4) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
+            }
+
+            if (lvl == 5) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
+            }
+
+            if (lvl == 6) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
+            }
+            if (lvl == 7) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
+                deployEnemy(enemylight, [c.width / 10, c.height / 4]);
+            }
+            if (lvl == 8) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
+                deployEnemy(enemylight, [c.width / 10, c.height / 4]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 6]);
+            }
+            if (lvl == 9) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
+                deployEnemy(enemylight, [c.width / 10, c.height / 4]);
+                deployEnemy(enemyttank, [c.width / 10, c.height / 6]);
+                deployEnemy(enemylight, [c.width / 3, c.height / 4]);
+            }
+            //new
+            if (lvl == 10) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+// Smoke-pure.js: (c) 2013-2014 Michael Romanovsky, or "Agamemnus" on Github. Released under the MIT license.
+
+void function () {
+ var smoke = {}
+
+ // Options:
+ smoke.ok               = "ОК"          // Text for "Ok" button.
+ smoke.cancel           = "Отмена"      // Text for "Cancel" button.
+ smoke.point_event      = 'click'       // Point event ("click", "touchstart", etc.)
+ smoke.parent           = document.body // Where the smoke div attaches. Note that if this is undefined (because document.body hasn't been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.
+ smoke.zindex           = 10000         // Z-index of the smoke DOM object. This should be a high number.
+ smoke.reverse_buttons  = false         // If false, the "Ok" button appears before (left of) the "Cancel" button. If true, the "Cancel" button appears before the "Ok" button.
+ smoke.autofocus        = true          // If true, the input is automatically focused when the smoke DOM object is created.
+ smoke.autoexit         = true          // If true, clicking outside the smoke dialog (but inside the dialog_wrapper) closes/detaches the smoke DOM object and runs the callback with a parameter of (false, evt).
+ smoke.custom_css       = {}            // Custom classes for each object in the structure. E.G.: smoke.custom_css = {"button.ok": "my_ok_button_style"} or smoke.custom_css = {"buttons.ok": ["my_ok_button_style1", "my_ok_button_style2"]}
+ smoke.css_prefix       = "smoke"       // The CSS prefix for the classes used in the .build function.
+ smoke.value            = undefined     // The initial value to set the prompt input text to.
+ smoke.callback         = undefined     // Function to run after user input is sent.
+ smoke.observe_mutation = true          // If true, attachess a mutation observer that will destroy the keyboard listeners when the element is removed from the DOM.
+ smoke.window_opened    = undefined     // Function that runs at the end of smoke.build. Is in the form of "function (dom_window_object, text, processed_params)".
+ smoke.window_closed    = undefined     // Function that runs after the object is removed from the DOM. Is in the form of "function (dom_window_object, text, processed_params)". Requires observe_mutation to be true for full functionality.
+ 
+ // Structure:
+ // var obj (return value)                              | smoke-base
+ //  obj.dialog_wrapper                                 |  smoke-dialog_wrapper
+ //   obj.dialog                                        |   smoke-dialog
+ //    obj.text            = obj.dialog.text            |    smoke-dialog-text
+ //    obj.prompt          = obj.dialog.prompt          |    smoke-dialog-prompt
+ //     obj.prompt.input   = obj.dialog.prompt.input    |     smoke-dialog-prompt-input
+ //    obj.buttons         = obj.dialog.buttons         |    smoke-dialog-buttons
+ //     obj.buttons.ok     = obj.dialog.buttons.ok      |     smoke-dialog-buttons-ok
+ //     obj.buttons.cancel = obj.dialog.buttons.cancel  |     smoke-dialog-buttons-cancel
+ //
+ // Extras:
+ // obj.ok     () // <-- programatically run "ok" on the object.
+ // obj.cancel () // <-- programatically run "cancel" on the object.
+ 
+ smoke.build = function (text, params) {
+  if ((typeof smoke.parent == "undefined") || (smoke.parent == null)) smoke.parent = document.body
+  var ok                  = (typeof params.ok               != "undefined") ? params.ok               : smoke.ok
+  var cancel              = (typeof params.cancel           != "undefined") ? params.cancel           : smoke.cancel
+  var point_event         = (typeof params.point_event      != "undefined") ? params.point_event      : smoke.point_event
+  var parent              = (typeof params.parent           != "undefined") ? params.parent           : smoke.parent
+  var zindex              = (typeof params.zindex           != "undefined") ? params.zindex           : smoke.zindex
+  var reverse_buttons     = (typeof params.reverse_buttons  != "undefined") ? params.reverse_buttons  : smoke.reverse_buttons
+  var autoexit            = (typeof params.autoexit         != "undefined") ? params.autoexit         : smoke.autoexit
+  var autofocus           = (typeof params.autofocus        != "undefined") ? params.autofocus        : smoke.autofocus
+  var custom_css          = (typeof params.custom_css       != "undefined") ? params.custom_css       : smoke.custom_css
+  var css_prefix          = (typeof params.css_prefix       != "undefined") ? params.css_prefix       : smoke.css_prefix
+  var input_default_value = (typeof params.value            != "undefined") ? params.value            : smoke.value
+  var callback            = (typeof params.callback         != "undefined") ? params.callback         : smoke.callback
+  var observe_mutation    = (typeof params.observe_mutation != "undefined") ? params.observe_mutation : smoke.observe_mutation
+  var window_opened       = (typeof params.window_opened    != "undefined") ? params.window_opened    : smoke.window_opened
+  var window_closed       = (typeof params.window_closed    != "undefined") ? params.window_closed    : smoke.window_closed
+  var window_closed_ran   = false
+  params.point_event      = point_event
+  params.callback         = callback
+  
+  var obj = document.createElement('div'); obj.className = css_prefix + '-base'; obj.style.zIndex = zindex
+  parent.appendChild (obj)
+  
+  var dialog_wrapper = obj.dialog_wrapper = document.createElement ('div'); dialog_wrapper.className = css_prefix + '-dialog_wrapper'
+  obj.appendChild (dialog_wrapper)
+  
+  // Add an event listener for when the user clicks outside of the dialog, but inside the dialog wrapper.
+  // If activated, the parent smoke div removes itself and calls the callback.
+  if (autoexit) {
+   dialog_wrapper.addEventListener (point_event, function (evt) {
+    if (typeof evt.changedTouches != "undefined") evt = evt.changedTouches[0]
+    if (evt.currentTarget != evt.target) return
+    obj.parentNode.removeChild (obj)
+    params.callback (false, evt)
+    if ((!window_closed_ran) && smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}
+   })
+  }
+  
+  var dialog = obj.dialog = document.createElement ('div'); dialog.className = css_prefix + '-dialog'
+  dialog_wrapper.appendChild (dialog)
+  
+  var text_div = obj.text = obj.dialog.text = document.createElement ('div'); text_div.className = css_prefix + '-dialog-text'
+  text_div.innerHTML = text
+  dialog.appendChild (text_div)
+  
+  if (params.type == 'prompt') {
+   var prompt = obj.prompt = obj.dialog.prompt = document.createElement ('div'); prompt.className = css_prefix + '-prompt'
+   prompt.input = document.createElement ('input'); prompt.input.type = 'text';  prompt.input.className = css_prefix + '-prompt-input'
+   if (typeof input_default_value != "undefined") prompt.input.value = input_default_value
+   prompt.appendChild (prompt.input)
+   dialog.appendChild (prompt)
+  }
+  
+  var buttons = obj.buttons = obj.dialog.buttons = document.createElement ('div'); buttons.className = css_prefix + '-dialog-buttons'
+  buttons.ok = document.createElement ('button'); buttons.ok.className = css_prefix + '-dialog-buttons-ok'; buttons.ok.innerHTML = ok
+  if (params.type == 'alert') buttons.appendChild (buttons.ok)
+  if ((params.type == 'prompt') || (params.type == 'confirm')) {
+   buttons.cancel = document.createElement ('button'); buttons.cancel.className = css_prefix + '-dialog-buttons-cancel'; buttons.cancel.innerHTML = cancel
+   if (params.reverse_buttons) {
+    buttons.appendChild (buttons.cancel); buttons.appendChild (buttons.ok)
+   } else {
+    buttons.appendChild (buttons.ok); buttons.appendChild (buttons.cancel)
+   }
+  }
+  dialog.appendChild (buttons)
+  
+  // Append any extra CSS styles on any part of the structure.
+  for (var current_structure_name in custom_css) {
+   var property_array = current_structure_name.split (".")
+   var current_element = obj
+   property_array.forEach (function (current_property) {current_element = current_element[current_property]})
+   var current_class_list = custom_css[current_structure_name]
+   if (typeof current_class_list == "string") current_class_list = [current_class_list]
+   current_class_list.forEach (function (current_classname) {current_element.classList.add (current_classname)})
+  }
+  
+  if (typeof params.callback != "function") params.callback = function () {}
+  obj.params = params
+  smoke['finishbuilding_' + params.type] (obj, params)
+  if ((typeof obj.prompt != "undefined") && (autofocus != false)) obj.prompt.input.focus ()
+  
+  // Add a mutation observer that observes for the object's removal. If it is removed, destroy the listeners and run smoke.window_closed.
+  if (observe_mutation) {
+   var MutationObserver = window.MutationObserver || window.WebkitMutationObserver
+   if (typeof MutationObserver != "undefined") {
+    var observer = new MutationObserver (function (mutation_list) {
+     for (var i = 0, curlen_i = mutation_list.length; i < curlen_i; i++) {
+      var mutation_item = mutation_list[i]
+      if (mutation_item.type != 'childList') return
+      for (var j = 0, curlen_j = mutation_item.removedNodes.length; j < curlen_j; j++) {
+       if (mutation_item.removedNodes[j] != obj) continue
+       if ((!window_closed_ran) && smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}
+       obj.destroy_listeners (observer)
+       return
+      }
+     }
+    })
+    observer.observe (parent, {attributes: false, childList: true, subtree: false})
+   }
+  }
+  
+  if (smoke.window_opened) smoke.window_opened (obj, text, params)
+  
+  return obj
+ }
+ 
+ smoke.finishbuilding_alert   = function (obj) {
+  obj.callback_ok = function () {obj.params.callback ()}
+  obj.destroy_listeners = function (observer) {if (observer) observer.disconnect (); document.removeEventListener ('keyup', ok_function_wrapper)}
+  var ok_function_wrapper = obj.ok = function (evt) {ok_function(evt, obj)}
+  document.addEventListener       ('keyup', ok_function_wrapper)
+  obj.buttons.ok.addEventListener (obj.params.point_event, ok_function_wrapper)
+  obj.buttons.ok.smoke_pure_obj = obj
+ }
+ smoke.finishbuilding_confirm = function (obj) {
+  obj.callback_ok     = function () {obj.params.callback (true)}
+  obj.callback_cancel = function () {obj.params.callback (false)}
+  obj.destroy_listeners = function (observer) {
+   if (observer) observer.disconnect ()
+   document.removeEventListener ('keyup', ok_function_wrapper)
+   document.removeEventListener ('keyup', cancel_function_wrapper)
+  }
+  var ok_function_wrapper     = obj.ok     = function (evt) {ok_function    (evt, obj)}
+  var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}
+  document.addEventListener           ('keyup', ok_function_wrapper)
+  obj.buttons.ok.addEventListener     (obj.params.point_event, ok_function_wrapper)
+  document.addEventListener           ('keyup', cancel_function_wrapper)
+  obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)
+  obj.buttons.ok.smoke_pure_obj     = obj
+  obj.buttons.cancel.smoke_pure_obj = obj
+ }
+ smoke.finishbuilding_prompt  = function (obj) {
+  obj.callback_ok     = function () {obj.params.callback (obj.prompt.input.value)}
+  obj.callback_cancel = function () {obj.params.callback (false)}
+  obj.destroy_listeners = function (observer) {
+   if (observer) observer.disconnect ()
+   document.removeEventListener ('keyup', ok_function_wrapper)
+   document.removeEventListener ('keyup', cancel_function_wrapper)
+  }
+  var ok_function_wrapper     = obj.ok     = function (evt) {ok_function    (evt, obj)}
+  var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}
+  document.addEventListener           ('keyup', ok_function_wrapper)
+  obj.buttons.ok.addEventListener     (obj.params.point_event, ok_function_wrapper)
+  document.addEventListener           ('keyup', cancel_function_wrapper)
+  obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)
+  obj.buttons.ok.smoke_pure_obj     = obj
+  obj.buttons.cancel.smoke_pure_obj = obj
+ }
+ 
+ function ok_function (evt, obj) {
+  if (evt && (((evt.type == "keyup") && (typeof evt.keyCode != "undefined")) && ((evt.keyCode == 0) || (evt.keyCode != 13)))) return
+  obj.destroy_listeners ()
+  if (obj.parentNode) obj.parentNode.removeChild (obj)
+  obj.callback_ok ()
+ }
+ function cancel_function (evt, obj) {
+  if (evt && (((evt.type == "keyup") && (typeof evt.keyCode != "undefined")) && ((evt.keyCode == 0) || (evt.keyCode != 27)))) return
+  obj.destroy_listeners ()
+  if (obj.parentNode) obj.parentNode.removeChild (obj)
+  obj.callback_cancel ()
+ }
+ 
+ smoke.action_list = [{name : 'alert'}, {name : 'confirm'}, {name : 'prompt'}]
+ 
+ for (var i = 0; i < smoke.action_list.length; i++) {
+  void function (current_action) {
+   smoke[current_action] = function (text, callback, params) {return smoke.build (text, merge_objects ({callback: callback, type: current_action}, params))}
+  } (smoke.action_list[i].name)
+ }
+ 
+ function merge_objects (secondary, primary) {
+  // The primary object's duplicate keys are superior. The secondary object's duplicate keys are inferior.
+  if (typeof secondary == "undefined") var primary = primary.primary, secondary = primary.secondary
+  var new_object = {}
+  for (var property in secondary) {new_object[property] = secondary[property]}
+  for (var property in primary)   {new_object[property] = primary  [property]}
+  return new_object
+ }
+ 
+ if (typeof module != 'undefined' && module.exports) {
+  module.exports = smoke
+ } else if (typeof define === 'function' && define.amd) {
+  define ('smoke', [], function() {return smoke})
+ } else {
+  this.smoke = smoke
+ }
+} ()
+//Îáû÷íûé alert
+smoke.alert ("Характеристики врагов повышены на 20%");
+            }
+            if (lvl == 11) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+            }
+
+            if (lvl == 12) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+            }
+
+            if (lvl == 13) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+            }
+
+            if (lvl == 14) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
+            }
+
+            if (lvl == 15) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
+            }
+
+            if (lvl == 16) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
+            }
+            if (lvl == 17) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
+                deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);
+            }
+            if (lvl == 18) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
+                deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 6]);
+            }
+            if (lvl == 19) {
+                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
+                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
+                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
+                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
+                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
+                deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);
+                deployEnemy(enemyttankhp, [c.width / 10, c.height / 6]);
+                deployEnemy(enemylighthp, [c.width / 3, c.height / 4]);
+            }
+            firstwave = true;
+            
+        }
+
+        if (Math.floor(gameTime) == enemydep * (99999999 - lvl))
+        {
+
+            deployEnemy(enemybasic, [getRandom(30, c.width - 30), getRandom(-20, - 40)]);
+            deployEnemy(enemylight, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);
+            deployEnemy(enemylight, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);
+            deployEnemy(enemyttank, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);
+            deployEnemy(enemyttank, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);
+            enemydep++;
+            
+        }
+
+            updateEntities(dt, units);
+        updateEntities(dt, enemies);
+        updateBullets(dt);
+        updateIcons(dt);
+
+          //   checkCollisions();
+
+    };
+
+    function updateIcons(dt)
+    {
+
+        for (i = 0; i < icons.length; i++)
+        {
+            if (icons[i].pos[1] > icons[i].defaultpos[1] && icons[i].respawn == true)
+            {
+                icons[i].pos[1] -= icons[i].respawnrate * k * dt;
+            }
+            else
+            {
+                icons[i].respawn = false;
+            }
+        }
+    };
+
+    function updateEntities(dt, list)
+    {
+
+             // Update the tank position
+
+
+
+
+            
+        for (var i = 0; i < list.length; i++)
+        {
+
+            var u = list[i];
+            var u2;
+
+            list == units ? u2 = enemies : u2 = units;
+
+
+            u.time = u.time + dt || 0;
+            u.lastshot = u.lastshot + dt || 0;
+            u.avoidCollision(list, i, dt);
+            //remove 
+            if (u.destroyed)
+            {
+                list.splice(i, 1);
+                i--;
+                if (list == units)
+                {
+                    counter++;
+                }
+                else
+                {
+                    counter2++;
+                }
+            }
+            else if (list == enemies && u.pos[1] > c.height - (c.width / 4 + 2 * k))
+            {
+
+                isGameOver = true;
+                gameOver('loss');
+                break;
+
+            }
+            else if (
+            list == units && u.pos[1] < k * 2)
+            {
+                isGameOver = true;
+                gameOver('win');
+                break;
+            }
+
+            if (u.status == "acceleration" && u.speed < u.maxspeed)
+            {
+
+                u.speed += 15 * dt;
+                switch (list)
+                {
+                case units:
+                    if (u.angle < u.defaultangle)
+                    {
+                        u.angle += Math.floor(80 * dt * u.dir);
+                    }
+                    else if (u.angle > u.defaultangle)
+                    {
+                        u.angle -= Math.floor(80 * dt * u.dir);
+                    }
+                    break;
+                case enemies:
+
+                    u.cang = u.defaultangle;
+                    if (u.cang < -90)
+                    {
+                        u.cang += 180;
+                    }
+                    else if (u.cang > -90)
+                    {
+                        u.cang -= 180;
+                    }
+                    if (u.cang < u.angle)
+                    {
+                        u.angle -= Math.floor(75 * dt);
+                    }
+                    else if (u.cang > u.angle)
+                    {
+                        u.angle += Math.floor(75 * dt);
+                    }
+
+
+
+                }
+            }
+
+
+
+            if (u.time > 1 && !u.target && u.pos[1] > k)
+            {
+                u.findTarget(u2);
+            }
+
+            if (u.target && u.target.destroyed)
+            {
+                u.status = 'acceleration';
+                delete u.target;
+
+            }
+            else if (u.status == "targetfound" && !u.target.destroyed)
+            {
+
+                if (u.speed > 0)
+                {
+                    u.speed -= u.maxspeed * 2 * dt;
+                }
+                else
+                {
+                    u.speed = 0
+                }
+
+
+                
+                    u.cang = Math.floor(u.getAngle(u.target.pos));
+                    
+                    if (list == enemies ) {
+                        if (u.cang < -90)
+                    {
+                        u.cang += 180;
+                    }
+                    else if (u.cang > -90)
+                    {
+                        u.cang -= 180;
+                    }
+                    }
+                    if (u.cang > u.angle && u.cang < u.angle + 3)
+                    {
+                        u.angle = u.cang;
+                    } else if (u.cang > u.angle )
+                    {
+                        u.angle += Math.floor(150 * dt);
+                    }
+                    else if (u.cang < u.angle && u.cang > u.angle - 3)
+                    {
+                        u.angle = u.cang;
+                    } else if (u.cang < u.angle )
+                    {
+                        u.angle -= Math.floor(150 * dt);
+                    }
+                                
+                    
+
+                
+
+
+                if (u.lastshot > u.reload && Math.floor(u.angle) == Math.floor(u.cang) && u.getDistance(u.target) < u.range)
+                {
+
+                    u.fireOnTarget();
+
+                } else {
+                     u.findTarget(u2);
+                }
+
+            }
+
+            if (u.time > 0.7 && u.speed > 0)
+            {
+
+                u.moveAhead(dt);
+
+            }
+
+        };
+
+    }
+
+    function updateBullets(dt)
+    {
+
+        // Update all the explosions
+
+            
+        for (var i = 0; i < explosions.length; i++)
+        {        explosions[i].sprite.update(dt);
+
+                     // Remove if animation is done
+                    
+            if (explosions[i].sprite.done)
+            {            explosions.splice(i, 1);            i--;        
+            }    
+        }
+
+             // Update all the bullets
+
+            
+        for (var i = 0; i < bullets.length; i++)
+        {
+
+                    
+            var b = bullets[i];
+
+            var rad = b.angle / (180 / Math.PI);
+            b.pos[0] += Math.cos(rad) * b.speed * dt * b.dir;
+            b.pos[1] += Math.sin(rad) * b.speed * dt * b.dir;
+
+
+                            // Remove the bullet
+
+                    
+            if (b.pos[1] < b.target.pos[1] + k && b.pos[1] > b.target.pos[1] - k && b.pos[0] < b.target.pos[0] + k && b.pos[0] > b.target.pos[0] - k)
+            {         bullets.splice(i, 1);         i--; 
+                if (b.target.hp >= 0 && !b.target.destroyed)
+                {
+                    b.target.hp -= b.damage; 
+                }
+                if (b.target.hp < 0)
+                {
+                    b.target.destroyed = true;
+                    b.target.hp = 0;  // Add an explosion
+                                    explosions.push(
+                    {                    pos: b.target.pos,
+                                            sprite: new Sprite("https://hsto.org/webt/f1/fb/m2/f1fbm2uydhk96r1syq2f_jxv3om.png", [0, 117],   [39, 39], [k * 3.2, k * 3.2], 14,   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],  null,  true)     
+                    });
+                }
+            }        
+        } 
+
+          
+    }
+
+
+
+    function render()
+    {
+
+        if (!isGameOver)
+        {
+
+            renderArea(ctx);
+            renderEntities(enemies);
+            renderEntities(units);
+            renderBullets();
+            renderEntities(explosions);
+
+     
+        }
+    };
+//игровое поле
+    function renderArea(ctx)  {
+    
+    ctx.globalAlpha = 0.5;
+        
+    for (x = 0;x * 102 < c.width;x++) {
+        for (y = 0;y * 102 < c.height;y++) { ctx.drawImage(resources.get('https://hsto.org/webt/ti/r4/sh/tir4shtincszw4peazx3f6znvn4.png'), 0, 0, 512, 512, x*102, y*102,102,102);
+        }
+    }
+    ctx.globalAlpha = 1;
+   ctx.fillStyle = "rgba(250,250,250,0.19)";
+        ctx.fillRect(0, 0, c.width, c.height );
+        ctx.fillStyle = "rgba(50,200,50,0.9)";
+        ctx.fillRect(0, 0, c.width, c.height / 20);
+        ctx.fillStyle = " rgba(200,50,50,0.7)";
+        ctx.fillRect(0, c.height - c.width / 4 - c.height / 20, c.width, c.height / 20);
+        ctx.font = c.height / 26 + "px Arial";
+        ctx.fillStyle = " rgba(250,250,250,0.7)";
+        
+ctx.fillText("Прохождение уровней", c.width/500, c.height/24);              
+
+        ctx.beginPath();
+        for (var x = c.width / 4; x < c.width; x += c.width / 4)
+        {
+
+            ctx.moveTo(x + 0.1, c.height - c.width / 4);
+            ctx.lineTo(x + 0.1, c.height);
+        };
+
+        ctx.moveTo(0, c.height - c.width / 4);
+        ctx.lineTo(c.width, c.height - c.width / 4);
+        ctx.closePath();
+        ctx.strokeStyle = "#eee";
+        ctx.stroke();
+
+        if (deployarea === true)
+        {
+            drawDeployArea();
+        }
+
+     
+    };
+
+    function drawDeployArea()
+    {
+        
+        ctx.beginPath();
+        ctx.rect(c.width / 100 -2, c.height / 2 -2, c.width - c.width / 100 - 3 +4, c.height / 3.7 +4);
+        ctx.strokeStyle = "darkgreen";
+         ctx.closePath();
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.rect(c.width / 100, c.height / 2, c.width - c.width / 100 - 3, c.height / 3.7);
+        ctx.strokeStyle = "white";
+        ctx.closePath();
+        ctx.stroke();
+
+
+    }
+
+    function drawTrLights()
+    {
+
+        for (i = 0; i < icons.length; i++)
+        {
+
+            if (icons[i].respawn == true || !icons[i].active)
+            {
+                ctx.fillStyle = "red";
+            }
+            else
+            {
+                ctx.fillStyle = "green";
+            }
+            ctx.fillRect(c.width / 4.8 + c.width / 4 * i, c.height - c.width / 4.1, c.width / 30, c.width / 30);
+        };
+    };
+
+    
+    function renderEntities(list)
+    {
+
+            
+        for (var i = 0; i < list.length; i++)
+        {
+
+                    renderEntity(list[i]);  
+        
+        }
+        
+        drawTrLights();
+        drawIcons(icons);
+        
+    }
+    
+    function renderBullets() {
+        for (var i = 0; i < bullets.length; i++)
+        {
+                   
+         ctx.save();
+         
+        ctx.fillStyle = "black";
+         ctx.beginPath ();
+         ctx.arc(bullets[i].pos[0], bullets[i].pos[1], 1 + bullets[i].damage/300, 0, 2*Math.PI) ;
+        ctx.fill();
+           ctx.restore();
+        }
+          
+        }
+    
+    
+    function drawIcons(list)
+    {
+        for (var i = 0; i < list.length; i++)
+        {
+
+            if (!list[i].dragable)
+            {
+
+                   ctx.save();
+                ctx.translate(list[i].pos[0] + list[i].sprite.resized[0] / 2, list[i].pos[1] + list[i].sprite.resized[1] / 2);
+                ctx.rotate(Math.PI / 180 * (-90));
+                ctx.translate(-list[i].sprite.resized[0] / 2, - list[i].sprite.resized[1] / 2);
+                if(!list[i].active) ctx.globalAlpha = 0.2;
+                list[i].sprite.render(ctx);
+                
+                ctx.restore();
+                
+             
+
+            }
+            else
+            {
+
+                ctx.save();
+
+                if (mouse.down)
+                {
+                    ctx.translate(mouse.x, mouse.y);
+                }
+                else
+                {
+                    ctx.translate(xxx, yyy);
+                }
+                ctx.rotate(Math.PI / 180 * (-90));
+                ctx.translate(-list[i].sprite.resized[0] / 2, - list[i].sprite.resized[1] / 2);
+                
+            
+
+                list[i].sprite.render(ctx);
+
+                list[i].pos = [xxx, yyy]
+
+                ctx.restore();
+            }    
+        }
+    };
+
+
+    function renderEntity(entity)
+    {
+
+
+        if (!entity.destroyed)
+        {    ctx.save();
+            ctx.translate(entity.pos[0], entity.pos[1]);
+
+            if (entity.time && entity.time < 0.7)
+            {
+                ctx.scale(1.9 - entity.time * entity.time * 1.7, 1.9 - entity.time * entity.time * 1.7);
+            }
+
+            ctx.rotate(Math.PI / 180 * (entity.angle));
+
+            ctx.translate(-entity.sprite.resized[0] / 2, - entity.sprite.resized[1] / 2);
+
+             entity.sprite.render(ctx);
+            renderHP(entity);  ctx.restore();
+        }
+    }
+
+    function renderHP(entity)
+    {
+
+        if (entity.time > 0.8)
+        {
+            var hp = entity.hp * 100 / entity.maxhp;
+            if (hp < 0) hp = 0;
+            if (entity.dir < 0)
+            {
+                var reverse = entity.sprite.resized[0];
+            }
+            else
+            {
+                var reverse = 0;
+            }
+
+            ctx.beginPath();
+            ctx.lineWidth = k / 2.5;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "black";
+            ctx.moveTo(0 + reverse, 0);
+            ctx.lineTo(0 + reverse, entity.sprite.resized[1]);
+            ctx.stroke();
+
+
+            ctx.beginPath();
+            ctx.lineWidth = k / 3.2;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "lightgrey";
+            ctx.moveTo(0 + reverse, 0);
+            ctx.lineTo(0 + reverse, entity.sprite.resized[1]);
+            ctx.stroke();
+
+            ctx.beginPath();
+
+            ctx.lineWidth = k / 4;
+
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "rgb(" + Math.floor(100 - hp * 2.56) + "," + Math.floor(hp * 2.56) + ",0)";
+            ctx.moveTo(0 + reverse, 0);
+            ctx.lineTo(0 + reverse, hp / 100 * entity.sprite.resized[1]);
+            ctx.stroke();
+            ctx.lineWidth = 1;
+        }
+    }
+
+};
+
+
+
+
+
+
+/////////////^^^^^^^^^^^^^^////////////
+
+var requestAnimFrame = (function ()
+{
+
+        
+    return window.requestAnimationFrame ||
+
+            window.webkitRequestAnimationFrame ||
+
+            window.mozRequestAnimationFrame ||
+
+            window.oRequestAnimationFrame ||
+
+            window.msRequestAnimationFrame ||
+
+            
+    function (callback)
+    {
+
+                    window.setTimeout(callback, 1000 / 60);
+
+                
+    };
+})();
+
+///^^^^^^^///////////^^^^/////////
+
+function loader()
+{
+
+    var maindiv = document.getElementById("main");
+    
+    
+
+
+    maindiv.innerHTML = '<button id="start" onclick="startGame ()">Почати гру</button><br><button id="info" onclick="inf()">Як грати?</button><br/><span class="dif">Рівень:</span><span class="dif" >' + dif[lvl] + '  </span>';
+
+    lastTime = Date.now();
+
+};
+//////////////////////////////////
+
+(function ()
+{
+    var resourceCache = {};
+    var loading = [];
+    var readyCallbacks = [];
+    // Load an image url or an array of image urls
+    function load(urlOrArr)
+    {
+        if (urlOrArr instanceof Array)
+        {
+            urlOrArr.forEach(function (url)
+            {
+                _load(url);
+            });
+        }
+        else
+        {
+            _load(urlOrArr);
+        }
+    }
+
+    function _load(url)
+    {
+        if (resourceCache[url])
+        {
+            return resourceCache[url];
+        }
+        else
+        {
+            var img = new Image();
+            img.onload = function ()
+            {
+                resourceCache[url] = img;
+                if (isReady())
+                {
+                    readyCallbacks.forEach(function (func)
+                    {
+                        func();
+                    });
+                }
+            };
+            resourceCache[url] = false;
+            img.src = url;
+        }
+    }
+
+    function get(url)
+    {
+        return resourceCache[url];
+    }
+    function isReady()
+    {
+        var ready = true;
+        for (var k in resourceCache)
+        {
+            if (resourceCache.hasOwnProperty(k) && !resourceCache[k])
+            {
+                ready = false;
+            }
+        }
+        return ready;
+    }
+
+    function onReady(func)
+    {
+        readyCallbacks.push(func);
+    }
+    window.resources =
+    {
+        load: load,
+        get: get,
+        onReady: onReady,
+        isReady: isReady
+    };
+})();
+
+resources.load([
+
+"https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png",
+
+"https://hsto.org/webt/f1/fb/m2/f1fbm2uydhk96r1syq2f_jxv3om.png",
+
+"https://hsto.org/webt/ti/r4/sh/tir4shtincszw4peazx3f6znvn4.png"
+]);
+
+resources.onReady(loader);
+
+
+
+      </script>
+    </head>
+<body>
+       <div id="main">
+          <progress class="progress"> </progress> 
+       </div>
+      <div id="infdiv">Перестасківай свої танки в ігрову зону. <br/> <br/> Ти виграєш, коли один з твоїх танків торкнеться зеленої лінії у верхній частині поля <br/> <br/> Не дозволяй ворожим танкам дістатися то твоєї бази. <Br / > <br/> Удачі, танктіст! Нехай везіння буде на твоєму боці.</div>
+       <div id="log"></div>
+       
+       <div id="myModal" class="modal">
+            <div class="modal-content">
+                 <span class="close">&times;</span>
+                 <p class="modal-text"></p>
+      </div>
+   </div> 
+   
+</body>
+</html>
