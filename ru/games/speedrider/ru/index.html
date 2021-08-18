@@ -15,11 +15,13 @@
     <meta charset="UTF-8">
     <title>SpeedRider</title>
     <style type="text/css">
-        @media only screen and (max-device-width: 480px) {
-    .HideMobile{
-        display:none;
-    }  
-}
+.hide-on-mobile { display: inline; }
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ .hide-on-mobile { display: none; }}
+
+
 .show-on-mobile { display: none; }
 /* Smartphone Portrait and Landscape */
 @media only screen
@@ -204,65 +206,14 @@ and (max-device-width : 480px){ .show-on-mobile { display: inline; }}
 }
     </style>
 
-<body class="HideMobile">
+<body>
 <div class="show-on-mobile">
-    <style type="text/css" media="screen">
 
+Данный контент доступен только на компьютерных устройстах
 
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
-      }
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-    </style>
-  </head>
-  <body>
-
-    <div class="container">
-
-      <h1>301</h1>
-      <p><strong>Данный контент доступен только на десктопных устройствах</strong></p>
-
-      <p>
-        Вернитесь на главную страницу <a href = 'phonezgames.github.io/ru/'>здесь</a>
-      </p>
-
-    
-
-      
-    </div>
 </div>
 
+<div class="hide-on-mobile">
     <div id="help">
         <p>Управление: стрелками на клавиатуре</p>
     </div>
@@ -560,7 +511,7 @@ $(function () {
 });
 
     </script>
-
+</div>
 </body>
 
 </html>
