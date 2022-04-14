@@ -1,4 +1,4 @@
-<!-- Written by Pavel Spitsyn -->
+
 <!-- Based on the game "Clash of Tanks" -->
 <!DOCTYPE html> 
 <html> 
@@ -1125,18 +1125,6 @@ c.addEventListener("touchmove", function (event)
 
        if (Math.floor(gameTime) == 0 && firstwave == false)
         {
-                function sayTutorial1() {
-                smoke.alert('Перетягуй свої танки на поле бою');
-                }
-                setTimeout(sayTutorial2, 40);
-                function sayTutorial2() {
-                smoke.alert('ПУТІН ХУЙЛО!');
-                }
-                setTimeout(sayTutorial3, 10);
-                function sayTutorial3() {
-                smoke.alert('Твоя задача знишити ворожий танк й добратися до зеленої лінії у верхній частині поля!');
-                }
-                setTimeout(sayTutorial3, 3000);
 
             deployEnemy(enemyttank, [c.width / 2, c.height / 20]);
 
