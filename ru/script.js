@@ -21,16 +21,16 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event/"
             }
         },
-        1 : {
+        0 : {
             name : "Unreal Escaping",
-            type : "Поймай хуйло",
+            type : "Поймай лукашенка",
             art : "https://phonezgames.xyz/ru/icons/unrealescaping_event_l.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_l_event/",
             update : {
                 version : "1.0 E",
-                date : "7 марта, 2022г.",
-                versionTxt : "Специальноуавыааыв в поддержку Украины. Суть очень проста, вместо заключенного вы должны поймать сами понимаете кого))",
-                img : "https://phonezgames.xyz/ru/img/unrealescaping_event.png"
+                date : "8 мая, 2022г.",
+                versionTxt : "Специальное событие, в поддержку Украины. Суть очень проста, вместо заключенного вы должны поймать сами понимаете кого))",
+                img : "https://phonezgames.xyz/ru/img/unrealescaping_event_l.png"
 },
             details : {
                 seller : "PhoneZ Games",
@@ -42,7 +42,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event/"
             }
         },
-        2 : {
+        3 : {
             name : "Clash of Tanks",
             type : "Уничтожь хуйло на танке",
             art : "https://phonezgames.xyz/ru/icons/clashoftanks_event.png",
