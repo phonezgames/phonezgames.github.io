@@ -21,7 +21,28 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event/"
             }
         },
-        2 : {
+2 : {
+            name : "Unreal Escaping",
+            type : "Catch Lukashenko",
+            art : "https://phonezgames.xyz/en/icons/unrealescaping_event_l.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event_l/",
+            update : {
+                version : "1.0 E",
+                date : "May 8, 2022",
+                versionTxt : "Special event in support of Ukraine. The essence is very simple, instead of a prisoner, you have to catch yourself, you know who))",
+                img : "https://phonezgames.xyz/en/img/unrealescaping_event_l.png"
+},
+            details : {
+                seller : "PhoneZ Games",
+                size : "2,38 MB",
+                language : "English",
+                sort : "6+",
+                inapp : "No",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event_l/"
+            }
+        },
+        3 : {
             name : "Clash of Tanks",
             type : "Destroy the dick on the tank",
             art : "https://phonezgames.xyz/en/icons/clashoftanks_event.png",
@@ -42,7 +63,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/clashoftanks_event/"
             }
         },
-        3 : {
+        4 : {
             name : "Kill putins",
             type : "Destroy all 'Putins'",
             art : "https://phonezgames.xyz/en/icons/killputins.png",
@@ -63,7 +84,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/killputins/"
             }
         },
-        4 : {
+        5 : {
             name : "Sniper 2D",
             type : "Hit a target",
             art : "https://phonezgames.xyz/en/icons/sniper2d.png",
@@ -84,7 +105,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/sniper2d/"
             }
         },
-        5 : {
+        6 : {
             name : "Math Reaction",
             type : "Develops mental arithmetic",
             art : "https://phonezgames.xyz/en/icons/mathreaction.png",
@@ -105,7 +126,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/mathreaction/"
             }
         },
-        6 : {
+        7 : {
             name : "Space Run",
             type : "Control the space rocket",
             art : "https://phonezgames.xyz/en/icons/spacerun.png",
@@ -126,7 +147,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/spacerun/"
             }
         },
-        7 : {
+        8 : {
             name : "SpeedRider",
             type : "Endless racing game",
             art : "https://phonezgames.xyz/en/icons/speedrider.png",
