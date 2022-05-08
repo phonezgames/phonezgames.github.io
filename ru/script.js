@@ -21,11 +21,11 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event/"
             }
         },
-        2 : {
-            name : "Unreal Escаping",
+        9 : {
+            name : "Unreal Escaping",
             type : "Поймай лукашенка",
             art : "https://phonezgames.xyz/ru/icons/unrealescaping_event_l.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_l_event/",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event_l/",
             update : {
                 version : "1.0 E",
                 date : "8 мая, 2022г.",
