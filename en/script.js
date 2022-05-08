@@ -21,11 +21,11 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event/"
             }
         },
-2 : {
+0 : {
             name : "Unreal Escaping",
             type : "Catch Lukashenko",
             art : "https://phonezgames.xyz/en/icons/unrealescaping_event_l.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event_l/",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_l_event/",
             update : {
                 version : "1.0 E",
                 date : "May 8, 2022",
