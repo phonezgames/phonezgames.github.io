@@ -7,7 +7,7 @@ $(function(){
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/",
             update : {
                 version : "1.0 E",
-                date : "7 березня, 2022г.",
+                date : "7 марта, 2022г.",
                 versionTxt : "Спеціальна подія на підтримку України. Суть дуже проста, замість ув'язненого ви повинні зловити самі, розумієте кого)) ",
                 img : "https://phonezgames.xyz/ua/img/unrealescaping_event.png"
 },
@@ -21,35 +21,14 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/"
             }
         },
-0 : {
-            name : "Unreal Escaping",
-            type : "Піймай лукашенка",
-            art : "https://phonezgames.xyz/ua/icons/unrealescaping_event_l.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_l_event/",
-            update : {
-                version : "1.0 E",
-                date : "8 травня, 2022г.",
-                versionTxt : "Спеціальна подія на підтримку України. Суть дуже проста, замість ув'язненого ви повинні зловити самі, розумієте кого)) ",
-                img : "https://phonezgames.xyz/ua/img/unrealescaping_event_l.png"
-},
-            details : {
-                seller : "PhoneZ Games",
-                size : "2,38 MB",
-                language : "Українська",
-                sort : "6+",
-                inapp : "Відсутні",
-                copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event_l/"
-            }
-        },
-        3 : {
+        2 : {
             name : "Clash of Tanks",
             type : "Знищ хуйло на танку",
             art : "https://phonezgames.xyz/ua/icons/clashoftanks_event.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/clashoftanks_event/",
             update : {
                 version : "1.0 E",
-                date : "7 березня, 2022г.",
+                date : "7 марта, 2022г.",
                 versionTxt : "Російський військовий корабель - йди на # @ й! Швидше за все, багато хто вже почув легендарну фразу, тож давайте всі разом підтримаємо Україну, зігравши у спеціальну подію Clash of Tanks, де ви українські танки, а перемогти ви повинні російський!",
                 img : "https://phonezgames.xyz/ua/img/clashoftanks_event.png"
 },
@@ -63,7 +42,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/clashoftanks_event/"
             }
         },
-        4 : {
+        3 : {
             name : "Kill putins",
             type : "Знищ усіх 'путінів'",
             art : "https://phonezgames.xyz/ua/icons/killputins.png",
@@ -84,7 +63,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/killputins/"
             }
         },
-        5 : {
+        4 : {
             name : "Sniper 2D",
             type : "Попади у ціль",
             art : "https://phonezgames.xyz/ua/icons/sniper2d.png",
@@ -105,14 +84,14 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/sniper2d/"
             }
         },
-        6 : {
+        5 : {
             name : "Math Reaction",
             type : "Развиває ментальну арифметику",
             art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
             update : {
                 version : "1.0",
-                date : "9 серпня, 2022г.",
+                date : "9 августа, 2022г.",
                 versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
                 img : "https://phonezgames.xyz/ua/img/mathreaction.png"
 },
@@ -126,7 +105,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
             }
         },
-        7 : {
+        6 : {
             name : "Space Run",
             type : "Керуй космічним кораблем",
             art : "https://phonezgames.xyz/ua/icons/spacerun.png",
@@ -147,14 +126,14 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/spacerun/"
             }
         },
-        8 : {
+        7 : {
             name : "SpeedRider",
             type : "Бескінечна гоночна гра",
             art : "https://phonezgames.xyz/ua/icons/speedrider.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/speedrider/",
             update : {
                 version : "1.1",
-                date : "7 січня, 2018г.",
+                date : "7 Января, 2018г.",
                 versionTxt : "Це бескінечна комп'ютерна гра. Просте управління й сенс гри, 'залипалка' ще та :)",
                 img : "https://phonezgames.xyz/ua/img/speedrider.png"
 },
