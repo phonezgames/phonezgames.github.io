@@ -244,17 +244,17 @@ function loadGame(){
     updArr(totalArr);
 
     function drawBoard() {
+        var img = new Image();
         ctx.beginPath();
         ctx.fillRect(board.x,board.y-5,40,board.width+3);
         ctx.fillRect(board.x,board.y-board.height/2,board.width,board.height);
         ctx.moveTo(board.x,board.y-15);
         ctx.quadraticCurveTo(board.x-10,board.y,board.x,board.y+15);
         //ctx.lineTo(10,6);
-        ctx.fillStyle = "#36e";
+        ctx.fillStyle = "#aaa";
         ctx.fill();
         ctx.closePath();
         ctx.fillStyle = "#000";
-    
         if(board.y >= h || board.y <= 0){
             board.dy *= -1;
         }
