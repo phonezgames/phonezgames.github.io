@@ -2,9 +2,9 @@ $(function(){
     var app = {
         1 : {
             name : "Unreal Escaping",
-            type : "Catch a dick",
+            type : "Catch the terrorist",
             art : "https://phonezgames.xyz/en/icons/unrealescaping_event.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event/",
+            url : "https://phonezgames.xyz/en/games/unrealescaping_event/",
             update : {
                 version : "1.0 E",
                 date : "March 7, 2022",
@@ -18,14 +18,14 @@ $(function(){
                 sort : "6+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/unrealescaping_event/"
+                site : "https://phonezgames.xyz/en/games/unrealescaping_event/"
             }
         },
-        2 : {
+        3 : {
             name : "Clash of Tanks",
-            type : "Destroy the dick on the tank",
+            type : "Destroy the terrorist on the tank",
             art : "https://phonezgames.xyz/en/icons/clashoftanks_event.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/clashoftanks_event/",
+            url : "https://phonezgames.xyz/en/games/clashoftanks_event/",
             update : {
                 version : "1.0 E",
                 date : "March 7, 2022",
@@ -39,14 +39,14 @@ $(function(){
                 sort : "6+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/clashoftanks_event/"
+                site : "https://phonezgames.xyz/en/games/clashoftanks_event/"
             }
         },
-        3 : {
+        4 : {
             name : "Kill putins",
             type : "Destroy all 'Putins'",
             art : "https://phonezgames.xyz/en/icons/killputins.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/killputins/",
+            url : "https://phonezgames.xyz/en/games/killputins/",
             update : {
                 version : "1.0",
                 date : "April 15, 2022",
@@ -60,14 +60,14 @@ $(function(){
                 sort : "6+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/killputins/"
+                site : "https://phonezgames.xyz/en/games/killputins/"
             }
         },
-        4 : {
+        5 : {
             name : "Sniper 2D",
             type : "Hit a target",
             art : "https://phonezgames.xyz/en/icons/sniper2d.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/sniper2d/",
+            url : "https://phonezgames.xyz/en/games/sniper2d/",
             update : {
                 version : "1.0",
                 date : "August 19, 2022г.",
@@ -81,14 +81,14 @@ $(function(){
                 sort : "6+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/sniper2d/"
+                site : "https://phonezgames.xyz/en/games/sniper2d/"
             }
         },
-        5 : {
+        6 : {
             name : "Math Reaction",
             type : "Develops mental arithmetic",
             art : "https://phonezgames.xyz/en/icons/mathreaction.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/mathreaction/",
+            url : "https://phonezgames.xyz/en/games/mathreaction/",
             update : {
                 version : "1.0",
                 date : "August 9, 2022г.",
@@ -102,14 +102,14 @@ $(function(){
                 sort : "4+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/mathreaction/"
+                site : "https://phonezgames.xyz/en/games/mathreaction/"
             }
         },
-        6 : {
+        7 : {
             name : "Space Run",
             type : "Control the space rocket",
             art : "https://phonezgames.xyz/en/icons/spacerun.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/spacerun/",
+            url : "https://phonezgames.xyz/en/games/spacerun/",
             update : {
                 version : "1.0",
                 date : "March 29, 2020",
@@ -123,14 +123,14 @@ $(function(){
                 sort : "4+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/spacerun/"
+                site : "https://phonezgames.xyz/en/games/spacerun/"
             }
         },
-        7 : {
+        8 : {
             name : "SpeedRider",
             type : "Endless racing game",
             art : "https://phonezgames.xyz/en/icons/speedrider.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/speedrider/",
+            url : "https://phonezgames.xyz/en/games/speedrider/",
             update : {
                 version : "1.1",
                 date : "January 7, 2018",
@@ -144,7 +144,7 @@ $(function(){
                 sort : "4+",
                 inapp : "No",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/en/games/speedrider/"
+                site : "https://phonezgames.xyz/en/games/speedrider/"
             }
         }
     }
