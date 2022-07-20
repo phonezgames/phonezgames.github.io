@@ -44,7 +44,7 @@ $(function(){
         },
         3 : {
             name : "PhoneZ Bank",
-            type : "Ваш внутрішній банківський рахунок",
+            type : "Ваш внутрішній банківський рахунок (Натисніть)",
             art : "https://phonezgames.xyz/img/bankpng.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/killputins/",
             update : {
