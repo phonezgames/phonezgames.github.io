@@ -9,7 +9,7 @@ $(function(){
                 version : "1.0 E",
                 date : "7 марта, 2022г.",
                 versionTxt : "Спеціальна подія на підтримку України. Суть дуже проста, замість ув'язненого ви повинні зловити самі, розумієте кого)) ",
-                img : " phonezgames.github.io/id/login/dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/original_000000005макеєвамарія04082006-3.png "
+                img : "phonezgames.xyz/id/login/dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/original_00000000504082006-3.png"
 },
             details : {
                 seller : "PhoneZ Card (C)",
@@ -30,7 +30,7 @@ $(function(){
                 version : "1.0 E",
                 date : "7 марта, 2022г.",
                 versionTxt : "Російський військовий корабель - йди на # @ й! Швидше за все, багато хто вже почув легендарну фразу, тож давайте всі разом підтримаємо Україну, зігравши у спеціальну подію Clash of Tanks, де ви українські танки, а перемогти ви повинні російський!",
-                img : "https://phonezgames.xyz/id/login/dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/original_000000002%D0%BC%D0%B0%D0%BA%D0%B5%D1%94%D0%B2%D0%B0%D0%BC%D0%B0%D1%80%D1%96%D1%8F06042006-1.png"
+                img : "https://phonezgames.xyz/id/login/dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/original_00000000206042006-1.png"
 },
             details : {
                 seller : "PhoneZ Identification (Paper)",
@@ -51,7 +51,7 @@ $(function(){
                 version : "1.0",
                 date : "15 квітня, 2022р.",
                 versionTxt : "Просто потрібно убити всіх путінів у грі, тицяй грати і сам/а зрозумієш))",
-                img : " phonezgames.github.io/id/login/dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/original_000000005макеєвамарія04082006-3.png"
+                img : "phonezgames.xyz/id/login/dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/original_00000000504082006-3.png"
 },
             details : {
                 seller : "PhoneZ Bank Account",
