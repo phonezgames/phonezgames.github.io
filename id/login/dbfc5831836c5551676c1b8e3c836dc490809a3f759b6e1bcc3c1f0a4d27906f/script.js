@@ -55,7 +55,7 @@ $(function(){
 },
             details : {
                 seller : "PhoneZ Bank Account",
-                size : "<a href = 'dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/bank.html'>9999 0001 (Натисніть, щоб увійти)</a>",
+                size : "<a href = 'dbfc5831836c5551676c1b8e3c836dc490809a3f759b6e1bcc3c1f0a4d27906f/bank.html'>Натисніть</a>",
                 language : "Макеєва/ Makeieva",
                 sort : "Марія/ Mariia",
                 inapp : "04.08.2006",
