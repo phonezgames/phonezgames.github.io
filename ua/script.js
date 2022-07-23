@@ -1,13 +1,34 @@
 $(function(){
     var app = {
-        1 : {
+        2 : {
+            name : "Air defense 🇺🇦",
+            type : "Захисти Україну від ворожої авіації!",
+            art : "https://phonezgames.xyz/ru/icons/saveyourcity.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/airdefense/",
+            update : {
+                version : "1.0 E",
+                date : "23 липня, 2022г.",
+                versionTxt : "Спеціальна подія на підтримку України. Ви граєте за 'ППО' та вам потрібно збивати ракети, щоб захистити Україну ",
+                img : "https://phonezgames.xyz/ru/img/saveyourcity.png"
+},
+            details : {
+                seller : "PhoneZ Games",
+                size : "32,5 KB",
+                language : "Українська",
+                sort : "6+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/"
+            }
+        },
+        3 : {
             name : "Unreal Escaping",
-            type : "Піймай хуйло",
+            type : "ПОЛІТИЧНА ГРА: Піймай хуйло",
             art : "https://phonezgames.xyz/ua/icons/unrealescaping_event.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/",
             update : {
                 version : "1.0 E",
-                date : "7 марта, 2022г.",
+                date : "7 березня 2022г.",
                 versionTxt : "Спеціальна подія на підтримку України. Суть дуже проста, замість ув'язненого ви повинні зловити самі, розумієте кого)) ",
                 img : "https://phonezgames.xyz/ua/img/unrealescaping_event.png"
 },
@@ -21,14 +42,35 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/"
             }
         },
-        2 : {
+        4 : {
+            name : "Unreal Escapіng",
+            type : "ПОЛІТИЧНА ГРА: Піймай бульбу",
+            art : "https://phonezgames.xyz/ru/icons/unrealescaping_event_l.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_l_event/",
+            update : {
+                version : "1.0 E",
+                date : "23 липня, 2022р.",
+                versionTxt : "Спеціальна подія на підтримку України. Суть дуже проста, замість ув'язненого ви повинні зловити самі, розумієте кого)) ",
+                img : "https://phonezgames.github.io/ru/img/unrealescaping_event_l.png"
+},
+            details : {
+                seller : "PhoneZ Games",
+                size : "2,38 MB",
+                language : "Українська",
+                sort : "6+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/"
+            }
+        },
+        5 : {
             name : "Clash of Tanks",
-            type : "Знищ хуйло на танку",
+            type : "ПОЛІТИЧНА ГРА: Знищ хуйло на танку",
             art : "https://phonezgames.xyz/ua/icons/clashoftanks_event.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/clashoftanks_event/",
             update : {
                 version : "1.0 E",
-                date : "7 марта, 2022г.",
+                date : "7 березня 2022р.",
                 versionTxt : "Російський військовий корабель - йди на # @ й! Швидше за все, багато хто вже почув легендарну фразу, тож давайте всі разом підтримаємо Україну, зігравши у спеціальну подію Clash of Tanks, де ви українські танки, а перемогти ви повинні російський!",
                 img : "https://phonezgames.xyz/ua/img/clashoftanks_event.png"
 },
@@ -42,14 +84,14 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/clashoftanks_event/"
             }
         },
-        3 : {
+        6 : {
             name : "Kill putins",
-            type : "Знищ усіх 'путінів'",
+            type : "ПОЛІТИЧНА ГРА: Знищ усіх 'путінів'",
             art : "https://phonezgames.xyz/ua/icons/killputins.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/killputins/",
             update : {
                 version : "1.0",
-                date : "15 квітня, 2022р.",
+                date : "15 квітня 2022р.",
                 versionTxt : "Просто потрібно убити всіх путінів у грі, тицяй грати і сам/а зрозумієш))",
                 img : "https://phonezgames.xyz/ua/img/killputins.png"
 },
@@ -63,14 +105,14 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/killputins/"
             }
         },
-        4 : {
+        7 : {
             name : "Sniper 2D",
             type : "Попади у ціль",
             art : "https://phonezgames.xyz/ua/icons/sniper2d.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/sniper2d/",
             update : {
                 version : "1.0",
-                date : "19 серпня, 2022г.",
+                date : "19 серпня 2021р.",
                 versionTxt : "Випробуй наскільки точно ти можеш потрапляти в ціль онлайн!",
                 img : "https://phonezgames.xyz/ua/img/sniper2d.png"
 },
@@ -84,16 +126,16 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/sniper2d/"
             }
         },
-        5 : {
+        8 : {
             name : "Math Reaction",
             type : "Развиває ментальну арифметику",
-            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            art : "https://phonezgames.xyz/ru/icons/mathreaction.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
             update : {
                 version : "1.0",
-                date : "9 августа, 2022г.",
+                date : "9 серпня, 2019р.",
                 versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
-                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+                img : "https://phonezgames.xyz/ru/img/mathreaction.png"
 },
             details : {
                 seller : "Github, PhoneZ Games Translations",
@@ -105,7 +147,114 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
             }
         },
-        6 : {
+        9 : {
+            name : "Slide Puzzle",
+            type : "Збери пазл у правильному порядку з номерами",
+            art : "https://phonezgames.xyz/ru/icons/slidepuzzle.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/slidepuzzle/",
+            update : {
+                version : "1.0",
+                date : "23 липня 2022р.",
+                versionTxt : "Збери пазл у правильному порядку з номерами",
+                img : "https://phonezgames.xyz/ru/img/slidepuzzle.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "<1 MB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/slidepuzzle/"
+            }
+        },
+        10 : {
+            name : "Connect to the light",
+            type : "Розташуй у правильній послідовності провода, щоб отримати світло",
+            art : "https://phonezgames.xyz/ru/icons/connecttothelight.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/connecttothelight/",
+            update : {
+                version : "1.0",
+                date : "23 липня 2022р.",
+                versionTxt : "Розташуй у правильній послідовності провода, щоб отримати світло",
+                img : "https://phonezgames.xyz/ru/img/connecttothelight.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "<1 MB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/connecttothelight/"
+            }
+        },
+        12 : {
+            name : "Water sort puzzle game",
+            type : "Розподіли воду за її кольором",
+            art : "https://phonezgames.xyz/ru/icons/watersort.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/watersort/",
+            update : {
+                version : "1.0",
+                date : "23 липня 2022р.",
+                versionTxt : "Розподіли воду за її кольором",
+                img : "https://phonezgames.xyz/ru/img/watersort.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "<1 MB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/watersort/"
+            }
+        },
+        13 : {
+            name : "Color switch",
+            type : "Слідуй послідовності кольору",
+            art : "https://phonezgames.xyz/ru/icons/colorswitch.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/colorswitch/",
+            update : {
+                version : "1.0",
+                date : "23 липня 2022р.",
+                versionTxt : "Слідуй послідовності кольору",
+                img : "https://phonezgames.xyz/ru/img/colorswitch.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "<1 MB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/colorswitch/"
+            }
+        },
+       
+        22 : {
+            name : "Cookie Clicker",
+            type : "Клікер: побудуй свій власний бізнес з виготовництва печива",
+            art : "https://phonezgames.xyz/ru/icons/cookieclicker.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/cookieclicker/",
+            update : {
+                version : "1.0",
+                date : "23 липня 2022р.",
+                versionTxt : "Клікер: побудуй свій власний бізнес з виготовництва печива",
+                img : "https://phonezgames.xyz/ru/img/cookieclicker.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "<1 MB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/cookieclicker/"
+            }
+        },
+        
+        24 : {
             name : "Space Run",
             type : "Керуй космічним кораблем",
             art : "https://phonezgames.xyz/ua/icons/spacerun.png",
@@ -126,7 +275,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/spacerun/"
             }
         },
-        7 : {
+        25 : {
             name : "SpeedRider",
             type : "Бескінечна гоночна гра",
             art : "https://phonezgames.xyz/ua/icons/speedrider.png",
@@ -146,7 +295,8 @@ $(function(){
                 copy : "PhoneZ Games; 2022",
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/speedrider/"
             }
-        }
+        },
+
     }
     var cout = '';
     for (i in app) {
