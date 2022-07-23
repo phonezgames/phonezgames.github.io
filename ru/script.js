@@ -4,7 +4,7 @@ $(function(){
             name : "Air defense 🇺🇦",
             type : "Защити Украину от вражеской авиации!",
             art : "https://phonezgames.xyz/ru/icons/saveyourcity.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/airdefense/",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/towerwars/",
             update : {
                 version : "1.0 E",
                 date : "23 июля 2022г.",
