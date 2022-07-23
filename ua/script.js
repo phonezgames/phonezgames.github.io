@@ -4,7 +4,7 @@ $(function(){
             name : "Air defense 🇺🇦",
             type : "Захисти Україну від ворожої авіації!",
             art : "https://phonezgames.xyz/ru/icons/saveyourcity.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/airdefense/",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/towerwars/",
             update : {
                 version : "1.0 E",
                 date : "23 липня, 2022г.",
@@ -18,7 +18,7 @@ $(function(){
                 sort : "6+",
                 inapp : "Відсутні",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/unrealescaping_event/"
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/towerwars/"
             }
         },
         3 : {
