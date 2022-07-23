@@ -21,7 +21,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event/"
             }
         },
-        1 : {
+        3 : {
             name : "Unreal Escaping",
             type : "ПОЛИТИЧЕСКАЯ ИГРА: Поймай хуйло",
             art : "https://phonezgames.xyz/ru/icons/unrealescaping_event.png",
@@ -63,7 +63,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event/"
             }
         },
-        2 : {
+        5 : {
             name : "Clash of Tanks",
             type : "ПОЛИТИЧЕСКАЯ ИГРА: Уничтожь хуйло на танке",
             art : "https://phonezgames.xyz/ru/icons/clashoftanks_event.png",
@@ -84,7 +84,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/clashoftanks_event/"
             }
         },
-        3 : {
+        6 : {
             name : "Kill putins",
             type : "ПОЛИТИЧЕСКАЯ ИГРА: Уничтожь всех 'путинов'",
             art : "https://phonezgames.xyz/ru/icons/killputins.png",
@@ -105,7 +105,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/killputins/"
             }
         },
-        4 : {
+        7 : {
             name : "Sniper 2D",
             type : "Попади в цель",
             art : "https://phonezgames.xyz/ru/icons/sniper2d.png",
@@ -126,7 +126,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/sniper2d/"
             }
         },
-        5 : {
+        8 : {
             name : "Math Reaction",
             type : "Развивает ментальную арифметику",
             art : "https://phonezgames.xyz/ru/icons/mathreaction.png",
@@ -252,7 +252,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/cookieclicker/"
             }
         },
-        6 : {
+        23 : {
             name : "Space Run",
             type : "Управляй космической ракетой",
             art : "https://phonezgames.xyz/ru/icons/spacerun.png",
@@ -273,7 +273,7 @@ $(function(){
                 site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/spacerun/"
             }
         },
-        7 : {
+        24 : {
             name : "SpeedRider",
             type : "Бесконечная гоночная игра",
             art : "https://phonezgames.xyz/ru/icons/speedrider.png",
