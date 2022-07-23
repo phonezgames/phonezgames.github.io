@@ -147,7 +147,7 @@ function DefendTheCastle(){
     var curves = [];
     var targets = [];
     var enemyFire = [];
-    var targetStock = ["💩","😬","🤗","😈","😘","😱","😂","😎","😗","😇","😭","😜","😛","😝","😤","😵","😁","😑","😚","😍","😠","😐","🙄"];
+    var targetStock = ["🚁","✈"];
     var score = {};
     var gameSettings = {
         SHOT_DURATION:300,
@@ -155,14 +155,9 @@ function DefendTheCastle(){
         G:2.0,
         poop_m:0.5
     };
-    var CASTLE_SPRITES = ["🏯","🏫","🏰"];
+    var CASTLE_SPRITES = ["🇺🇦"];
     var CASTLE_SPRITE = CASTLE_SPRITES[randVal(0, CASTLE_SPRITES.length - 1)];
-    var scoreboard = new Scoreboard(options);
     randomCanvasColor();
-    document.getElementById("btnShowScore").onclick=function(){
-        if(drawInterval){pause();}
-        scoreboard.showScoreBoard();
-    }
     var drawInterval = null;
 
     function setDifficulty(){
@@ -235,13 +230,13 @@ function DefendTheCastle(){
             // clearInterval(drawInterval);
             drawInterval = null;
             ctx.font="50px Times New Roman";
-            ctx.fillStyle="red"; ctx.fillText("Paused",canvas.width*0.3,canvas.height/2);
-            btnPause.innerHTML="Resume";
+            ctx.fillStyle="red"; ctx.fillText("На павузі",canvas.width*0.3,canvas.height/2);
+            btnPause.innerHTML="Продовжити";
         }
         else{
             drawInterval = requestAnimationFrame(draw);
             // drawInterval = setInterval(draw, 33);
-            btnPause.innerHTML="Pause";
+            btnPause.innerHTML="Павуза";
         }
     }
  document.getElementById("randCanvasCol").onclick=randomCanvasColor;
@@ -264,13 +259,13 @@ function DefendTheCastle(){
     function drawScore(){
         ctx.font = "10px Times New Roman";
         ctx.fillStyle = 'white';
-        ctx.fillText("Health: "+score.health+"%", 10,20);
-        ctx.fillText("Score: "+score.score, 10,30);
-        ctx.fillText("Hits: "+score.hits, 10,40);
-        ctx.fillText("Fired: "+score.fired, 10,50);
-        ctx.fillText("Missed: "+score.miss, 10,60);
-        ctx.fillText("Hit %: "+Math.round((score.hits/score.fired)*100,2)+"%", 10,70);
-        ctx.fillText("Streak: "+score.streak, 10,80);
+        ctx.fillText("Залишилось від країни: "+score.health+"%", 10,20);
+        ctx.fillText("К-лк. очків: "+score.score, 10,30);
+        ctx.fillText("Попадань: "+score.hits, 10,40);
+        ctx.fillText("Влучань: "+score.fired, 10,50);
+        ctx.fillText("Пропущено: "+score.miss, 10,60);
+        ctx.fillText("Влучено %: "+Math.round((score.hits/score.fired)*100,2)+"%", 10,70);
+        ctx.fillText("Підряд: "+score.streak, 10,80);
     }
 
     function drawCastle(){
@@ -400,7 +395,7 @@ function DefendTheCastle(){
                     dy:gameSettings.DIFFICULTY,
                     poop_m:gameSettings.poop_m,
                     dir:tar.dir,
-                    icon:(tar.icon=="💩")? targetStock[randVal(1,targetStock.length-1)]:"💩",
+                    icon:(tar.icon=="🚀")? targetStock[randVal(1,targetStock.length-1)]:"🚀",
                     size:gameSettings.ENEMY_SIZE/2
                 });
             }
@@ -579,7 +574,7 @@ function DefendTheCastle(){
         drawScore();
         if(score.health<=0){
             if(!gameSettings.GAME_OVER){
-               scoreboard.submitNewScoreDialog(score.score);
+
                 gameSettings.GAME_OVER = true;
             }
              exp.createExplosion(randVal(canvas.width*0.3,canvas.width*0.7),randVal(canvas.height-60,canvas.height),randColor());
@@ -618,13 +613,10 @@ function DefendTheCastle(){
         $.confirm({
             animation: anims[randVal(0,anims.length-1)],
             closeAnimation: anims[randVal(0,anims.length-1)],
-            title: 'Start New Game',
-            content: 'Set Difficulty: '+'<select class="btn-primary" id="selectDifficulty">'+
-                '<option value=1 '+(selectDiff.value==='1'? 'selected':'')+'>Easy</option>'+
-                '<option value=2 ' +(selectDiff.value==='2'? 'selected':'')+'>Normal</option>'+
-                '<option value=3 ' +(selectDiff.value==='3'? 'selected':'')+'>Hard</option>'+
-                '<option value=4 '+(selectDiff.value==='4'? 'selected':'')+'>eXtreme</option>'+
-                '<option value=5 '+(selectDiff.value==='5'? 'selected':'')+'>1ns4n3!</option></select>',
+            title: 'Розпочати нову гру',
+            content: 'Оберіть рівень складності: '+'<select class="btn-primary" id="selectDifficulty">'+
+                '<option value=2 ' +(selectDiff.value==='2'? 'selected':'')+'>Нормальний</option>'+
+                '<option value=3 ' +(selectDiff.value==='3'? 'selected':'')+'>Складний</option>',
             type:'blue',
             closeIcon: function(){
                 pause();
@@ -639,7 +631,7 @@ function DefendTheCastle(){
                     //$.alert('Canceled!');
                     pause();
                 },
-                "Start Game": function () {
+                "Грати": function () {
                     var diffVal = this.$content.find('#selectDifficulty').val();
                     selectDiff.value = diffVal;
                     newGame();
