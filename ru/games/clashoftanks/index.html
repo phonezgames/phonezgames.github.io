@@ -1,6 +1,8 @@
 <!DOCTYPE html> 
 <html>
     <head>
+         <meta name="viewport" charset="UTF-8" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script data-ad-client="ca-pub-2100948222892131" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFJFXRSK8E"></script>
@@ -28,7 +30,6 @@
     text-align: center;
     
 }
-
 .smoke-base {
  position         : absolute;
  left             : 0%;
@@ -109,12 +110,10 @@
 .smoke-dialog-buttons-cancel {
  background-color : rgba(0, 0, 0, .40);
 }
-
-
 .dif {
     display: inline-block ;
     margin-top: 8px;
-    margin-left: 14px;
+    margin-left: 1px;
     margin-right: -12px;
     font-weight: bold;
     font-size: 2em;
@@ -146,10 +145,6 @@ canvas {
     margin: auto;
     border-radius: 7px;
     box-shadow: 0 0 15px;
--webkit-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);
--moz-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);
-box-shadow: 0px 5px 21px 10px rgba(0,0,0,0.66);
-
 }
 #start{
     color: green;
@@ -169,7 +164,6 @@ button {
     background-color: #f3f3f3;
     font-weight: bold;
     outline-style: none;
-
 }
 
 #btn-left, #btn-right {
@@ -228,12 +222,6 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
-.units{
-    -webkit-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);
-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.75);
-}
-
 
         </style>
       <script type="text/javascript">
@@ -243,7 +231,7 @@ units = [],
     bullets = [],
     enemies = [],
     explosions = [],
-    dif = [' 1', ' 2', ' 3', ' 4', ' 5', ' 6', ' 7', ' 8', ' 9', ' 10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+    dif = [' Online'],
     gameTime = 0,
     isGameOver,
     nextwave = 0,
@@ -306,46 +294,46 @@ units = [],
         update: function (dt)
         {
 
-                        this._index += this.animspeed * dt;
+                        this._index += this.animspeed * dt;
 
-                    
+                    
         },
 
 
 
-                 render: function (ctx)
+                 render: function (ctx)
         {
 
             var frame;
 
 
-                        
+                        
             if (this.animspeed > 0)
-            {                
-                var max = this.frames.length;                
-                var idx = Math.floor(this._index);                frame = this.frames[idx % max];               
+            {                
+                var max = this.frames.length;                
+                var idx = Math.floor(this._index);                frame = this.frames[idx % max];               
                 if (this.once && idx >= max)
-                {                    this.done = true;                    
-                    return;                
-                }            
-            }            
+                {                    this.done = true;                    
+                    return;                
+                }            
+            }            
             else
-            {                frame = 0;            
+            {                frame = 0;            
             }
 
-                           
-            var x = this.pos[0];     
-            var y = this.pos[1];  
+                           
+            var x = this.pos[0];     
+            var y = this.pos[1];  
 
-             x += frame * this.size[0];   ctx.drawImage(resources.get(this.url),  x, y,  this.size[0], this.size[1],  0, 0,  this.resized[0], this.resized[1]);
+             x += frame * this.size[0];   ctx.drawImage(resources.get(this.url),  x, y,  this.size[0], this.size[1],  0, 0,  this.resized[0], this.resized[1]);
 
-                    
+                    
         }
 
-            
+            
     };
 
-        window.Sprite = Sprite;
+        window.Sprite = Sprite;
 })();
 
 (function ()
@@ -370,7 +358,7 @@ units = [],
     Unit.prototype =
     {
 
-                 getAngle: function (target)
+                 getAngle: function (target)
         {
 
             var x = this.pos[0] - target[0];
@@ -460,10 +448,10 @@ units = [],
 
             this.lastshot = 0;
 
-        }    
+        }    
     };
 
-        window.Unit = Unit;
+        window.Unit = Unit;
 })();
 
 var getRandom = function (min, max)
@@ -727,7 +715,18 @@ void function () {
   this.smoke = smoke
  }
 } ()
+//Îáû÷íûé alert
+function CountryNames(){ 
 
+var syllable_1 = new Array("Aqu", "Bos", "Ven", "Cor", "Aghr", "Aren", "Shad", "Bel", "Dar", "Nem", "Han", "Num", "Py", "Nord", "Oph", "Fr", "I", "L", "Mec", "Ron", "Sh", "Ter", "Abb", "Akb", "An", "Asg", "Er", "Gh", "K", "Lib", "Pel", "Sab", "St", "Har", "Kh", "Neb", "Nil", "T", "Th", "Ak", "Khor", "Sam", "Vil", "Cyl", "Mik", "Gon", "R", "Mor", "Cim"); 
+
+var syllable_2 = new Array("i", "o", "a", "e", "u", "y", "ai", "", "ae", "ea", "ia"); 
+
+var syllable_3 = new Array("lonia", "nia", "rium", "nthium", "pur", "jun", "zar", "verus", "far", "dia", "mar", "lia", "thon", "heim", "r", "sol", "nthe", "dier", "nta", "co", "mu", "m", "son", "drah", "tania", "kia", "lum", "k", "za", "ros", "num", "shtia", "tea", "mir", "shan", "gia", "kh", "jar", "mi", "xur", "thu", "lus", "khmet", "a", "ran", "f", "sun", "ra", "hpur", "yet", "ska", "lannon", "land", "dor", "han", "ria"); 
+
+return (syllable_1[Math.round(Math.random()*(49 - 1))] + syllable_2[Math.round(Math.random()*(11 - 1))] + syllable_3[Math.round(Math.random()*(56 - 1))]) 
+
+} 
 var gameOver = function (a)
 {
 
@@ -740,9 +739,9 @@ var gameOver = function (a)
 
     case 'win':
 
-        smoke.alert("✔Уровень пройден! \n\n 📊Статистика: \n ⏱️Время: " + _min + ':' + _sec + '\n☠Подбит: ' + counter + '\n⚔Убил: ' + counter2 + '.');
+        alert("✔Уровень пройден! \n\n 📊Статистика: \n ⏲Время: " + _min + ':' + _sec + '\n☠Подбит: ' + counter + '\n⚔Убил: ' + counter2 + '.');
 
-        var log_item = "<h2 align = 'center' class = 'win'>Игра " + ++gameNum + ": 🏆 Победа ⏱️" + _min + ':' + _sec + ' /' + dif[lvl] + ' /' + "</h2>";
+        var log_item = "<h2 align = 'center' class = 'win'>Игра " + ++gameNum + ": 🏆 Победа ⏲" + _min + ':' + _sec + ' /' + dif[lvl] + ' /' + "</h2>";
         if (lvl < dif.length - 1) lvl++;
         var log = document.getElementById('log');
         log.innerHTML += log_item;
@@ -752,9 +751,9 @@ var gameOver = function (a)
         break;
 
     case 'loss':
-        smoke.alert("❌Поражение! \n\n 📊Статистика: \n ⏱️Время: " + _min + ':' + _sec + '\n☠Подбит: ' + counter + '\n⚔Убил: ' + counter2 + '.');
+        alert("❌Поражение! \n\n 📊Статистика: \n ⏲Время: " + _min + ':' + _sec + '\n☠Подбит: ' + counter + '\n⚔Убил: ' + counter2 + '.');
 
-        var log_item = "<h2 align = 'center' class = 'loss'>Игра " + ++gameNum + ": 💩 Поражение ⏱️" + _min + ':' + _sec + ' /' + dif[lvl] + ' /' + "</h2>";
+        var log_item = "<h2 align = 'center' class = 'loss'>Игра " + ++gameNum + ": 💩 Поражение ⏲" + _min + ':' + _sec + ' /' + dif[lvl] + ' /' + "</h2>";
         var log = document.getElementById('log');
         log.innerHTML += log_item;
         document.body.style.paddingTop = 50 - (gameNum * 3)+ "%";
@@ -804,7 +803,7 @@ var startGame = function ()
     var p = document.getElementsByClassName("modal-text")[0];
     span.onclick = function() {
          modal.style.display = "none";
-         game_paused = !game_paused;
+         
     }
 
     var log = document.getElementById('log');
@@ -954,13 +953,13 @@ var startGame = function ()
         
         if (xx > icons[3].pos[0] && xx < icons[3].pos[0] + (k * 5) && yy > icons[3].pos[1] - (k * 3) && yy < icons[3].pos[1] + (k * 3))
         {
-           game_paused = !game_paused;
+           
            
            if(modal.style.display == "block") {
                 modal.style.display = "none";
            } else {
               
-                p.innerHTML = 'Игра на паузе...'; 
+                p.innerHTML = 'Пауза недоступна в Онлайн-режиме.'; 
                 modal.style.width = c.width*0.8 + "px";
                 modal.style.marginLeft = c.width*0.1 + xo + "px";
                 modal.style.display = "block";
@@ -970,7 +969,7 @@ var startGame = function ()
           
         }
     }
-
+   
     function checkDeployment(xx, yy)
     {
 
@@ -1057,6 +1056,11 @@ var startGame = function ()
     var enemyttankhp = ['acceleration', [0,          0], 200,  0,   k * 3.5, k * 40, 70,     0.05,   - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [362, 269], [205, 124], [c.width / 11.6, c.height / 24])];
     //tutorial
     var enemylighttutorial = ['acceleration', [200,      200], 500,  0,   k * 1, k * 110,   20,    0.21,    - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [395, 600], [159, 130], [c.width / 13, c.height / 24])];
+    //lowhp
+    var enemybasiclhp = ['acceleration', [0,          0], 1800, 0,   k * 1.5, k * 110,    700,    1.3,    - 90,    - 90,        - 1,   new Sprite('https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png', [365, 76], [194, 135], [c.width / 11, c.height / 21])];
+    var enemylightlhp = ['acceleration', [200,      200], 390,  0,   k * 15.0, k * 110,   260,    0.9,    - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [395, 600], [159, 130], [c.width / 13, c.height / 24])];
+    var enemyttanklhp = ['acceleration', [0,          0], 180,  0,   k * 3.5, k * 40, 300,     0.05,   - 90,    - 90,      - 1,   new Sprite("https://hsto.org/webt/s1/qb/ew/s1qbew-nghf2pt2t1eucftw3yko.png", [362, 269], [205, 124], [c.width / 11.6, c.height / 24])];
+
 
 
     main()
@@ -1068,11 +1072,11 @@ var startGame = function ()
     function main()
     {
 
-            
+            
         var now = Date.now();
 
         if (!game_paused) { 
-            
+            
           var dt = (now - lastTime) / 1000;
 
           update(dt);
@@ -1083,18 +1087,21 @@ var startGame = function ()
 
         lastTime = now;
 
-          
-        if  (!isGameOver) requestAnimFrame(main);
+          
+        if  (!isGameOver) requestAnimFrame(main);
 
     };
 
     function update(dt)
     {
 
-            gameTime += dt;
+            gameTime += dt;
             
-            if (nextwave < -99999) {
-                nextwave = (enemydep * (-9999999999999 - lvl)-gameTime + -999999999).toFixed(0) 
+            if (nextwave < 0) {
+                nextwave = (enemydep * (10
+
+
+ - lvl)-gameTime + 2).toFixed(0) 
             } else {
                nextwave -= dt;
             }
@@ -1102,472 +1109,33 @@ var startGame = function ()
         if (Math.floor(gameTime) == 1 && firstwave == false)
         {
             
-            if (lvl == 0) {
-                function sayTutorial1() {
-                smoke.alert('Перетаксивай свои танки на поле боя!');
-                }
-                setTimeout(sayTutorial1, 10);
-
-                function sayTutorial2() {
-                smoke.alert('Твоя задача уничтожить их и добраться до зеленой линии в верхней части поля!');
-                }
-                setTimeout(sayTutorial2, 3000);
-                deployEnemy(enemylighttutorial, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighttutorial, [c.width - (c.width / 4), c.height / 5]);
-            }
-
-            if (lvl == 1) {
-                function sayTutorial3() {
-                smoke.alert('Теперь попробуй сам. Удачи! 😄');
-                }
-                setTimeout(sayTutorial3, 1000);
-
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-            }
-
-            if (lvl == 2) {
-                function sayTutorial3() {
-                smoke.alert('Отлично, продолжай в том-же духе! 😄');
-                }
-                setTimeout(sayTutorial3, 1000);
-
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-
-            }
-
-            if (lvl == 3) {
-                smoke.alert('Давай, ты уже на 3/20 уровней, поднажми! 😉');
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-            }
-
-            if (lvl == 4) {
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
-            }
-
-            if (lvl == 5) {
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
-            }
-
-            if (lvl == 6) {
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
-            }
-            if (lvl == 7) {
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
-                deployEnemy(enemylight, [c.width / 10, c.height / 4]);
-            }
-            if (lvl == 8) {
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
-                deployEnemy(enemylight, [c.width / 10, c.height / 4]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 6]);
-            }
-            if (lvl == 9) {
-                deployEnemy(enemylight, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylight, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasic, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttank, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasic, [c.width / 5, c.height / 6]);
-                deployEnemy(enemylight, [c.width / 10, c.height / 4]);
-                deployEnemy(enemyttank, [c.width / 10, c.height / 6]);
-                deployEnemy(enemylight, [c.width / 3, c.height / 4]);
-            }
-            //new
-            if (lvl == 10) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-// Smoke-pure.js: (c) 2013-2014 Michael Romanovsky, or "Agamemnus" on Github. Released under the MIT license.
-
-void function () {
- var smoke = {}
-
- // Options:
- smoke.ok               = "ОК"          // Text for "Ok" button.
- smoke.cancel           = "Отмена"      // Text for "Cancel" button.
- smoke.point_event      = 'click'       // Point event ("click", "touchstart", etc.)
- smoke.parent           = document.body // Where the smoke div attaches. Note that if this is undefined (because document.body hasn't been added yet), the build function attempts to define it as document.body when the build function is run --that is, when the smoke DOM object is created.
- smoke.zindex           = 10000         // Z-index of the smoke DOM object. This should be a high number.
- smoke.reverse_buttons  = false         // If false, the "Ok" button appears before (left of) the "Cancel" button. If true, the "Cancel" button appears before the "Ok" button.
- smoke.autofocus        = true          // If true, the input is automatically focused when the smoke DOM object is created.
- smoke.autoexit         = true          // If true, clicking outside the smoke dialog (but inside the dialog_wrapper) closes/detaches the smoke DOM object and runs the callback with a parameter of (false, evt).
- smoke.custom_css       = {}            // Custom classes for each object in the structure. E.G.: smoke.custom_css = {"button.ok": "my_ok_button_style"} or smoke.custom_css = {"buttons.ok": ["my_ok_button_style1", "my_ok_button_style2"]}
- smoke.css_prefix       = "smoke"       // The CSS prefix for the classes used in the .build function.
- smoke.value            = undefined     // The initial value to set the prompt input text to.
- smoke.callback         = undefined     // Function to run after user input is sent.
- smoke.observe_mutation = true          // If true, attachess a mutation observer that will destroy the keyboard listeners when the element is removed from the DOM.
- smoke.window_opened    = undefined     // Function that runs at the end of smoke.build. Is in the form of "function (dom_window_object, text, processed_params)".
- smoke.window_closed    = undefined     // Function that runs after the object is removed from the DOM. Is in the form of "function (dom_window_object, text, processed_params)". Requires observe_mutation to be true for full functionality.
- 
- // Structure:
- // var obj (return value)                              | smoke-base
- //  obj.dialog_wrapper                                 |  smoke-dialog_wrapper
- //   obj.dialog                                        |   smoke-dialog
- //    obj.text            = obj.dialog.text            |    smoke-dialog-text
- //    obj.prompt          = obj.dialog.prompt          |    smoke-dialog-prompt
- //     obj.prompt.input   = obj.dialog.prompt.input    |     smoke-dialog-prompt-input
- //    obj.buttons         = obj.dialog.buttons         |    smoke-dialog-buttons
- //     obj.buttons.ok     = obj.dialog.buttons.ok      |     smoke-dialog-buttons-ok
- //     obj.buttons.cancel = obj.dialog.buttons.cancel  |     smoke-dialog-buttons-cancel
- //
- // Extras:
- // obj.ok     () // <-- programatically run "ok" on the object.
- // obj.cancel () // <-- programatically run "cancel" on the object.
- 
- smoke.build = function (text, params) {
-  if ((typeof smoke.parent == "undefined") || (smoke.parent == null)) smoke.parent = document.body
-  var ok                  = (typeof params.ok               != "undefined") ? params.ok               : smoke.ok
-  var cancel              = (typeof params.cancel           != "undefined") ? params.cancel           : smoke.cancel
-  var point_event         = (typeof params.point_event      != "undefined") ? params.point_event      : smoke.point_event
-  var parent              = (typeof params.parent           != "undefined") ? params.parent           : smoke.parent
-  var zindex              = (typeof params.zindex           != "undefined") ? params.zindex           : smoke.zindex
-  var reverse_buttons     = (typeof params.reverse_buttons  != "undefined") ? params.reverse_buttons  : smoke.reverse_buttons
-  var autoexit            = (typeof params.autoexit         != "undefined") ? params.autoexit         : smoke.autoexit
-  var autofocus           = (typeof params.autofocus        != "undefined") ? params.autofocus        : smoke.autofocus
-  var custom_css          = (typeof params.custom_css       != "undefined") ? params.custom_css       : smoke.custom_css
-  var css_prefix          = (typeof params.css_prefix       != "undefined") ? params.css_prefix       : smoke.css_prefix
-  var input_default_value = (typeof params.value            != "undefined") ? params.value            : smoke.value
-  var callback            = (typeof params.callback         != "undefined") ? params.callback         : smoke.callback
-  var observe_mutation    = (typeof params.observe_mutation != "undefined") ? params.observe_mutation : smoke.observe_mutation
-  var window_opened       = (typeof params.window_opened    != "undefined") ? params.window_opened    : smoke.window_opened
-  var window_closed       = (typeof params.window_closed    != "undefined") ? params.window_closed    : smoke.window_closed
-  var window_closed_ran   = false
-  params.point_event      = point_event
-  params.callback         = callback
-  
-  var obj = document.createElement('div'); obj.className = css_prefix + '-base'; obj.style.zIndex = zindex
-  parent.appendChild (obj)
-  
-  var dialog_wrapper = obj.dialog_wrapper = document.createElement ('div'); dialog_wrapper.className = css_prefix + '-dialog_wrapper'
-  obj.appendChild (dialog_wrapper)
-  
-  // Add an event listener for when the user clicks outside of the dialog, but inside the dialog wrapper.
-  // If activated, the parent smoke div removes itself and calls the callback.
-  if (autoexit) {
-   dialog_wrapper.addEventListener (point_event, function (evt) {
-    if (typeof evt.changedTouches != "undefined") evt = evt.changedTouches[0]
-    if (evt.currentTarget != evt.target) return
-    obj.parentNode.removeChild (obj)
-    params.callback (false, evt)
-    if ((!window_closed_ran) && smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}
-   })
-  }
-  
-  var dialog = obj.dialog = document.createElement ('div'); dialog.className = css_prefix + '-dialog'
-  dialog_wrapper.appendChild (dialog)
-  
-  var text_div = obj.text = obj.dialog.text = document.createElement ('div'); text_div.className = css_prefix + '-dialog-text'
-  text_div.innerHTML = text
-  dialog.appendChild (text_div)
-  
-  if (params.type == 'prompt') {
-   var prompt = obj.prompt = obj.dialog.prompt = document.createElement ('div'); prompt.className = css_prefix + '-prompt'
-   prompt.input = document.createElement ('input'); prompt.input.type = 'text';  prompt.input.className = css_prefix + '-prompt-input'
-   if (typeof input_default_value != "undefined") prompt.input.value = input_default_value
-   prompt.appendChild (prompt.input)
-   dialog.appendChild (prompt)
-  }
-  
-  var buttons = obj.buttons = obj.dialog.buttons = document.createElement ('div'); buttons.className = css_prefix + '-dialog-buttons'
-  buttons.ok = document.createElement ('button'); buttons.ok.className = css_prefix + '-dialog-buttons-ok'; buttons.ok.innerHTML = ok
-  if (params.type == 'alert') buttons.appendChild (buttons.ok)
-  if ((params.type == 'prompt') || (params.type == 'confirm')) {
-   buttons.cancel = document.createElement ('button'); buttons.cancel.className = css_prefix + '-dialog-buttons-cancel'; buttons.cancel.innerHTML = cancel
-   if (params.reverse_buttons) {
-    buttons.appendChild (buttons.cancel); buttons.appendChild (buttons.ok)
-   } else {
-    buttons.appendChild (buttons.ok); buttons.appendChild (buttons.cancel)
-   }
-  }
-  dialog.appendChild (buttons)
-  
-  // Append any extra CSS styles on any part of the structure.
-  for (var current_structure_name in custom_css) {
-   var property_array = current_structure_name.split (".")
-   var current_element = obj
-   property_array.forEach (function (current_property) {current_element = current_element[current_property]})
-   var current_class_list = custom_css[current_structure_name]
-   if (typeof current_class_list == "string") current_class_list = [current_class_list]
-   current_class_list.forEach (function (current_classname) {current_element.classList.add (current_classname)})
-  }
-  
-  if (typeof params.callback != "function") params.callback = function () {}
-  obj.params = params
-  smoke['finishbuilding_' + params.type] (obj, params)
-  if ((typeof obj.prompt != "undefined") && (autofocus != false)) obj.prompt.input.focus ()
-  
-  // Add a mutation observer that observes for the object's removal. If it is removed, destroy the listeners and run smoke.window_closed.
-  if (observe_mutation) {
-   var MutationObserver = window.MutationObserver || window.WebkitMutationObserver
-   if (typeof MutationObserver != "undefined") {
-    var observer = new MutationObserver (function (mutation_list) {
-     for (var i = 0, curlen_i = mutation_list.length; i < curlen_i; i++) {
-      var mutation_item = mutation_list[i]
-      if (mutation_item.type != 'childList') return
-      for (var j = 0, curlen_j = mutation_item.removedNodes.length; j < curlen_j; j++) {
-       if (mutation_item.removedNodes[j] != obj) continue
-       if ((!window_closed_ran) && smoke.window_closed) {smoke.window_closed (obj, text, params); window_closed_ran = true}
-       obj.destroy_listeners (observer)
-       return
-      }
-     }
-    })
-    observer.observe (parent, {attributes: false, childList: true, subtree: false})
-   }
-  }
-  
-  if (smoke.window_opened) smoke.window_opened (obj, text, params)
-  
-  return obj
- }
- 
- smoke.finishbuilding_alert   = function (obj) {
-  obj.callback_ok = function () {obj.params.callback ()}
-  obj.destroy_listeners = function (observer) {if (observer) observer.disconnect (); document.removeEventListener ('keyup', ok_function_wrapper)}
-  var ok_function_wrapper = obj.ok = function (evt) {ok_function(evt, obj)}
-  document.addEventListener       ('keyup', ok_function_wrapper)
-  obj.buttons.ok.addEventListener (obj.params.point_event, ok_function_wrapper)
-  obj.buttons.ok.smoke_pure_obj = obj
- }
- smoke.finishbuilding_confirm = function (obj) {
-  obj.callback_ok     = function () {obj.params.callback (true)}
-  obj.callback_cancel = function () {obj.params.callback (false)}
-  obj.destroy_listeners = function (observer) {
-   if (observer) observer.disconnect ()
-   document.removeEventListener ('keyup', ok_function_wrapper)
-   document.removeEventListener ('keyup', cancel_function_wrapper)
-  }
-  var ok_function_wrapper     = obj.ok     = function (evt) {ok_function    (evt, obj)}
-  var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}
-  document.addEventListener           ('keyup', ok_function_wrapper)
-  obj.buttons.ok.addEventListener     (obj.params.point_event, ok_function_wrapper)
-  document.addEventListener           ('keyup', cancel_function_wrapper)
-  obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)
-  obj.buttons.ok.smoke_pure_obj     = obj
-  obj.buttons.cancel.smoke_pure_obj = obj
- }
- smoke.finishbuilding_prompt  = function (obj) {
-  obj.callback_ok     = function () {obj.params.callback (obj.prompt.input.value)}
-  obj.callback_cancel = function () {obj.params.callback (false)}
-  obj.destroy_listeners = function (observer) {
-   if (observer) observer.disconnect ()
-   document.removeEventListener ('keyup', ok_function_wrapper)
-   document.removeEventListener ('keyup', cancel_function_wrapper)
-  }
-  var ok_function_wrapper     = obj.ok     = function (evt) {ok_function    (evt, obj)}
-  var cancel_function_wrapper = obj.cancel = function (evt) {cancel_function(evt, obj)}
-  document.addEventListener           ('keyup', ok_function_wrapper)
-  obj.buttons.ok.addEventListener     (obj.params.point_event, ok_function_wrapper)
-  document.addEventListener           ('keyup', cancel_function_wrapper)
-  obj.buttons.cancel.addEventListener (obj.params.point_event, cancel_function_wrapper)
-  obj.buttons.ok.smoke_pure_obj     = obj
-  obj.buttons.cancel.smoke_pure_obj = obj
- }
- 
- function ok_function (evt, obj) {
-  if (evt && (((evt.type == "keyup") && (typeof evt.keyCode != "undefined")) && ((evt.keyCode == 0) || (evt.keyCode != 13)))) return
-  obj.destroy_listeners ()
-  if (obj.parentNode) obj.parentNode.removeChild (obj)
-  obj.callback_ok ()
- }
- function cancel_function (evt, obj) {
-  if (evt && (((evt.type == "keyup") && (typeof evt.keyCode != "undefined")) && ((evt.keyCode == 0) || (evt.keyCode != 27)))) return
-  obj.destroy_listeners ()
-  if (obj.parentNode) obj.parentNode.removeChild (obj)
-  obj.callback_cancel ()
- }
- 
- smoke.action_list = [{name : 'alert'}, {name : 'confirm'}, {name : 'prompt'}]
- 
- for (var i = 0; i < smoke.action_list.length; i++) {
-  void function (current_action) {
-   smoke[current_action] = function (text, callback, params) {return smoke.build (text, merge_objects ({callback: callback, type: current_action}, params))}
-  } (smoke.action_list[i].name)
- }
- 
- function merge_objects (secondary, primary) {
-  // The primary object's duplicate keys are superior. The secondary object's duplicate keys are inferior.
-  if (typeof secondary == "undefined") var primary = primary.primary, secondary = primary.secondary
-  var new_object = {}
-  for (var property in secondary) {new_object[property] = secondary[property]}
-  for (var property in primary)   {new_object[property] = primary  [property]}
-  return new_object
- }
- 
- if (typeof module != 'undefined' && module.exports) {
-  module.exports = smoke
- } else if (typeof define === 'function' && define.amd) {
-  define ('smoke', [], function() {return smoke})
- } else {
-  this.smoke = smoke
- }
-} ()
-//Îáû÷íûé alert
-smoke.alert ("Характеристики врагов повышены на 20%");
-            }
-            if (lvl == 11) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-            }
-
-            if (lvl == 12) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-            }
-
-            if (lvl == 13) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-            }
-
-            if (lvl == 14) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
-            }
-
-            if (lvl == 15) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
-            }
-
-            if (lvl == 16) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
-            }
-            if (lvl == 17) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
-                deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);
-            }
-            if (lvl == 18) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
-                deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 6]);
-            }
-            if (lvl == 19) {
-                deployEnemy(enemylighthp, [c.width / 4, c.height / 5]);
-                deployEnemy(enemylighthp, [c.width - (c.width / 4), c.height / 5]);
-                deployEnemy(enemybasichp, [c.width / 2, c.height / 5]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 2]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 2, c.height / 8]);
-                deployEnemy(enemyttankhp, [c.width / 4, c.height / 6]);
-                deployEnemy(enemybasichp, [c.width / 5, c.height / 6]);
-                deployEnemy(enemylighthp, [c.width / 10, c.height / 4]);
-                deployEnemy(enemyttankhp, [c.width / 10, c.height / 6]);
-                deployEnemy(enemylighthp, [c.width / 3, c.height / 4]);
+            if (lvl >= 0) {
+                deployEnemy(enemylight, [c.width / 4, c.height / 10]);
+                deployEnemy(enemybasic, [c.width - (c.width / 4), c.height / 10]);
+                smoke.alert( "Ваш соперник: " + CountryNames());
             }
             firstwave = true;
             
         }
 
-        if (Math.floor(gameTime) == enemydep * (99999999 - lvl))
+        if (Math.floor(gameTime) == enemydep * (11 - lvl))
         {
 
-            deployEnemy(enemybasic, [getRandom(30, c.width - 30), getRandom(-20, - 40)]);
-            deployEnemy(enemylight, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);
-            deployEnemy(enemylight, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);
-            deployEnemy(enemyttank, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);
-            deployEnemy(enemyttank, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);
+            deployEnemy(enemybasiclhp, [getRandom(30, c.width - 30), getRandom(-20, - 40)]);
+            deployEnemy(enemylightlhp, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);
+            deployEnemy(enemylightlhp, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 2)]);
+            deployEnemy(enemyttanklhp, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);
+            deployEnemy(enemyttanklhp, [getRandom(30, c.width - 30), getRandom(-20, - 40) - (k * 4)]);
             enemydep++;
             
         }
 
-            updateEntities(dt, units);
+            updateEntities(dt, units);
         updateEntities(dt, enemies);
         updateBullets(dt);
         updateIcons(dt);
 
-          //   checkCollisions();
+          //   checkCollisions();
 
     };
 
@@ -1590,12 +1158,12 @@ smoke.alert ("Характеристики врагов повышены на 20
     function updateEntities(dt, list)
     {
 
-             // Update the tank position
+             // Update the tank position
 
 
 
 
-            
+            
         for (var i = 0; i < list.length; i++)
         {
 
@@ -1765,24 +1333,24 @@ smoke.alert ("Характеристики врагов повышены на 20
 
         // Update all the explosions
 
-            
+            
         for (var i = 0; i < explosions.length; i++)
-        {        explosions[i].sprite.update(dt);
+        {        explosions[i].sprite.update(dt);
 
-                     // Remove if animation is done
-                    
+                     // Remove if animation is done
+                    
             if (explosions[i].sprite.done)
-            {            explosions.splice(i, 1);            i--;        
-            }    
+            {            explosions.splice(i, 1);            i--;        
+            }    
         }
 
-             // Update all the bullets
+             // Update all the bullets
 
-            
+            
         for (var i = 0; i < bullets.length; i++)
         {
 
-                    
+                    
             var b = bullets[i];
 
             var rad = b.angle / (180 / Math.PI);
@@ -1790,28 +1358,28 @@ smoke.alert ("Характеристики врагов повышены на 20
             b.pos[1] += Math.sin(rad) * b.speed * dt * b.dir;
 
 
-                            // Remove the bullet
+                            // Remove the bullet
 
-                    
+                    
             if (b.pos[1] < b.target.pos[1] + k && b.pos[1] > b.target.pos[1] - k && b.pos[0] < b.target.pos[0] + k && b.pos[0] > b.target.pos[0] - k)
-            {         bullets.splice(i, 1);         i--; 
+            {         bullets.splice(i, 1);         i--; 
                 if (b.target.hp >= 0 && !b.target.destroyed)
                 {
-                    b.target.hp -= b.damage; 
+                    b.target.hp -= b.damage; 
                 }
                 if (b.target.hp < 0)
                 {
                     b.target.destroyed = true;
-                    b.target.hp = 0;  // Add an explosion
-                                    explosions.push(
-                    {                    pos: b.target.pos,
-                                            sprite: new Sprite("https://hsto.org/webt/f1/fb/m2/f1fbm2uydhk96r1syq2f_jxv3om.png", [0, 117],   [39, 39], [k * 3.2, k * 3.2], 14,   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],  null,  true)     
+                    b.target.hp = 0;  // Add an explosion
+                                    explosions.push(
+                    {                    pos: b.target.pos,
+                                            sprite: new Sprite("https://hsto.org/webt/f1/fb/m2/f1fbm2uydhk96r1syq2f_jxv3om.png", [0, 117],   [39, 39], [k * 3.2, k * 3.2], 14,   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],  null,  true)     
                     });
                 }
-            }        
-        } 
+            }        
+        } 
 
-          
+          
     }
 
 
@@ -1847,10 +1415,11 @@ smoke.alert ("Характеристики врагов повышены на 20
         ctx.fillRect(0, 0, c.width, c.height / 20);
         ctx.fillStyle = " rgba(200,50,50,0.7)";
         ctx.fillRect(0, c.height - c.width / 4 - c.height / 20, c.width, c.height / 20);
-        ctx.font = c.height / 26 + "px Arial";
+        ctx.font = c.height / 26 + "px Arial";
         ctx.fillStyle = " rgba(250,250,250,0.7)";
         
-ctx.fillText("Прохождение уровней", c.width/500, c.height/24);              
+ctx.fillText("Онлайн режим ", c.width/500, c.height/24);            
+ 
 
         ctx.beginPath();
         for (var x = c.width / 4; x < c.width; x += c.width / 4)
@@ -1914,11 +1483,11 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
     function renderEntities(list)
     {
 
-            
+            
         for (var i = 0; i < list.length; i++)
         {
 
-                    renderEntity(list[i]);  
+                    renderEntity(list[i]);  
         
         }
         
@@ -1931,13 +1500,13 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
         for (var i = 0; i < bullets.length; i++)
         {
                    
-         ctx.save();
+         ctx.save();
          
         ctx.fillStyle = "black";
          ctx.beginPath ();
          ctx.arc(bullets[i].pos[0], bullets[i].pos[1], 1 + bullets[i].damage/300, 0, 2*Math.PI) ;
         ctx.fill();
-           ctx.restore();
+           ctx.restore();
         }
           
         }
@@ -1951,7 +1520,7 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
             if (!list[i].dragable)
             {
 
-                   ctx.save();
+                   ctx.save();
                 ctx.translate(list[i].pos[0] + list[i].sprite.resized[0] / 2, list[i].pos[1] + list[i].sprite.resized[1] / 2);
                 ctx.rotate(Math.PI / 180 * (-90));
                 ctx.translate(-list[i].sprite.resized[0] / 2, - list[i].sprite.resized[1] / 2);
@@ -1986,7 +1555,7 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
                 list[i].pos = [xxx, yyy]
 
                 ctx.restore();
-            }    
+            }    
         }
     };
 
@@ -1996,7 +1565,7 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
 
 
         if (!entity.destroyed)
-        {    ctx.save();
+        {    ctx.save();
             ctx.translate(entity.pos[0], entity.pos[1]);
 
             if (entity.time && entity.time < 0.7)
@@ -2008,8 +1577,8 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
 
             ctx.translate(-entity.sprite.resized[0] / 2, - entity.sprite.resized[1] / 2);
 
-             entity.sprite.render(ctx);
-            renderHP(entity);  ctx.restore();
+             entity.sprite.render(ctx);
+            renderHP(entity);  ctx.restore();
         }
     }
 
@@ -2071,24 +1640,24 @@ ctx.fillText("Прохождение уровней", c.width/500, c.height/24
 var requestAnimFrame = (function ()
 {
 
-        
+        
     return window.requestAnimationFrame ||
 
-            window.webkitRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
 
-            window.mozRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
 
-            window.oRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
 
-            window.msRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
 
-            
+            
     function (callback)
     {
 
-                    window.setTimeout(callback, 1000 / 60);
+                    window.setTimeout(callback, 1000 / 60);
 
-                
+                
     };
 })();
 
@@ -2102,11 +1671,12 @@ function loader()
     
 
 
-    maindiv.innerHTML = '<button id="start" onclick="startGame ()">Начать игру</button><br><button id="info" onclick="inf()">Как играть?</button><br/><span class="dif">Уровень:</span><span class="dif" >' + dif[lvl] + '  </span>';
+    maindiv.innerHTML = '<button id="start" onclick="startGame ()">Начать игру</button><br><button id="info" onclick="inf()">Как играть?</button>';
 
     lastTime = Date.now();
 
 };
+
 //////////////////////////////////
 
 (function ()
@@ -2199,14 +1769,17 @@ resources.onReady(loader);
 
 
       </script>
+
     </head>
 <body>
+    <script type="text/javascript">
+            smoke.alert( "Ваш ник: " + CountryNames());
+    </script>
        <div id="main">
-          <progress class="progress"> </progress> 
+          <p>Загрузка...</p>
        </div>
       <div id="infdiv">Перестаскивай свои танки в игровую зону.<br/><br/>Ты выиграешь, когда один из твоих танков коснеться зеленой линии в верхней части поля<br/><br/>Не позволяй вражеским танкам добраться то твоей базы.<br/><br/>Удачи, танктист! Пусть везение будет на твоей стороне.</div>
        <div id="log"></div>
-       
        <div id="myModal" class="modal">
             <div class="modal-content">
                  <span class="close">&times;</span>
