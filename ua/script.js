@@ -1,24 +1,24 @@
 $(function(){
     var app = {
         2 : {
-            name : "Air defense 🇺🇦",
-            type : "Захисти Україну від ворожої авіації!",
-            art : "https://phonezgames.xyz/ru/icons/saveyourcity.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/towerwars/",
+            name : "Clash of Tanks: 1 vs 1",
+            type : "У тебе є танки, якими ти маєш знищити свого суперника (Гра без реєстрації)",
+            art : "https://phonezgames.xyz/ru/icons/clashoftanks.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/clashoftanks/",
             update : {
-                version : "1.0 E",
-                date : "23 липня, 2022г.",
-                versionTxt : "Спеціальна подія на підтримку України. Ви граєте за 'ППО' та вам потрібно збивати ракети, щоб захистити Україну ",
-                img : "https://phonezgames.xyz/ru/img/saveyourcity.png"
+                version : "1.0 BETA",
+                date : "26 червня 2022р.",
+                versionTxt : "Перетягуй свої танки в ігрову зону. Ти виграєш, коли один із твоїх танків торкнеться зеленої лінії у верхній частині поля. Не дозволяй ворожим танкам добратися до твоєї бази. Успіхів, танктисте! Нехай везіння буде на твоєму боці.",
+                img : "https://phonezgames.xyz/ru/img/clashoftanks.png"
 },
             details : {
                 seller : "PhoneZ Games",
-                size : "32,5 KB",
-                language : "Українська",
+                size : "2 MB",
+                langruge : "Українська",
                 sort : "6+",
                 inapp : "Відсутні",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/towerwars/"
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/clashoftanks/"
             }
         },
         3 : {
