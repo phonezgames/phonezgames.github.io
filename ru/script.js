@@ -1,24 +1,24 @@
 $(function(){
     var app = {
         2 : {
-            name : "Air defense 🇺🇦",
-            type : "Защити Украину от вражеской авиации!",
+            name : "Clash of Tanks: 1 vs 1",
+            type : "У тебя есть танки, которыми ты должен уничтожить своего соперника (Игра без регистрации)",
             art : "https://phonezgames.xyz/ru/icons/saveyourcity.png",
-            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/towerwars/",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/clashoftanks/",
             update : {
-                version : "1.0 E",
-                date : "23 июля 2022г.",
-                versionTxt : "Специальное событие в поддержку Украины. Вы играете за ПВО и вам нужно сбивать ракеты, чтобы защитить Украину ",
-                img : "https://phonezgames.xyz/ru/img/saveyourcity.png"
+                version : "1.0 BETA",
+                date : "26 июля 2022г.",
+                versionTxt : "Перестаскивай свои танки в игровую зону. Ты выиграешь, когда один из твоих танков коснеться зеленой линии в верхней части поля. Не позволяй вражеским танкам добраться то твоей базы. Удачи, танктист! Пусть везение будет на твоей стороне. ",
+                img : "https://phonezgames.xyz/ru/img/clashoftanks.png"
 },
             details : {
                 seller : "PhoneZ Games",
-                size : "32,5 KB",
+                size : "2 MB",
                 langruge : "Русский",
                 sort : "6+",
                 inapp : "Отсутствуют",
                 copy : "PhoneZ Games; 2022",
-                site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/unrealescaping_event/"
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/clashoftanks"
             }
         },
         3 : {
