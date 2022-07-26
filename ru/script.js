@@ -3,7 +3,7 @@ $(function(){
         2 : {
             name : "Clash of Tanks: 1 vs 1",
             type : "У тебя есть танки, которыми ты должен уничтожить своего соперника (Игра без регистрации)",
-            art : "https://phonezgames.xyz/ru/icons/saveyourcity.png",
+            art : "https://phonezgames.xyz/ru/icons/clashoftanks.png",
             url : "http://adf.ly/20106767/https://phonezgames.xyz/ru/games/clashoftanks/",
             update : {
                 version : "1.0 BETA",
