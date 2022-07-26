@@ -1,0 +1,168 @@
+ 14 : {
+            name : "Flappy bird",
+            type : "",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "1 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        15 : {
+            name : "Game balls: Connection",
+            type : "",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "1 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        16 : {
+            name : "Game balls: Hit",
+            type : "",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "1 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        17 : {
+            name : "Meteors",
+            type : "Не піпади під метеоритний обстріл",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "3 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        18 : {
+            name : "Memory",
+            type : "Запам'ятай кольори, а потім з'єднай їх у правильному порядку",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "3 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        19 : {
+            name : "Fun 'Mario'",
+            type : "Пригодницька гра, де потрібно намагатися не потрапити у пастки",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "3 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        20 : {
+            name : "Subsequence",
+            type : "Знайди цифри у порядку їх зростання",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "5 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
+        21 : {
+            name : "Guess the name of the color",
+            type : "Вам дається колір, а вам потрібно вгадати його назву",
+            art : "https://phonezgames.xyz/ua/icons/mathreaction.png",
+            url : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/",
+            update : {
+                version : "1.0",
+                date : "5 серпня 2022р.",
+                versionTxt : "Гра про математичні рівняння. Розвивають логіку та математичне мислення. Є 3 типи гра: 'Звичайний - де у тебе 2 хвилини на рішення якомога більше прикладів і в кінці тобі висвічується оцінка по 5-ти бальній системі, 'Час - де ти повинен відповісти на якомога більше прикладів, якщо відповідаєш правильно - Час додається, неправильно - забирається. Також є найскладніший режим - 'Хардкор - де ти маєш лише 3 секунди дати відповідь на легкий, а можливо і складний приклад. Ну ж, випробувай себе! ",
+                img : "https://phonezgames.xyz/ua/img/mathreaction.png"
+},
+            details : {
+                seller : "Github, PhoneZ Games Translations",
+                size : "52 KB",
+                language : "Українська",
+                sort : "4+",
+                inapp : "Відсутні",
+                copy : "PhoneZ Games; 2022",
+                site : "http://adf.ly/20106767/https://phonezgames.xyz/ua/games/mathreaction/"
+            }
+        },
