@@ -1,4 +1,4 @@
-$(function(){
+$(function(){ 
     var app = {
         2 : {
             name : "Clash of Tanks: 1 vs 1",
